@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#EDEBE9] contact-bg">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center mx-auto max-w-sm">
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">Get in Touch</h2>
