@@ -38,14 +38,14 @@ const Contact: React.FC = () => {
           <SocialIcon bgColor="bg-[#DDD0C8]" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 sm:gap-x-4 md:gap-x-14 mt-12">
           {contactInfo.map((info, index) => {
             const isHovered = hoveredIndex === index;
 
             return (
               <div
                 key={index}
-                className="relative group w- h-72 mx-auto perspective"
+                className="relative group w-full sm:w-52 lg:w-[300px] xl:w-[350px] h-72 mx-auto perspective"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-14">
+      <div className="mt-16">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
           width="100%"
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
         ></iframe>
       </div>
 
-      <div className="max-w-xl mx-auto py-20">
+      <div className="max-w-xl mx-auto py-20 px-4 md:px-12">
         {/* form */}
         <div className="text-center">
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">
