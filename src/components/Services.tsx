@@ -40,7 +40,7 @@ const Services: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 md:px-12 bg-white">
+    <section className="py-20 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl md:text-3xl lg:text-6xl text-center mb-12">
           People making Technology work
@@ -116,7 +116,7 @@ const Services: React.FC = () => {
                         <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
                       </svg>
                     </span>
-                    <span className="bg-[#DDD0C8]">{client}</span>
+                    <span className="">{client}</span>
                   </motion.li>
                 ))}
               </ul>

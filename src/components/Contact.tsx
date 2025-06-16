@@ -27,8 +27,8 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#EDEBE9] contact-bg">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 contact-bg">
+      <div className="max-w-6xl mx-auto px-4 md:px-12">
         <div className="flex flex-col items-center text-center mx-auto max-w-sm">
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">Get in Touch</h2>
           <p className="leading-loose mb-5">
@@ -38,14 +38,14 @@ const Contact: React.FC = () => {
           <SocialIcon bgColor="bg-[#DDD0C8]" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 mt-12">
           {contactInfo.map((info, index) => {
             const isHovered = hoveredIndex === index;
 
             return (
               <div
                 key={index}
-                className="relative group w-[350px] h-60 mx-auto perspective"
+                className="relative group w- h-72 mx-auto perspective"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   {/* Front Side */}
-                  <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
+                  <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
                     <info.icon className="h-8 w-8 text-black" />
                     <h3 className="text-lg md:text-2xl font-bold text-black">
                       {info.title}
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   {/* Back Side */}
-                  <div className="absolute w-full h-full backface-hidden bg-black rounded-xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-white">
+                  <div className="absolute w-full h-full backface-hidden bg-black rounded-2xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-white">
                     <info.icon className="h-8 w-8 text-white" />
                     <h3 className="text-lg md:text-2xl font-bold">
                       {info.title}
@@ -99,34 +99,34 @@ const Contact: React.FC = () => {
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">
             Schedule a Consultation
           </h2>
-          <p className="leading-loose">We would love to hear from you!</p>
+          <p className="neue-font leading-loose">We would love to hear from you!</p>
         </div>
-        <form className="max-w-2xl mx-auto mt-10">
+        <form className="neue-font max-w-2xl mx-auto mt-10">
           <div className="grid grid-cols-1 gap-6">
             <input
               type="text"
               placeholder="Your Full Name"
-              className="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
             />
             <input
               type="tel"
               placeholder="Your Contact Number"
-              className="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
           <textarea
             placeholder="Your Message"
-            className="w-full mt-6 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full mt-6 p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
             rows={5}
           ></textarea>
           <button
             type="submit"
-            className="mt-6 px-6 py-3 bg-[#DDD0C8] text-black font-semibold rounded-lg transition-colors"
+            className="mt-6 px-6 py-3 bg-[#DDD0C8] text-black font-semibold leading-loose rounded-lg transition-colors"
           >
             Submit
           </button>

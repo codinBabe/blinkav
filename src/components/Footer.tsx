@@ -5,6 +5,7 @@ import {
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import SocialIcon from "./Social-Icon";
 
 const Footer: React.FC = () => {
   const icons = [
@@ -58,7 +59,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="py-20 px-4 md:px-12 bg-white border-t border-t-black">
+    <footer className="py-20 px-4 md:px-12 border-t border-t-black">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <Image
@@ -73,21 +74,7 @@ const Footer: React.FC = () => {
             individuals and corporations.
           </h5>
 
-          <div className="flex flex-wrap items-center gap-4">
-            {icons.map(({ id, icon, link }) => (
-              <a
-                key={id}
-                href={link || "#"}
-                target={link?.startsWith("http") ? "_blank" : "_self"}
-                rel={
-                  link?.startsWith("http") ? "noopener noreferrer" : undefined
-                }
-                className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow cursor-pointer transition hover:scale-105"
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
+         <SocialIcon bgColor={"#DDD0C8"}/>
         </div>
 
         <div className="font-bold text-center mt-8">

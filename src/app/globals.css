@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
+
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-family: "Helvetica Neue-LT";
+  src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Helvetica Neue Medium";
-  src: url("/fonts/HelveticaNeueMedium.otf") format("opentype");
-  font-weight: 500;
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -34,16 +35,17 @@
 
 /* Optional utility classes */
 .nav-font {
-  font-family: "Helvetica Neue Medium", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 .neue-font {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue-LT", sans-serif;
 }
 .body-font {
   font-family: "SangBleu Sans", sans-serif;
   line-height: 1.2;
   font-size: 16px;
   color: #000;
+  background-color: #EDEBE9
 }
 /* SERVICES FILE */
 .perspective {
@@ -64,6 +66,6 @@
 
 .contact-bg {
   background-image: url("/images/blob-grad.svg");
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
 }
