@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
         ></iframe>
       </div>
 
-      <div className="max-w-lg mx-auto py-20">
+      <div className="max-w-xl mx-auto py-20 px-4 md:px-12">
         {/* form */}
         <div className="text-center">
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-3">
