@@ -73,5 +73,5 @@
 .input-dotted:focus {
   outline-style: dotted;
   outline-width: 1px;
-  outline-color: black; /* Tailwind's blue-500 */
+  outline-color: black;
 }
