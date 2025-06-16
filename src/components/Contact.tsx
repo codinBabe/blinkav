@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
             return (
               <div
                 key={index}
-                className="relative group w-full sm:w-52 lg:w-[300px] xl:w-[350px] h-72 mx-auto perspective"
+                className="relative group w-full sm:w-52 md:w-60 lg:w-[310px] xl:w-[350px] h-72 mx-auto perspective"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-18">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
           width="100%"
@@ -96,37 +96,37 @@ const Contact: React.FC = () => {
       <div className="max-w-xl mx-auto py-20 px-4 md:px-12">
         {/* form */}
         <div className="text-center">
-          <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">
+          <h2 className="text-xl md:text-3xl lg:text-6xl mb-3">
             Schedule a Consultation
           </h2>
           <p className="neue-font leading-loose">We would love to hear from you!</p>
         </div>
-        <form className="neue-font max-w-2xl mx-auto mt-10">
+        <form className="neue-font max-w-xl mx-auto mt-6">
           <div className="grid grid-cols-1 gap-6">
             <input
               type="text"
               placeholder="Your Full Name"
-              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-3 bg-white input-dotted outline-none"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-3 bg-white input-dotted outline-none"
             />
             <input
               type="tel"
               placeholder="Your Contact Number"
-              className="p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-4 bg-white input-dotted outline-none"
             />
           </div>
           <textarea
             placeholder="Your Message"
-            className="w-full mt-6 p-4 bg-white focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full mt-6 p-3 bg-white input-dotted outline-none"
             rows={5}
           ></textarea>
           <button
             type="submit"
-            className="mt-6 px-6 py-3 bg-[#DDD0C8] text-black font-semibold leading-loose rounded-lg transition-colors"
+            className="mt-6 px-6 py-2 bg-[#DDD0C8] text-black font-semibold leading-loose rounded-lg transition-colors"
           >
             Submit
           </button>

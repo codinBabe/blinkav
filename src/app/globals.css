@@ -69,3 +69,9 @@
   background-position: top center;
   background-repeat: no-repeat;
 }
+
+.input-dotted:focus {
+  outline-style: dotted;
+  outline-width: 1px;
+  outline-color: black;
+}
