@@ -66,18 +66,30 @@ const Hero: React.FC = () => {
         <AnimatePresence mode="wait">
           <motion.h1
             key={bgTexts[index]}
-            className="text-white text-4xl md:text-8xl font-bold whitespace-nowrap"
+            className="text-white text-4xl md:text-6xl md:leading-tight lg:text-8xl font-bold lg:whitespace-nowrap"
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {bgTexts[index]}
+            {bgTexts[index] === "Work Smarter Live Better" ? (
+              <>
+                <span className="block lg:inline whitespace-nowrap">
+                  Work Smarter
+                </span>
+                <br className="hidden lg:block" />
+                <span className="block lg:inline">Live Better</span>
+              </>
+            ) : (
+              bgTexts[index]
+            )}
           </motion.h1>
         </AnimatePresence>
       </div>
-      <div className="flex items-center">
-        <div className="absolute bottom-16 left-[10%] transform -translate-x-1/2 z-30 flex gap-3">
+      {/* Navigation dots */}
+      <div className="absolute bottom-16 left-6 right-6 px-6 z-30 flex justify-between items-center">
+        {/* Dots on the left */}
+        <div className="flex gap-3">
           {bgImages.map((_, i) => (
             <button
               key={i}
@@ -86,7 +98,6 @@ const Hero: React.FC = () => {
                 i === index ? "bg-white shadow-lg" : "bg-black"
               }`}
             >
-              {/* Inner dot */}
               <span
                 className={`block rounded-full transition-all duration-300 shadow ${
                   i === index
@@ -98,19 +109,17 @@ const Hero: React.FC = () => {
           ))}
         </div>
 
-        {/* Arrows */}
-        <div className="absolute bottom-16 right-14 transform -translate-x-1/2 z-30 flex items-center gap-3">
+        {/* Arrows on the right */}
+        <div className="flex items-center gap-3">
           <button
             onClick={prevSlide}
             onMouseEnter={() => setHovered("left")}
             onMouseLeave={() => setHovered(null)}
-            className={`relative bg-[#edebe9] text-black shadow transition-all duration-300 ease-in-out
-    ${
-      hovered === "left"
-        ? "rounded-l-full rounded-r-2xl p-3"
-        : "rounded-full p-3"
-    }
-  `}
+            className={`relative bg-[#edebe9] text-black shadow transition-all duration-300 ease-in-out ${
+              hovered === "left"
+                ? "rounded-l-full rounded-r-2xl p-3"
+                : "rounded-full p-3"
+            }`}
             aria-label="Previous"
           >
             <div className="relative flex items-center gap-1">
@@ -135,8 +144,7 @@ const Hero: React.FC = () => {
               hovered === "right"
                 ? "rounded-r-full rounded-l-2xl p-3"
                 : "rounded-full p-3"
-            }
-  `}
+            }`}
             aria-label="Next"
           >
             <div className="relative flex items-center gap-1">

@@ -40,7 +40,7 @@ const Services: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 md:px-12">
+    <section className="py-20 px-4 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl md:text-3xl lg:text-6xl text-center mb-12">
           People making Technology work
@@ -89,13 +89,13 @@ const Services: React.FC = () => {
             );
           })}
         </div>
-        <div className="pt-32 pb-10 px-4 md:px-16">
-          <div className="flex items-center justify-between">
+        <div className="pt-32 pb-10 px-4 lg:px-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 lg:justify-between">
             <div>
-              <h2 className="text-xl md:text-3xl lg:text-6xl mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl lg:whitespace-nowrap mb-4">
                 IperHome’s Clients
               </h2>
-              <p className="text-lg">
+              <p className="neue-font text-[17px] leading-loose md:w-2/3 md:ml-4 lg:w-auto">
                 A list of our recent clients who loves our work!
               </p>
 
@@ -121,7 +121,7 @@ const Services: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div className="w-[450px] h-full rounded-xl overflow-hidden flex-shrink-0">
+            <div className="w-full md:max-w-xs lg:max-w-sm h-full rounded-xl overflow-hidden flex-shrink-0">
               <Image
                 unoptimized
                 src="/images/iperhomeclient.webp"

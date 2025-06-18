@@ -74,10 +74,10 @@ const Footer: React.FC = () => {
             individuals and corporations.
           </h5>
 
-         <SocialIcon bgColor={"#DDD0C8"}/>
+          <SocialIcon bgColor={"#DDD0C8"} />
         </div>
 
-        <div className="font-bold text-center mt-8">
+        <div className="text-center mt-8 neue-font">
           <p>&copy; {new Date().getFullYear()} Iper Home Ltd.</p>
         </div>
       </div>

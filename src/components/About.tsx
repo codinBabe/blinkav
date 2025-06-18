@@ -1,6 +1,5 @@
 "use client";
 
-import { Icons } from "@/utils/Icons";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -76,7 +75,7 @@ const AboutUs: React.FC = () => {
         </div>
 
         <div className="mt-20 w-full flex flex-col lg:flex-row items-center gap-20">
-          <div>
+          <div className="w-full">
             <h2 className="text-xl md:text-3xl lg:text-4xl mb-4">
               Why choose us?
             </h2>
@@ -87,7 +86,7 @@ const AboutUs: React.FC = () => {
               <li>Committed to exceptional customer experience</li>
             </ul>
           </div>
-          <div className="w-full lg:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0">
+          <div className="w-full lg:w-3/5 h-full rounded-xl overflow-hidden">
             <Image
               src={"/images/why-choose-us.webp"}
               alt="Why Choose Us"
@@ -111,9 +110,7 @@ const AboutUs: React.FC = () => {
           </div>
           <div className="w-full mt-12 relative">
             <Carousel
-              arrows={false}
-              customLeftArrow={<Icons.LeftArrow />}
-              customRightArrow={<Icons.RightArrow />}
+              arrows
               autoPlay
               autoPlaySpeed={3000}
               infinite
