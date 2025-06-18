@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "Helvetica Neue-LT";
   src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
@@ -34,9 +33,6 @@
 }
 
 /* Optional utility classes */
-.nav-font {
-  font-family: "Helvetica Neue", sans-serif;
-}
 .neue-font {
   font-family: "Helvetica Neue-LT", sans-serif;
 }
@@ -45,7 +41,7 @@
   line-height: 1.2;
   font-size: 16px;
   color: #000;
-  background-color: #EDEBE9
+  background-color: #edebe9;
 }
 /* SERVICES FILE */
 .perspective {

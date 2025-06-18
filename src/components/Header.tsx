@@ -2,10 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const pathname = usePathname();
+  console.log("Current Pathname:", pathname);
 
   const menu = [
     { label: "Home", href: "/" },
@@ -29,7 +32,13 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-transparent">
+    <header
+      className={`${
+        pathname === "/"
+          ? "absolute top-0 left-0 right-0 bg-transparent"
+          : "bg-[#edebe9]"
+      } p-5 z-50`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -42,7 +51,7 @@ const Header: React.FC = () => {
           </div>
 
           <nav>
-            <ul className="nav-font flex items-center space-x-8 relative">
+            <ul className="flex items-center space-x-8 relative">
               {menu.map((item, index) =>
                 item.dropdown ? (
                   <li
@@ -51,7 +60,7 @@ const Header: React.FC = () => {
                     onMouseEnter={() => setDropdownOpen(true)}
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
-                    <span className="inline-flex items-center">
+                    <span className="inline-flex items-center neue-font font-semibold leading-loose text-[15px]">
                       {item.label}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -66,13 +75,15 @@ const Header: React.FC = () => {
                     </span>
 
                     {isDropdownOpen && (
-                      <ul className="absolute left-0 top-full mt-2 w-56 bg-white shadow-lg z-10 space-y-3 rounded-md py-2">
+                      <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-md py-2">
                         {item.dropdown.map((subItem, subIdx) => (
-                          <li
-                            key={subIdx}
-                            className="px-4 py-2 hover:bg-gray-100"
-                          >
-                            <Link href={subItem.href}>{subItem.label}</Link>
+                          <li key={subIdx} className="px-3 py-2">
+                            <Link
+                              className="neue-font font-semibold leading-loose text-[15px]"
+                              href={subItem.href}
+                            >
+                              {subItem.label}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -80,7 +91,12 @@ const Header: React.FC = () => {
                   </li>
                 ) : (
                   <li key={index}>
-                    <Link href={item.href}>{item.label}</Link>
+                    <Link
+                      className="neue-font font-semibold leading-loose text-[15px]"
+                      href={item.href}
+                    >
+                      {item.label}
+                    </Link>
                   </li>
                 )
               )}

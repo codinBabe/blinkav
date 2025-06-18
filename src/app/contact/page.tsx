@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Iperhome",
+  title: "Contact - Iperhome",
   description:
     "Get in touch with Iperhome for inquiries, support, or feedback.",
 };
