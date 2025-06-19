@@ -71,3 +71,29 @@
   outline-width: 1px;
   outline-color: black;
 }
+
+.residential-bg,
+.workspace-bg,
+.audio-visual-bg,
+.security-bg {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.residential-bg {
+  background-image: url("/images/Residential-1.jpg");
+}
+
+.workspace-bg {
+  background-image: url("/images/Workspace-1.jpg");
+}
+
+.audio-visual-bg {
+  background-image: url("/images/Audio-visual.jpg");
+}
+
+.security-bg {
+  background-image: url("/images/SECURITY-PAGE.jpg");
+}

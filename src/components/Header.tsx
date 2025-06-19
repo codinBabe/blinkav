@@ -12,6 +12,13 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const noBgPaths =
+    pathname === "/" ||
+    pathname === "/services/residential-solutions" ||
+    pathname === "/services/workspace-solutions" ||
+    pathname === "/services/audio-visual-solutions" ||
+    pathname === "/services/security-solutions";
+
   const menu = [
     { label: "Home", href: "/" },
     {
@@ -21,7 +28,7 @@ const Header: React.FC = () => {
           label: "Residential Solutions",
           href: "/services/residential-solutions",
         },
-        { label: "Workplace Solutions", href: "/services/workplace-solutions" },
+        { label: "Workspace Solutions", href: "/services/workspace-solutions" },
         {
           label: "Audio Visual Solutions",
           href: "/services/audio-visual-solutions",
@@ -36,7 +43,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`${
-        pathname === "/"
+        noBgPaths
           ? "absolute top-0 left-0 right-0 bg-transparent"
           : "bg-[#edebe9]"
       } p-5 z-50`}
@@ -45,7 +52,7 @@ const Header: React.FC = () => {
         <div className="flex-shrink-0">
           <Image
             src={
-              pathname === "/"
+              noBgPaths
                 ? "/images/iper-logo-white.webp"
                 : "/images/iper-logo.webp"
             }
@@ -66,7 +73,7 @@ const Header: React.FC = () => {
               >
                 <span
                   className={`${
-                    pathname === "/" ? "text-white" : "text-black"
+                    noBgPaths ? "text-white" : "text-black"
                   } inline-flex items-center neue-font font-bold leading-[70px] text-[15px]`}
                 >
                   {item.label}
@@ -83,7 +90,7 @@ const Header: React.FC = () => {
                 </span>
 
                 {isDropdownOpen && (
-                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-md py-2">
+                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-xs py-2">
                     {item.dropdown.map((subItem, subIdx) => (
                       <li key={subIdx} className="px-3 py-2">
                         <Link
@@ -101,7 +108,7 @@ const Header: React.FC = () => {
               <Link
                 key={index}
                 className={`${
-                  pathname === "/" ? "text-white" : "text-black"
+                  noBgPaths ? "text-white" : "text-black"
                 } neue-font font-bold leading-[70px] text-[15px]`}
                 href={item.href}
               >
@@ -115,9 +122,7 @@ const Header: React.FC = () => {
         <div className="lg:hidden">
           <button onClick={() => setMobileMenuOpen(true)}>
             <Bars3Icon
-              className={`w-8 h-8 ${
-                pathname === "/" ? "text-white" : "text-black"
-              }`}
+              className={`w-8 h-8 ${noBgPaths ? "text-white" : "text-black"}`}
             />
           </button>
         </div>
@@ -187,7 +192,7 @@ const Header: React.FC = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6 pt-2">
-            <SocialIcon bgColor="" />
+            <SocialIcon bgColor="bg-none" />
           </div>
         </div>
       )}

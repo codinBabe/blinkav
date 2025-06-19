@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
 
   return (
     <section className="py-20 contact-bg">
-      <div className="max-w-6xl mx-auto px-4 md:px-12">
+      <div className="max-w-6xl mx-auto px-4 lg:px-12">
         <div className="flex flex-col items-center text-center mx-auto max-w-sm">
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">Get in Touch</h2>
           <p className="leading-loose mb-5">
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
           <SocialIcon bgColor="bg-[#DDD0C8]" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 sm:gap-x-4 md:gap-x-14 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 sm:gap-x-4 lg:gap-x-10 mt-12">
           {contactInfo.map((info, index) => {
             const isHovered = hoveredIndex === index;
 
@@ -99,7 +99,9 @@ const Contact: React.FC = () => {
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-3">
             Schedule a Consultation
           </h2>
-          <p className="neue-font leading-loose">We would love to hear from you!</p>
+          <p className="neue-font leading-loose">
+            We would love to hear from you!
+          </p>
         </div>
         <form className="neue-font max-w-xl mx-auto mt-6">
           <div className="grid grid-cols-1 gap-6">
