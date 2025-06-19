@@ -16,7 +16,7 @@ const SecuritySolution: React.FC = () => {
           Security Solutions
         </motion.h1>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="w-full flex flex-col md:flex-row items-center gap-10 py-20">
           <div className="w-full md:w-[50%] h-full rounded-xl overflow-hidden">
             <Image

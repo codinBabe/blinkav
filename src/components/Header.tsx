@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         noBgPaths
           ? "absolute top-0 left-0 right-0 bg-transparent"
           : "bg-[#edebe9]"
-      } p-5 z-50`}
+      } p-6 z-50`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex-shrink-0">

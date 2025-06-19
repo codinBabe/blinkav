@@ -16,7 +16,7 @@ const ResidentialSolution: React.FC = () => {
           Residential Solutions
         </motion.h1>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col md:flex-row items-center gap-20 py-20">
           <div className="w-full max-w-2xl h-full rounded-xl overflow-hidden">
             <Image
