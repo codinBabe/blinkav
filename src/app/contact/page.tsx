@@ -1,7 +1,5 @@
 import { Metadata } from "next";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Contact - Iperhome",
@@ -10,11 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return (
-    <>
-      <Header />
-      <Contact />
-      <Footer />
-    </>
-  );
+  return <Contact />;
 }

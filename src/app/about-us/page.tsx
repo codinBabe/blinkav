@@ -1,6 +1,4 @@
 import AboutUs from "@/components/About";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 export const metadata = {
   title: "About Us - Iperhome",
@@ -9,11 +7,5 @@ export const metadata = {
 };
 
 export default function AboutUsPage() {
-  return (
-    <>
-      <Header />
-      <AboutUs />
-      <Footer />
-    </>
-  );
+  return <AboutUs />;
 }

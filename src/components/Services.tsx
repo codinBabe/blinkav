@@ -3,6 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Motion from "./global/motion";
+import { slideInLeft, slideInRight } from "@/animations";
 
 const solutions = [
   {
@@ -40,13 +42,17 @@ const Services: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 lg:px-12">
+    <section className="py-20 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-xl md:text-3xl lg:text-6xl text-center mb-12">
+        <Motion
+          as={"h2"}
+          variants={slideInRight}
+          className="text-[50px] leading-tight text-center mb-12"
+        >
           People making Technology work
-        </h2>
+        </Motion>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {solutions.map((item, idx) => {
             const isHovered = hoveredIndex === idx;
 
@@ -54,7 +60,7 @@ const Services: React.FC = () => {
               <Link
                 href={item.route}
                 key={idx}
-                className="relative group h-80 md:h-96 w-[280px] mx-auto perspective"
+                className="relative group w-full h-96 mx-auto perspective"
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -81,7 +87,7 @@ const Services: React.FC = () => {
 
                 {/* Text overlay (stays static) */}
                 <div className="absolute inset-0 z-10 flex items-center justify-center px-2 text-white text-center">
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+                  <h3 className="text-[40px] leading-tight font-semibold">
                     {item.title}
                   </h3>
                 </div>
@@ -92,17 +98,26 @@ const Services: React.FC = () => {
         <div className="pt-32 pb-10 px-4 lg:px-16">
           <div className="flex flex-col md:flex-row items-center gap-8 lg:justify-between">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl lg:whitespace-nowrap mb-4">
+              <Motion
+                as={"h2"}
+                variants={slideInLeft}
+                className="text-3xl md:text-4xl lg:text-5xl lg:whitespace-nowrap mb-4"
+              >
                 IperHome’s Clients
-              </h2>
-              <p className="neue-font text-[17px] leading-loose md:w-2/3 md:ml-4 lg:w-auto">
+              </Motion>
+              <Motion
+                as={"p"}
+                variants={slideInLeft}
+                className="neue-font text-[17px] leading-loose md:w-2/3 md:ml-4 lg:w-auto"
+              >
                 A list of our recent clients who loves our work!
-              </p>
+              </Motion>
 
               <ul className="flex flex-col flex-wrap gap-4 mt-8">
                 {clients.map((client, index) => (
                   <motion.li
                     key={index}
+                    variants={slideInRight}
                     className="flex item-start text-lg transition-transform duration-300"
                     whileHover={{ x: 10 }}
                   >

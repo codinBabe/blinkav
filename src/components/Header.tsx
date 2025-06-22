@@ -4,13 +4,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SocialIcon from "./Social-Icon";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setMobileDropdownOpen(false);
+  }, [pathname]);
 
   const noBgPaths =
     pathname === "/" ||
@@ -48,8 +54,8 @@ const Header: React.FC = () => {
           : "bg-[#edebe9]"
       } p-6 z-50`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex-shrink-0">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 md:px-6">
+        <div className="">
           <Image
             src={
               noBgPaths
@@ -57,7 +63,7 @@ const Header: React.FC = () => {
                 : "/images/iper-logo.webp"
             }
             alt="Company Logo"
-            width={250}
+            width={300}
             height={50}
           />
         </div>
@@ -119,7 +125,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Hamburger */}
-        <div className="lg:hidden">
+        <div className="lg:hidden mt-2">
           <button onClick={() => setMobileMenuOpen(true)}>
             <Bars3Icon
               className={`w-8 h-8 ${noBgPaths ? "text-white" : "text-black"}`}
@@ -130,7 +136,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="w-4/5 fixed top-0 right-0 h-full z-50 bg-white flex flex-col items-center justify-start p-6 pt-10 space-y-6 shadow-lg">
+        <div className="w-4/5 fixed top-0 right-0 h-full z-50 bg-white flex flex-col p-6 pt-10 shadow-lg overflow-y-auto">
           {/* Close Button */}
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -140,36 +146,44 @@ const Header: React.FC = () => {
           </button>
 
           {/* Logo */}
-          <Image
-            src="/images/iper-logo.webp"
-            alt="Logo"
-            width={400}
-            height={50}
-          />
+          <div className="flex justify-center">
+            <Image
+              src="/images/iper-logo.webp"
+              alt="Logo"
+              width={300}
+              height={50}
+            />
+          </div>
 
           {/* Mobile Links */}
-          <nav className="w-full flex flex-col items-center space-y-7 mt-6">
+          <nav className="w-full flex flex-col mt-10 space-y-2">
             {menu.map((item, idx) =>
               item.dropdown ? (
-                <div key={idx} className="w-full group">
-                  <span className="cursor-pointer neue-font font-bold text-[15px] flex justify-center items-center gap-1 border-b border-b-[#dddddd]">
-                    {item.label}
+                <div key={idx} className="w-full text-center">
+                  <button
+                    onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
+                    className="w-full flex justify-between items-center neue-font font-bold text-[15px] py-2.5 border-b border-b-[#dddddd]"
+                  >
+                    <span className="w-full text-center">{item.label}</span>
                     <svg
-                      className="w-4 h-4"
+                      className={`w-6 h-6 transition-transform ${
+                        isMobileDropdownOpen ? "rotate-180" : ""
+                      }`}
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
                     >
                       <path d="M6 9l6 6 6-6" />
                     </svg>
-                  </span>
-                  {isDropdownOpen && (
-                    <ul className="mt-2 space-y-4">
+                  </button>
+                  {isMobileDropdownOpen && (
+                    <ul className="mt-2 space-y-2">
                       {item.dropdown.map((sub, i) => (
                         <li key={i}>
                           <Link
                             href={sub.href}
-                            className="neue-font text-[15px] font-bold border-b border-b-[#dddddd]"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block neue-font text-[15px] font-bold py-2.5 border-b border-b-[#dddddd]"
                           >
                             {sub.label}
                           </Link>
@@ -182,7 +196,8 @@ const Header: React.FC = () => {
                 <Link
                   key={idx}
                   href={item.href}
-                  className="neue-font font-bold text-[15px] border-b border-b-[#dddddd]"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="neue-font font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
                 >
                   {item.label}
                 </Link>
@@ -191,8 +206,8 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Social Icons */}
-          <div className="flex justify-center gap-6 pt-2">
-            <SocialIcon bgColor="bg-none" />
+          <div className="flex justify-center gap-6 mt-8">
+            <SocialIcon bgColor="bg-transparent" />
           </div>
         </div>
       )}

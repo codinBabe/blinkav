@@ -1,35 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import Motion from "./global/motion";
+import { slideInBottom } from "@/animations";
 
 const AudioVisualSolution: React.FC = () => {
   return (
     <section>
-      <div className="audio-visual-bg relative w-full h-[80vh] md:h-[70vh] lg:h-[60vh] overflow-hidden flex items-center justify-center text-center">
-        <motion.h1
-          className="text-white text-[60px] md:leading-tight"
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+      <div className="audio-visual-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+        <Motion
+          as="h1"
+          variants={slideInBottom}
+          className="text-white text-[60px] md:leading-loose lg:text-[65px]"
         >
           Audio Visual Solutions
-        </motion.h1>
+        </Motion>
       </div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="w-full flex flex-col md:flex-row items-center gap-10 py-20">
-          <div className="w-full md:w-[50%] h-full rounded-xl overflow-hidden">
-            <Image
-              src="/images/Audio-visual-1.webp"
-              alt="Audio Visual Solutions"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 py-28">
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+          >
             <p>
               Audiovisual solutions encompass a range of technologies and
               services designed to enhance audio and visual experiences in
@@ -46,11 +39,30 @@ const AudioVisualSolution: React.FC = () => {
               spaces, and other venues to create captivating experiences for the
               audience.
             </p>
-          </div>
+          </Motion>
+
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/Audio-visual-1.webp"
+              alt="Audio Visual Solutions"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
+          </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-20">
-          <div className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose">
+        <div className="flex flex-col md:flex-row items-center gap-10 pb-28">
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+          >
             <p>
               Audiovisual solutions also involve content creation and
               management. They enable the production and distribution of
@@ -74,8 +86,12 @@ const AudioVisualSolution: React.FC = () => {
               facilitate remote meetings, and provide visually appealing
               displays for advertising and informational purposes
             </p>
-          </div>
-          <div className="w-full md:w-[50%] h-full rounded-xl overflow-hidden">
+          </Motion>
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
             <Image
               src="/images/Audio-visual-2.webp"
               alt="Audio Visual Solutions"
@@ -84,11 +100,15 @@ const AudioVisualSolution: React.FC = () => {
               height={100}
               className="w-full h-full object-cover"
             />
-          </div>
+          </Motion>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10 pb-20">
-          <div className="w-full md:w-[50%] h-full rounded-xl overflow-hidden">
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
             <Image
               src="/images/Audio-visual-3.webp"
               alt="Audio Visual Solution"
@@ -97,8 +117,12 @@ const AudioVisualSolution: React.FC = () => {
               height={100}
               className="w-full h-full object-cover"
             />
-          </div>
-          <div className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose">
+          </Motion>
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+          >
             <p>
               In the entertainment industry, audiovisual solutions are employed
               in theaters, stadiums, and theme parks to create captivating
@@ -112,7 +136,7 @@ const AudioVisualSolution: React.FC = () => {
               multimedia content, virtual simulations, and interactive displays
               to enhance learning experiences and improve information retention
             </p>
-          </div>
+          </Motion>
         </div>
       </div>
     </section>

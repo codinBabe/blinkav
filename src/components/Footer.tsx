@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="py-20 px-4 md:px-12 border-t border-t-black">
+    <footer className="py-20 px-4 md:px-10 lg:px-12 border-t border-t-black">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <Image

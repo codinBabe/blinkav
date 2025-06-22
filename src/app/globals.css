@@ -32,7 +32,6 @@
   font-display: swap;
 }
 
-/* Optional utility classes */
 .neue-font {
   font-family: "Helvetica Neue-LT", sans-serif;
 }
@@ -43,6 +42,7 @@
   color: #000;
   background-color: #edebe9;
 }
+
 /* SERVICES FILE */
 .perspective {
   perspective: 1000px;
@@ -59,11 +59,13 @@
 .rotateY-180 {
   transform: rotateY(180deg);
 }
+/* END OF SERVICE FILE */
 
 .contact-bg {
   background-image: url("/images/blob-grad.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .input-dotted:focus {
@@ -76,8 +78,10 @@
 .workspace-bg,
 .audio-visual-bg,
 .security-bg {
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -96,4 +100,17 @@
 
 .security-bg {
   background-image: url("/images/SECURITY-PAGE.jpg");
+}
+
+::selection {
+  background-color: #ddd0c8;
+}
+
+@media (max-width: 768px) {
+  .residential-bg,
+  .workspace-bg,
+  .audio-visual-bg,
+  .security-bg {
+    background-attachment: scroll;
+  }
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Iper Home",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="body-font antialiased">{children}</body>
+      <body className="body-font antialiased">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

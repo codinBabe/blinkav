@@ -4,6 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import SocialIcon from "./Social-Icon";
+import ContactForm from "./forms/contact-form";
+import Motion from "./global/motion";
+import { slideInBottom } from "@/animations";
 
 const Contact: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -28,24 +31,28 @@ const Contact: React.FC = () => {
 
   return (
     <section className="py-20 contact-bg">
-      <div className="max-w-6xl mx-auto px-4 lg:px-12">
-        <div className="flex flex-col items-center text-center mx-auto max-w-sm">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <Motion
+          as={"div"}
+          variants={slideInBottom}
+          className="flex flex-col items-center text-center mx-auto max-w-sm"
+        >
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">Get in Touch</h2>
           <p className="leading-loose mb-5">
             If you have any questions, feedback, or suggestions, we would love
             to hear from you.
           </p>
           <SocialIcon bgColor="bg-[#DDD0C8]" />
-        </div>
+        </Motion>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 sm:gap-x-4 lg:gap-x-10 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
           {contactInfo.map((info, index) => {
             const isHovered = hoveredIndex === index;
 
             return (
               <div
                 key={index}
-                className="relative group w-full sm:w-52 md:w-60 lg:w-[310px] xl:w-[350px] h-72 mx-auto perspective"
+                className="relative group w-full h-72 mx-auto perspective"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -82,7 +89,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-18">
+      <div className="mt-28">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
           width="100%"
@@ -93,46 +100,23 @@ const Contact: React.FC = () => {
         ></iframe>
       </div>
 
-      <div className="max-w-xl mx-auto py-20 px-4 md:px-12">
+      <div className="w-full md:w-[75%] xl:w-[43%] mx-auto py-20 px-6 md:px-12">
         {/* form */}
         <div className="text-center">
-          <h2 className="text-xl md:text-3xl lg:text-6xl mb-3">
+          <h2 className="text-[26px] md:text-[30px] lg:text-[60px] leading-tight mb-3">
             Schedule a Consultation
           </h2>
-          <p className="neue-font leading-loose">
-            We would love to hear from you!
-          </p>
-        </div>
-        <form className="neue-font max-w-xl mx-auto mt-6">
-          <div className="grid grid-cols-1 gap-6">
-            <input
-              type="text"
-              placeholder="Your Full Name"
-              className="p-3 bg-white input-dotted outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="p-3 bg-white input-dotted outline-none"
-            />
-            <input
-              type="tel"
-              placeholder="Your Contact Number"
-              className="p-4 bg-white input-dotted outline-none"
-            />
-          </div>
-          <textarea
-            placeholder="Your Message"
-            className="w-full mt-6 p-3 bg-white input-dotted outline-none"
-            rows={5}
-          ></textarea>
-          <button
-            type="submit"
-            className="mt-6 px-6 py-2 bg-[#DDD0C8] text-black font-semibold leading-loose rounded-lg transition-colors"
+          <Motion
+            as={"p"}
+            variants={slideInBottom}
+            className="neue-font leading-loose"
           >
-            Submit
-          </button>
-        </form>
+            We would love to hear from you!
+          </Motion>
+        </div>
+        <Motion as={"div"} variants={slideInBottom}>
+          <ContactForm />
+        </Motion>
       </div>
     </section>
   );

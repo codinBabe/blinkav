@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import ResidentialSolution from "@/components/Residential";
 
 export const metadata: Metadata = {
@@ -10,11 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function ResidentialSolutionsPage() {
-  return (
-    <>
-      <Header />
-      <ResidentialSolution />
-      <Footer />
-    </>
-  );
+  return <ResidentialSolution />;
 }
