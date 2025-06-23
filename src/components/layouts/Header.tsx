@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialIcon from "../Social-Icon";
-import useScrollToTop from "@/app/hooks/use-scroll-to-top";
+import useScrollToTop from "@/hooks/use-scroll-to-top";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
