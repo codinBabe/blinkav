@@ -1,6 +1,9 @@
 "use client";
 
-import { CustomLeftArrow, CustomRightArrow } from "@/utils/Custom-Arrow";
+import {
+  CustomLeftArrow,
+  CustomRightArrow,
+} from "@/components/icons/Custom-Arrow";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

@@ -5,7 +5,7 @@ import {
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import SocialIcon from "../Social-Icon";
+import SocialIcon from "../icons/Social-Icon";
 
 const Footer: React.FC = () => {
   const icons = [

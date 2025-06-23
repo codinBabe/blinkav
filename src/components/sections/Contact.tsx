@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
-import SocialIcon from "../Social-Icon";
+import SocialIcon from "../icons/Social-Icon";
 import ContactForm from "../forms/contact-form";
 import Motion from "../global/motion";
 import { containerStagger, slideInBottom } from "@/animations";
