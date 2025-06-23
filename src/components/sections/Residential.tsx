@@ -17,7 +17,7 @@ const ResidentialSolution: React.FC = () => {
         </Motion>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-20 py-20">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-20 my-28">
           <div>
             <Motion
               as={"h2"}
@@ -64,7 +64,7 @@ const ResidentialSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-20 pb-20 mt-8">
+        <div className="flex flex-col md:flex-row items-center gap-20 mb-20">
           <div>
             <Motion
               as={"h2"}

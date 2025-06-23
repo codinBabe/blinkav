@@ -94,6 +94,7 @@ const Hero: React.FC = () => {
             <button
               key={i}
               onClick={() => goToSlide(i)}
+              aria-label="Go to slide"
               className={`relative w-5 h-5 rounded-full flex items-center justify-center transition-all ${
                 i === index ? "bg-white shadow-lg" : "bg-black"
               }`}

@@ -17,7 +17,7 @@ const AudioVisualSolution: React.FC = () => {
         </Motion>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 py-28">
+        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-20">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -57,7 +57,7 @@ const AudioVisualSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-28">
+        <div className="audio-bg flex flex-col md:flex-row items-center gap-10 my-28">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -90,7 +90,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+            className="w-full mr-16 mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Audio-visual-2.webp"
@@ -103,7 +103,7 @@ const AudioVisualSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-20">
+        <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
           <Motion
             as={"div"}
             variants={slideInBottom}

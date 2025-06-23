@@ -81,9 +81,8 @@ const AboutUs: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="mt-20 w-full flex flex-col lg:flex-row items-center gap-20">
-          <div className="w-full lg:w-2/5 h-full rounded-xl overflow-hidden flex-shrink-0">
-            {/* overlapping image effect here */}
+        <div className="about-bg mt-28 w-full h-auto flex flex-col lg:flex-row items-center gap-20">
+          <div className="ml-20 w-[30%] mt-20 h-96 rounded-xl overflow-hidden flex-shrink-0">
             <Image
               src={"/images/what-we-offer.webp"}
               alt="What We Offer"

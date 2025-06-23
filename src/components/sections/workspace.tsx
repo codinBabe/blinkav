@@ -17,7 +17,7 @@ const WorkspaceSolution: React.FC = () => {
         </Motion>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
-        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 py-28">
+        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-28">
           <div className="md:w-[46%] space-y-6">
             <div>
               <Motion
@@ -82,7 +82,7 @@ const WorkspaceSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-28">
+        <div className="flex flex-col md:flex-row items-center gap-10 my-28">
           <div className="md:w-[47%]">
             <Motion
               as={"h2"}
@@ -121,7 +121,7 @@ const WorkspaceSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-20">
+        <div className="flex flex-col md:flex-row items-center gap-10 mb-28">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -160,7 +160,7 @@ const WorkspaceSolution: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 pb-20">
+        <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
           <div className="md:w-[47%]">
             <Motion
               as={"h2"}

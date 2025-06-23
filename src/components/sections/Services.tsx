@@ -125,8 +125,8 @@ const Services: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="pt-32 pb-10 px-4 lg:px-16">
-          <div className="flex flex-col md:flex-row items-center gap-8 lg:justify-between">
+        <div className="client-bg mt-28 pb-10 px-4 lg:px-16">
+          <div className="flex flex-col md:flex-row items-center gap-4 lg:justify-between">
             <div>
               <motion.h2
                 initial={"hidden"}
@@ -176,7 +176,12 @@ const Services: React.FC = () => {
                 ))}
               </motion.ul>
             </div>
-            <div className="w-full md:max-w-xs lg:max-w-sm h-full rounded-xl overflow-hidden flex-shrink-0">
+            <motion.div
+              variants={slideInBottom}
+              initial="hidden"
+              whileInView={"visible"}
+              className="mr-10 w-[40%] mt-20 h-full rounded-xl overflow-hidden flex-shrink-0"
+            >
               <Image
                 unoptimized
                 src="/images/iperhomeclient.webp"
@@ -185,7 +190,7 @@ const Services: React.FC = () => {
                 height={50}
                 className="w-full h-full object-cover"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
