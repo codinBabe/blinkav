@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Motion from "./global/motion";
+import Motion from "../global/motion";
 import { slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const WorkspaceSolution: React.FC = () => {
@@ -11,7 +11,7 @@ const WorkspaceSolution: React.FC = () => {
         <Motion
           as="h1"
           variants={slideInBottom}
-          className="text-white text-[60px] md:leading-loose lg:text-[65px]"
+          className="sangBlue-font text-white text-[60px] md:leading-loose lg:text-[65px]"
         >
           Workspace Solutions
         </Motion>
@@ -23,7 +23,7 @@ const WorkspaceSolution: React.FC = () => {
               <Motion
                 as={"h2"}
                 variants={slideInBottom}
-                className="text-[40px] leading-tight mb-4"
+                className="sangBlue-font text-[40px] leading-tight mb-4"
               >
                 Digital Signage
               </Motion>
@@ -31,7 +31,7 @@ const WorkspaceSolution: React.FC = () => {
               <Motion
                 as={"p"}
                 variants={slideInBottom}
-                className="neue-font text-[17px] leading-loose"
+                className="text-[17px] leading-loose"
               >
                 Our workplace solutions leverage technology to optimize and
                 enhance productivity in the workplace. By integrating various
@@ -46,14 +46,14 @@ const WorkspaceSolution: React.FC = () => {
               <Motion
                 as={"h3"}
                 variants={slideInBottom}
-                className="text-xl md:text-2xl mb-4 leading-tight"
+                className="sangBlue-font text-xl md:text-2xl mb-4 leading-tight"
               >
                 One touch experience
               </Motion>
               <Motion
                 as={"p"}
                 variants={slideInBottom}
-                className="neue-font text-[17px] leading-loose"
+                className="text-[17px] leading-loose"
               >
                 One key aspect of smart office solutions is automation. They
                 automate routine tasks like adjusting lighting, controlling
@@ -87,14 +87,14 @@ const WorkspaceSolution: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInLeft}
-              className="text-xl md:text-[40px] leading-tight mb-4"
+              className="sangBlue-font text-xl md:text-[40px] leading-tight mb-4"
             >
               Audio Visual solutions
             </Motion>
             <Motion
               as={"p"}
               variants={slideInBottom}
-              className="neue-font text-[17px] leading-loose"
+              className="text-[17px] leading-loose"
             >
               Collaboration is another area where smart office solutions excel.
               They enable seamless communication and information sharing among
@@ -140,14 +140,14 @@ const WorkspaceSolution: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInRight}
-              className="text-xl md:text-[40px] leading-tight mb-4"
+              className="sangBlue-font text-xl md:text-[40px] leading-tight mb-4"
             >
               Security and Access control
             </Motion>
             <Motion
               as={"p"}
               variants={slideInBottom}
-              className="neue-font text-[17px] leading-loose"
+              className="text-[17px] leading-loose"
             >
               Furthermore, smart office solutions enhance security and access
               control. Advanced authentication methods such as biometric
@@ -165,14 +165,14 @@ const WorkspaceSolution: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInLeft}
-              className="text-xl md:text-[40px] leading-tight mb-4"
+              className="sangBlue-font text-xl md:text-[40px] leading-tight mb-4"
             >
               Small to large meeting rooms
             </Motion>
             <Motion
               as={"p"}
               variants={slideInBottom}
-              className="neue-font text-[17px] leading-loose"
+              className="text-[17px] leading-loose"
             >
               Overall, smart office solutions revolutionize the modern workplace
               by creating an intelligent ecosystem that maximizes efficiency,

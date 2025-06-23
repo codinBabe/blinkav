@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import SocialIcon from "./Social-Icon";
+import SocialIcon from "../Social-Icon";
+import useScrollToTop from "@/app/hooks/use-scroll-to-top";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const showScroll = useScrollToTop();
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -55,7 +57,7 @@ const Header: React.FC = () => {
       } p-6 z-50`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 md:px-6">
-        <div className="">
+        <Link href={"/"}>
           <Image
             src={
               noBgPaths
@@ -66,7 +68,7 @@ const Header: React.FC = () => {
             width={300}
             height={50}
           />
-        </div>
+        </Link>
 
         <nav className="hidden lg:flex items-center space-x-8">
           {menu.map((item, index) =>
@@ -80,7 +82,7 @@ const Header: React.FC = () => {
                 <span
                   className={`${
                     noBgPaths ? "text-white" : "text-black"
-                  } inline-flex items-center neue-font font-bold leading-[70px] text-[15px]`}
+                  } inline-flex items-center font-bold leading-[70px] text-[15px]`}
                 >
                   {item.label}
                   <svg
@@ -100,7 +102,7 @@ const Header: React.FC = () => {
                     {item.dropdown.map((subItem, subIdx) => (
                       <li key={subIdx} className="px-3 py-2">
                         <Link
-                          className="neue-font font-bold leading-loose text-[15px]"
+                          className="font-bold leading-loose text-[15px]"
                           href={subItem.href}
                         >
                           {subItem.label}
@@ -115,7 +117,7 @@ const Header: React.FC = () => {
                 key={index}
                 className={`${
                   noBgPaths ? "text-white" : "text-black"
-                } neue-font font-bold leading-[70px] text-[15px]`}
+                } font-bold leading-[70px] text-[15px]`}
                 href={item.href}
               >
                 {item.label}
@@ -146,14 +148,14 @@ const Header: React.FC = () => {
           </button>
 
           {/* Logo */}
-          <div className="flex justify-center">
+          <Link href={"/"} className="flex justify-center">
             <Image
               src="/images/iper-logo.webp"
               alt="Logo"
               width={300}
               height={50}
             />
-          </div>
+          </Link>
 
           {/* Mobile Links */}
           <nav className="w-full flex flex-col mt-10 space-y-2">
@@ -162,7 +164,7 @@ const Header: React.FC = () => {
                 <div key={idx} className="w-full text-center">
                   <button
                     onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
-                    className="w-full flex justify-between items-center neue-font font-bold text-[15px] py-2.5 border-b border-b-[#dddddd]"
+                    className="w-full flex justify-between items-center font-bold text-[15px] py-2.5 border-b border-b-[#dddddd]"
                   >
                     <span className="w-full text-center">{item.label}</span>
                     <svg
@@ -183,7 +185,7 @@ const Header: React.FC = () => {
                           <Link
                             href={sub.href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className="block neue-font text-[15px] font-bold py-2.5 border-b border-b-[#dddddd]"
+                            className="block text-[15px] font-bold py-2.5 border-b border-b-[#dddddd]"
                           >
                             {sub.label}
                           </Link>
@@ -197,7 +199,7 @@ const Header: React.FC = () => {
                   key={idx}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="neue-font font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
+                  className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
                 >
                   {item.label}
                 </Link>
@@ -210,6 +212,28 @@ const Header: React.FC = () => {
             <SocialIcon bgColor="bg-transparent" />
           </div>
         </div>
+      )}
+      {showScroll && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-[9999] bg-black p-2 rounded shadow-md transition-opacity duration-300 hover:opacity-80"
+          aria-label="Scroll to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 15l7-7 7 7"
+            />
+          </svg>
+        </button>
       )}
     </header>
   );

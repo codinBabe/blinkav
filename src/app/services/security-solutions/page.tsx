@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import SecuritySolution from "@/components/Security";
+import SecuritySolution from "@/components/sections/Security";
 
 export const metadata: Metadata = {
   title: "Security Solutions - Iperhome",

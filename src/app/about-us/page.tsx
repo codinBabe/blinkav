@@ -1,4 +1,4 @@
-import AboutUs from "@/components/About";
+import AboutUs from "@/components/sections/About";
 
 export const metadata = {
   title: "About Us - Iperhome",

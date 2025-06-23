@@ -4,7 +4,7 @@ import { CustomLeftArrow, CustomRightArrow } from "@/utils/Custom-Arrow";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Motion from "./global/motion";
+import Motion from "../global/motion";
 import { slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const partnerImages = [
@@ -38,15 +38,15 @@ const AboutUs: React.FC = () => {
           <div>
             <Motion
               as={"h1"}
-              variants={slideInBottom}
-              className="text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
+              variants={slideInLeft}
+              className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
             >
               About us
             </Motion>
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="neue-font space-y-4 leading-loose text-[17px]"
+              className="space-y-4 leading-loose text-[17px]"
             >
               <p>
                 Since 2016, Iper Home LTD is a company dedicated to improving
@@ -94,14 +94,14 @@ const AboutUs: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="text-xl md:text-3xl lg:text-4xl mb-4"
+              className="sangBlue-font text-xl md:text-3xl lg:text-4xl mb-4"
             >
               What we offer?
             </Motion>
             <Motion
               as={"p"}
               variants={slideInBottom}
-              className="neue-font leading-loose text-[17px]"
+              className="leading-loose text-[17px]"
             >
               As a collective group, we offer global consulting to assist our
               clients in planning, development, design, construction, operation,
@@ -119,14 +119,14 @@ const AboutUs: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="text-xl md:text-3xl lg:text-4xl mb-4"
+              className="sangBlue-font text-xl md:text-3xl lg:text-4xl mb-4"
             >
               Why choose us?
             </Motion>
             <Motion
               as={"ul"}
               variants={slideInBottom}
-              className="neue-font leading-loose text-[17px] list-disc pl-12"
+              className="leading-loose text-[17px] list-disc pl-12"
             >
               <li>Dedicated support team</li>
               <li>Extron, Leviton & Creston certified.</li>
@@ -156,14 +156,14 @@ const AboutUs: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInLeft}
-              className="text-[40px] leading-loose lg:text-6xl"
+              className="sangBlue-font text-[40px] leading-loose lg:text-6xl"
             >
               Our Partners
             </Motion>
             <Motion
               as={"p"}
               variants={slideInRight}
-              className="md:w-[60%] neue-font leading-loose text-[17px]"
+              className="md:w-[60%] leading-loose text-[17px]"
             >
               We have partnered with the best brands and leading product
               manufacturers to ensure our solutions meets global standards and
@@ -208,10 +208,10 @@ const AboutUs: React.FC = () => {
 
         <div className="w-full my-10 bg-[#DDD0C8] px-8 py-6 md:px-14 md:py-18 rounded-3xl flex flex-col md:flex-row items-center">
           <Motion as={"div"} variants={slideInLeft}>
-            <h2 className="text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-5">
+            <h2 className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-5">
               E-Brochures
             </h2>
-            <p className="neue-font leading-loose text-[17px] md:w-[60%]">
+            <p className="leading-loose text-[17px] md:w-[60%]">
               A list of brochures and promotional materials to make you get more
               clarity about our company and products
             </p>
@@ -222,7 +222,7 @@ const AboutUs: React.FC = () => {
             variants={slideInRight}
             className="flex-1 flex flex-col items-center gap-4"
           >
-            <button className="w-full neue-font text-white text-lg flex items-center justify-center gap-1 bg-black px-12 py-3.5 rounded-md hover:bg-white hover:text-black transition-colors">
+            <button className="w-full text-white text-lg flex items-center justify-center gap-1 bg-black px-12 py-3.5 rounded-md hover:bg-white hover:text-black transition-colors">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 640 512"

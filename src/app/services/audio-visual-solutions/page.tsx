@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import AudioVisualSolution from "@/components/Audio-Visual";
+import AudioVisualSolution from "@/components/sections/Audio-Visual";
 
 export const metadata: Metadata = {
   title: "Audio Visual Solutions - Iperhome",

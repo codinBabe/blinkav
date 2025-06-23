@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Motion from "./global/motion";
+import Motion from "../global/motion";
 import { slideInBottom } from "@/animations";
 
 const AudioVisualSolution: React.FC = () => {
@@ -11,7 +11,7 @@ const AudioVisualSolution: React.FC = () => {
         <Motion
           as="h1"
           variants={slideInBottom}
-          className="text-white text-[60px] md:leading-loose lg:text-[65px]"
+          className="sangBlue-font text-white text-[60px] md:leading-loose lg:text-[65px]"
         >
           Audio Visual Solutions
         </Motion>
@@ -21,7 +21,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Audiovisual solutions encompass a range of technologies and
@@ -61,7 +61,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Audiovisual solutions also involve content creation and
@@ -121,7 +121,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               In the entertainment industry, audiovisual solutions are employed

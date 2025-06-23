@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         <AnimatePresence mode="wait">
           <motion.h1
             key={bgTexts[index]}
-            className="text-white text-4xl md:text-6xl md:leading-tight lg:text-8xl font-bold lg:whitespace-nowrap"
+            className="sangBlue-font text-white text-4xl md:text-6xl md:leading-tight lg:text-8xl font-bold lg:whitespace-nowrap"
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 0 }}
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
         </AnimatePresence>
       </div>
       {/* Navigation dots */}
-      <div className="absolute bottom-16 left-6 right-6 px-6 z-30 flex justify-between items-center">
+      <div className="absolute bottom-16 left-6 right-6 md:px-6 z-30 flex justify-between items-center">
         {/* Dots on the left */}
         <div className="flex gap-3">
           {bgImages.map((_, i) => (
@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
             aria-label="Previous"
           >
             <div className="relative flex items-center gap-1">
-              <ChevronLeftIcon className="w-6 h-6 z-10" />
+              <ChevronLeftIcon className="w-4 h-4 md:w-6 md:h-6 z-10" />
               {hovered === "left" && (
                 <motion.span
                   className="h-[2px] bg-black origin-left -ml-5"
@@ -157,7 +157,7 @@ const Hero: React.FC = () => {
                   transition={{ duration: 0.3 }}
                 />
               )}
-              <ChevronRightIcon className="w-6 h-6 z-10" />
+              <ChevronRightIcon className="w-4 h-4 md:w-6 md:h-6 z-10" />
             </div>
           </button>
         </div>

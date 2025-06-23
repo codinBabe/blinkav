@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Motion from "./global/motion";
+import Motion from "../global/motion";
 import { slideInBottom, slideInLeft } from "@/animations";
 
 const SecuritySolution: React.FC = () => {
@@ -11,7 +11,7 @@ const SecuritySolution: React.FC = () => {
         <Motion
           as="h1"
           variants={slideInLeft}
-          className="text-white text-[60px] md:leading-loose lg:text-[65px]"
+          className="sangBlue-font text-white text-[60px] md:leading-loose lg:text-[65px]"
         >
           Security Solutions
         </Motion>
@@ -21,7 +21,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Smart security solutions leverage advanced technologies to enhance
@@ -59,7 +59,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Another aspect of smart security solutions is access control. They
@@ -112,7 +112,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 neue-font text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Furthermore, smart security solutions enable centralized

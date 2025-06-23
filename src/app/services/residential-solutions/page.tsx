@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import ResidentialSolution from "@/components/Residential";
+import ResidentialSolution from "@/components/sections/Residential";
 
 export const metadata: Metadata = {
   title: "Residential Solutions - Iperhome",

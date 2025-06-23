@@ -32,11 +32,11 @@
   font-display: swap;
 }
 
-.neue-font {
-  font-family: "Helvetica Neue-LT", sans-serif;
+.sangBlue-font {
+  font-family: "SangBleu Sans", sans-serif;
 }
 .body-font {
-  font-family: "SangBleu Sans", sans-serif;
+  font-family: "Helvetica Neue-LT", sans-serif;
   line-height: 1.2;
   font-size: 16px;
   color: #000;
@@ -46,6 +46,13 @@
 /* SERVICES FILE */
 .perspective {
   perspective: 1000px;
+  z-index: 0;
+}
+
+.fix-3d-parent {
+  transform-style: flat;
+  backface-visibility: visible;
+  will-change: transform;
 }
 
 .preserve-3d {

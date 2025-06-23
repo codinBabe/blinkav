@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-
-import WorkspaceSolution from "@/components/Workspace";
+import WorkspaceSolution from "@/components/sections/workspace";
 
 export const metadata: Metadata = {
   title: "Workspace Solutions - Iperhome",

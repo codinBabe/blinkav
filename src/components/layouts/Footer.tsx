@@ -5,7 +5,7 @@ import {
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import SocialIcon from "./Social-Icon";
+import SocialIcon from "../Social-Icon";
 
 const Footer: React.FC = () => {
   const icons = [
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             height={50}
           />
 
-          <h5 className="md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
+          <h5 className="sangBlue-font md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
             Since 2016, Iper Home LTD has enhanced daily efficiency for
             individuals and corporations.
           </h5>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
           <SocialIcon bgColor={"#DDD0C8"} />
         </div>
 
-        <div className="text-center mt-8 neue-font">
+        <div className="text-center mt-8">
           <p>&copy; {new Date().getFullYear()} Iper Home Ltd.</p>
         </div>
       </div>

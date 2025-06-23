@@ -16,9 +16,8 @@ export default function Motion({
   as: Tag = "div",
   variants,
   className = "",
-  delay = 0.3,
+  delay = 0.2,
   once = true,
-  amount = 0.3,
   children,
   ...rest
 }: MotionProps) {
@@ -29,7 +28,7 @@ export default function Motion({
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount }}
+      viewport={{ once }}
       className={className}
       {...rest}
     >

@@ -5,7 +5,7 @@ export const slideInLeft: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 1.6, ease: "easeOut" },
   },
 };
 
@@ -36,10 +36,21 @@ export const slideInBottom: Variants = {
   },
 };
 
-export const fadeIn: Variants = {
-  hidden: { opacity: 0 },
+export const containerStagger: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+export const listSlideIn: Variants = {
+  hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,
+    x: 0,
     transition: { duration: 1.6, ease: "easeOut" },
   },
 };

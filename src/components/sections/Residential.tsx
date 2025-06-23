@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Motion from "./global/motion";
+import Motion from "../global/motion";
 import { slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const ResidentialSolution: React.FC = () => {
@@ -11,7 +11,7 @@ const ResidentialSolution: React.FC = () => {
         <Motion
           as="h1"
           variants={slideInBottom}
-          className="text-white text-[60px] md:leading-loose lg:text-[65px]"
+          className="sangBlue-font text-white text-[60px] md:leading-loose lg:text-[65px]"
         >
           Residential Solutions
         </Motion>
@@ -22,14 +22,14 @@ const ResidentialSolution: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInRight}
-              className="text-[40px] lg:text-6xl leading-tight mb-4"
+              className="sangBlue-font text-[40px] lg:text-6xl leading-tight mb-4"
             >
               Smart Home Automation
             </Motion>
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="neue-font text-[17px] leading-loose"
+              className="text-[17px] leading-loose"
             >
               <p>
                 Smart home automation empowers homeowners to have greater
@@ -69,14 +69,14 @@ const ResidentialSolution: React.FC = () => {
             <Motion
               as={"h2"}
               variants={slideInLeft}
-              className="text-[40px] leading-tight lg:text-6xl mb-4"
+              className="sangBlue-font text-[40px] leading-tight lg:text-6xl mb-4"
             >
               Entertainment Unleased
             </Motion>
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="neue-font text-[17px] leading-loose"
+              className="text-[17px] leading-loose"
             >
               <ul className="list-disc pl-8 my-4">
                 <li>Home theater systems</li>
