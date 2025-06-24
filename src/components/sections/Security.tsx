@@ -55,43 +55,46 @@ const SecuritySolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="secure-bg flex flex-col md:flex-row items-center gap-10 my-28">
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
-          >
-            <p>
-              Another aspect of smart security solutions is access control. They
-              utilize technologies like biometric identification, smart cards,
-              or facial recognition to ensure only authorized individuals can
-              access specific areas or resources. Access control systems can
-              also track and log entry and exit events, providing a
-              comprehensive audit trail for security purposes.
-            </p>
-            <p>
-              Smart security solutions also incorporate automation and remote
-              management capabilities. They can integrate with other smart
-              devices, such as motion sensors, door locks, and alarm systems, to
-              automate security processes. For example, smart security systems
-              can arm or disarm alarms, lock or unlock doors, and adjust
-              lighting based on predefined rules or remote commands.
-            </p>
-          </Motion>
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="w-full mr-16 mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/security-solution-1.webp"
-              alt="Security Solutions"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
+        <div className="relative my-16 md:my-28">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="secure-bg" />
+            <Motion
+              as={"div"}
+              variants={slideInBottom}
+              className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            >
+              <p>
+                Another aspect of smart security solutions is access control.
+                They utilize technologies like biometric identification, smart
+                cards, or facial recognition to ensure only authorized
+                individuals can access specific areas or resources. Access
+                control systems can also track and log entry and exit events,
+                providing a comprehensive audit trail for security purposes.
+              </p>
+              <p>
+                Smart security solutions also incorporate automation and remote
+                management capabilities. They can integrate with other smart
+                devices, such as motion sensors, door locks, and alarm systems,
+                to automate security processes. For example, smart security
+                systems can arm or disarm alarms, lock or unlock doors, and
+                adjust lighting based on predefined rules or remote commands.
+              </p>
+            </Motion>
+            <Motion
+              as={"div"}
+              variants={slideInBottom}
+              className="w-full md:mr-16 mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+            >
+              <Image
+                src="/images/security-solution-1.webp"
+                alt="Security Solutions"
+                unoptimized
+                width={400}
+                height={100}
+                className="w-full h-full object-cover"
+              />
+            </Motion>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10 mb-20">

@@ -52,7 +52,7 @@ const Services: React.FC = () => {
   const listInView = useInView(listRef, { once: true, amount: 0.3 });
 
   return (
-    <section className="py-20 px-6 md:px-8">
+    <section className="py-20 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={"hidden"}
@@ -125,8 +125,9 @@ const Services: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="client-bg mt-28 pb-10 px-4 lg:px-16">
+        <div className="relative mt-28 overflow-hidden">
           <div className="flex flex-col md:flex-row items-center gap-4 lg:justify-between">
+            <div className="client-bg"></div>
             <div>
               <motion.h2
                 initial={"hidden"}
@@ -180,7 +181,7 @@ const Services: React.FC = () => {
               variants={slideInBottom}
               initial="hidden"
               whileInView={"visible"}
-              className="mr-10 w-[40%] mt-20 h-full rounded-xl overflow-hidden flex-shrink-0"
+              className="relative mr-14 lg:mr-20 w-[80%] md:w-[38%] mt-20 h-full rounded-xl overflow-hidden"
             >
               <Image
                 unoptimized

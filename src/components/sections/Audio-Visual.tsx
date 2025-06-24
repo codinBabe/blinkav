@@ -57,67 +57,57 @@ const AudioVisualSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="audio-bg flex flex-col md:flex-row items-center gap-10 my-28">
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
-          >
-            <p>
-              Audiovisual solutions also involve content creation and
-              management. They enable the production and distribution of
-              multimedia content, such as videos, presentations, and interactive
-              displays. Content management systems allow for seamless control
-              and scheduling of audiovisual content, ensuring the right media is
-              displayed at the right time and in the right location.
-            </p>
-            <p>
-              Furthermore, audiovisual solutions often incorporate advanced
-              technologies to enhance the user experience. This may include
-              interactive touchscreens, virtual reality (VR) or augmented
-              reality (AR) experiences, immersive sound systems, and video
-              conferencing capabilities. These technologies enable interactive
-              engagement, remote collaboration, and realistic simulations.
-            </p>
-            <p>
-              In the business environment, audiovisual solutions are utilized
-              for effective presentations, video conferencing, and digital
-              signage. They enhance communication and collaboration among teams,
-              facilitate remote meetings, and provide visually appealing
-              displays for advertising and informational purposes
-            </p>
-          </Motion>
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="w-full mr-16 mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/Audio-visual-2.webp"
-              alt="Audio Visual Solutions"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
+        <div className="relative my-16 md:my-28 overflow-hidden">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="audio-bg" />
+            <Motion
+              as={"div"}
+              variants={slideInBottom}
+              className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            >
+              <p>
+                Audiovisual solutions also involve content creation and
+                management. They enable the production and distribution of
+                multimedia content, such as videos, presentations, and
+                interactive displays. Content management systems allow for
+                seamless control and scheduling of audiovisual content, ensuring
+                the right media is displayed at the right time and in the right
+                location.
+              </p>
+              <p>
+                Furthermore, audiovisual solutions often incorporate advanced
+                technologies to enhance the user experience. This may include
+                interactive touchscreens, virtual reality (VR) or augmented
+                reality (AR) experiences, immersive sound systems, and video
+                conferencing capabilities. These technologies enable interactive
+                engagement, remote collaboration, and realistic simulations.
+              </p>
+              <p>
+                In the business environment, audiovisual solutions are utilized
+                for effective presentations, video conferencing, and digital
+                signage. They enhance communication and collaboration among
+                teams, facilitate remote meetings, and provide visually
+                appealing displays for advertising and informational purposes
+              </p>
+            </Motion>
+            <Motion
+              as={"div"}
+              variants={slideInBottom}
+              className="w-full md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+            >
+              <Image
+                src="/images/Audio-visual-2.webp"
+                alt="Audio Visual Solutions"
+                unoptimized
+                width={400}
+                height={100}
+                className="w-full h-full object-cover"
+              />
+            </Motion>
+          </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/Audio-visual-3.webp"
-              alt="Audio Visual Solution"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -136,6 +126,21 @@ const AudioVisualSolution: React.FC = () => {
               multimedia content, virtual simulations, and interactive displays
               to enhance learning experiences and improve information retention
             </p>
+          </Motion>
+
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/Audio-visual-3.webp"
+              alt="Audio Visual Solution"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
           </Motion>
         </div>
       </div>

@@ -81,8 +81,13 @@ const AboutUs: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="about-bg mt-28 w-full h-auto flex flex-col lg:flex-row items-center gap-20">
-          <div className="ml-20 w-[30%] mt-20 h-96 rounded-xl overflow-hidden flex-shrink-0">
+        <div className="relative mt-20 w-full h-auto flex flex-col lg:flex-row items-center gap-20">
+          <div className="about-bg rounded-xl" />
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="ml-12 mt-12 w-[90%] md:ml-28 md:w-[75%] lg:w-[40%] md:mt-18 h-96 rounded-xl overflow-hidden flex-shrink-0"
+          >
             <Image
               src={"/images/what-we-offer.webp"}
               alt="What We Offer"
@@ -91,12 +96,12 @@ const AboutUs: React.FC = () => {
               height={100}
               className="w-full h-full object-cover"
             />
-          </div>
+          </Motion>
           <div>
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-xl md:text-3xl lg:text-4xl mb-4"
+              className="sangBlue-font text-[40px] leading-tight mb-4 lg:text-6xl"
             >
               What we offer?
             </Motion>
@@ -116,12 +121,12 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-20 w-full flex flex-col lg:flex-row items-center gap-20">
+        <div className="mt-24 w-full flex flex-col lg:flex-row items-center gap-20">
           <div className="w-full">
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-xl md:text-3xl lg:text-4xl mb-4"
+              className="sangBlue-font text-[40px] leading-tight mb-4"
             >
               Why choose us?
             </Motion>
@@ -154,7 +159,7 @@ const AboutUs: React.FC = () => {
 
         {/* our patners */}
         <div className="mt-20 w-full">
-          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+          <div className="w-full flex flex-col md:flex-row items-start md:items-center md:justify-between">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -185,9 +190,9 @@ const AboutUs: React.FC = () => {
               customLeftArrow={<CustomLeftArrow />}
               customRightArrow={<CustomRightArrow />}
               responsive={{
-                desktop: { breakpoint: { max: 3000, min: 1024 }, items: 5 },
-                tablet: { breakpoint: { max: 1024, min: 640 }, items: 4 },
-                mobile: { breakpoint: { max: 640, min: 0 }, items: 3 },
+                desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4 },
+                tablet: { breakpoint: { max: 1024, min: 640 }, items: 3 },
+                mobile: { breakpoint: { max: 640, min: 0 }, items: 2 },
               }}
               className="relative"
               containerClass="carousel-container"
@@ -208,9 +213,9 @@ const AboutUs: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="w-full my-10 bg-[#DDD0C8] px-8 py-6 md:px-14 md:py-18 rounded-3xl flex flex-col md:flex-row items-center">
+        <div className="w-full my-10 bg-[#DDD0C8] px-8 py-6 md:px-14 md:py-18 space-y-10 md:space-y-0 rounded-3xl flex flex-col md:flex-row items-center">
           <Motion as={"div"} variants={slideInLeft}>
-            <h2 className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-5">
+            <h2 className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-2 md:mb-5">
               E-Brochures
             </h2>
             <p className="leading-loose text-[17px] md:w-[60%]">
