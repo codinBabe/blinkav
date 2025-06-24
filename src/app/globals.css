@@ -170,9 +170,6 @@
 
 /* Medium and up — enable parallax */
 @media (min-width: 768px) {
-  .contact-bg {
-    background-size: 92%;
-  }
   .client-bg,
   .audio-bg {
     background-attachment: fixed;
@@ -187,10 +184,6 @@
 }
 
 @media (max-width: 640px) {
-  .contact-bg {
-    background-size: 100%;
-    background-position: calc(100%) calc(100% - 1650px);
-  }
   .audio-bg {
     background-image: none;
   }
