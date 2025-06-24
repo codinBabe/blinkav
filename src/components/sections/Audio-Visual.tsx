@@ -17,7 +17,7 @@ const AudioVisualSolution: React.FC = () => {
         </Motion>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-20">
+        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-20">
           <Motion
             as={"div"}
             variants={slideInBottom}

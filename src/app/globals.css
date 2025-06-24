@@ -163,10 +163,14 @@
     background-position: right top;
     background-size: 80%;
   }
-  .audio-bg,
-  .secure-bg {
+  .audio-bg {
     background-repeat: repeat-y;
     background-attachment: scroll;
+  }
+  .secure-bg {
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
   }
 }
 
@@ -190,6 +194,7 @@
     background-image: none;
   }
   .secure-bg {
+    background-attachment: scroll;
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 100%;

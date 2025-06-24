@@ -17,7 +17,7 @@ const SecuritySolution: React.FC = () => {
         </Motion>
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-28">
+        <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-28">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -42,7 +42,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[54%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/iper-hero-5.webp"
@@ -83,7 +83,7 @@ const SecuritySolution: React.FC = () => {
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="w-full md:mr-16 mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+              className="w-full md:mr-16 mt-4 md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
             >
               <Image
                 src="/images/security-solution-1.webp"
@@ -97,21 +97,7 @@ const SecuritySolution: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/security-solution-2.webp"
-              alt="Audio Visual Solution"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -141,6 +127,21 @@ const SecuritySolution: React.FC = () => {
               recognition, and proactive identification of potential risks or
               incidents.
             </p>
+          </Motion>
+
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/security-solution-2.webp"
+              alt="Audio Visual Solution"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
           </Motion>
         </div>
       </div>
