@@ -138,7 +138,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="w-4/5 fixed top-0 right-0 h-full z-50 bg-white flex flex-col p-6 pt-10 shadow-lg overflow-y-auto">
+        <div className="w-[90%] fixed top-0 right-0 h-full z-50 bg-[#edebe9] flex flex-col p-6 pt-10 shadow-lg overflow-y-auto">
           {/* Close Button */}
           <button
             onClick={() => setMobileMenuOpen(false)}

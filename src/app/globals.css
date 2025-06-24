@@ -49,12 +49,6 @@
   z-index: 0;
 }
 
-.fix-3d-parent {
-  transform-style: flat;
-  backface-visibility: visible;
-  will-change: transform;
-}
-
 .preserve-3d {
   transform-style: preserve-3d;
 }
@@ -72,7 +66,7 @@
   background-image: url("/images/blob-grad.svg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50%;
 }
 
 .input-dotted:focus {
@@ -176,6 +170,9 @@
 
 /* Medium and up — enable parallax */
 @media (min-width: 768px) {
+  .contact-bg {
+    background-size: 92%;
+  }
   .client-bg,
   .audio-bg {
     background-attachment: fixed;
@@ -190,6 +187,10 @@
 }
 
 @media (max-width: 640px) {
+  .contact-bg {
+    background-size: 100%;
+    background-position: calc(100%) calc(100% - 1650px);
+  }
   .audio-bg {
     background-image: none;
   }

@@ -48,63 +48,61 @@ const Contact: React.FC = () => {
           <SocialIcon bgColor="bg-[#DDD0C8]" />
         </motion.div>
 
-        <div className="fix-3d-parent">
-          <motion.div
-            ref={ref}
-            variants={containerStagger}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12 md:mt-14"
-          >
-            {contactInfo.map((info, index) => {
-              const isHovered = hoveredIndex === index;
+        <motion.div
+          ref={ref}
+          variants={containerStagger}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12 md:mt-14"
+        >
+          {contactInfo.map((info, index) => {
+            const isHovered = hoveredIndex === index;
 
-              return (
-                <motion.div
+            return (
+              <motion.div
+                key={index}
+                variants={slideInBottom}
+                className="w-full"
+              >
+                <div
                   key={index}
-                  variants={slideInBottom}
-                  className="w-full"
+                  className="relative group w-full h-72 mx-auto perspective"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div
-                    key={index}
-                    className="relative group w-full h-72 mx-auto perspective"
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    className="sangBlue-font relative w-full h-full preserve-3d transition-transform duration-700"
+                    style={{
+                      transform: `rotateY(${isHovered ? 180 : 0}deg)`,
+                    }}
                   >
-                    <div
-                      className="sangBlue-font relative w-full h-full preserve-3d transition-transform duration-700"
-                      style={{
-                        transform: `rotateY(${isHovered ? 180 : 0}deg)`,
-                      }}
-                    >
-                      {/* Front Side */}
-                      <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
-                        <info.icon className="h-8 w-8 text-black" />
-                        <h3 className="text-lg md:text-2xl font-bold text-black">
-                          {info.title}
-                        </h3>
-                        <p className="text-base md:text-lg text-center">
-                          {info.content}
-                        </p>
-                      </div>
+                    {/* Front Side */}
+                    <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
+                      <info.icon className="h-8 w-8 text-black" />
+                      <h3 className="text-lg md:text-2xl font-bold text-black">
+                        {info.title}
+                      </h3>
+                      <p className="text-base md:text-lg text-center">
+                        {info.content}
+                      </p>
+                    </div>
 
-                      {/* Back Side */}
-                      <div className="absolute w-full h-full backface-hidden bg-black rounded-2xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-white">
-                        <info.icon className="h-8 w-8 text-white" />
-                        <h3 className="text-lg md:text-2xl font-bold">
-                          {info.title}
-                        </h3>
-                        <p className="text-base md:text-lg text-center">
-                          {info.content}
-                        </p>
-                      </div>
+                    {/* Back Side */}
+                    <div className="absolute w-full h-full backface-hidden bg-black rounded-2xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-white">
+                      <info.icon className="h-8 w-8 text-white" />
+                      <h3 className="text-lg md:text-2xl font-bold">
+                        {info.title}
+                      </h3>
+                      <p className="text-base md:text-lg text-center">
+                        {info.content}
+                      </p>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
 
       <div className="mt-28">

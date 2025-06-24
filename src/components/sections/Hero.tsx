@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
   const nextSlide = () => setIndex((index + 1) % total);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[70vh] xl:h-[90vh] 2xl:h-screen w-full overflow-hidden">
       {/* Image layer */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         <AnimatePresence mode="wait">
           <motion.h1
             key={bgTexts[index]}
-            className="sangBlue-font text-white text-4xl md:text-6xl md:leading-tight lg:text-8xl font-bold lg:whitespace-nowrap"
+            className="sangBlue-font text-white text-[42.56px]  md:text-6xl leading-tight lg:text-8xl font-bold lg:whitespace-nowrap"
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 0 }}
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
         </AnimatePresence>
       </div>
       {/* Navigation dots */}
-      <div className="absolute bottom-16 left-6 right-6 md:px-6 z-30 flex justify-between items-center">
+      <div className="absolute bottom-6 left-6 right-6 md:px-6 z-30 flex justify-between items-center">
         {/* Dots on the left */}
         <div className="flex gap-3">
           {bgImages.map((_, i) => (
