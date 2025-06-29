@@ -130,7 +130,7 @@ const Services: React.FC = () => {
                 viewport={{ once: true }}
                 className="sangBlue-font text-[40px] leading-tight mb-4"
               >
-                IperHome’s Clients
+                Blinkav’s Clients
               </motion.h2>
               <motion.p
                 initial={"hidden"}
@@ -180,7 +180,7 @@ const Services: React.FC = () => {
               <Image
                 unoptimized
                 src="/images/iperhomeclient.webp"
-                alt="Iper Home Logo"
+                alt="Blinkav Home Logo"
                 width={600}
                 height={50}
                 className="w-full h-full object-cover"

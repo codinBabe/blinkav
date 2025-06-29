@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
     {
       icon: EnvelopeIcon,
       title: "Email Us",
-      content: "info@iperhome.com",
+      content: "info@blinkav.com",
     },
   ];
 

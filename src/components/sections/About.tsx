@@ -52,7 +52,7 @@ const AboutUs: React.FC = () => {
               className="space-y-4 leading-loose text-[17px]"
             >
               <p>
-                Since 2016, Iper Home LTD is a company dedicated to improving
+                Since 2023, Blinkav Ltd is a company dedicated to improving
                 the effectiveness of the daily lives of individuals both in
                 private and corporate entities. We are confident that we have
                 the manpower and financial strength to execute the project in
@@ -60,7 +60,7 @@ const AboutUs: React.FC = () => {
               </p>
 
               <p>
-                Iper Home LTD has been providing sustainable designs for more
+                Blinkav Ltd has been providing sustainable designs for more
                 than 7 years. Our company has more than 18 employees in our
                 Lagos office with affiliate offices in the UK, USA, and Nigeria.
               </p>

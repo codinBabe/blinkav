@@ -61,11 +61,11 @@ const Header: React.FC = () => {
           <Image
             src={
               noBgPaths
-                ? "/images/iper-logo-white.webp"
-                : "/images/iper-logo.webp"
+                ? "/images/logo-white.png"
+                : "/images/logo-black.png"
             }
             alt="Company Logo"
-            width={300}
+            width={150}
             height={50}
           />
         </Link>
@@ -150,7 +150,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link href={"/"} className="flex justify-center">
             <Image
-              src="/images/iper-logo.webp"
+              src="/images/logo-black.png"
               alt="Logo"
               width={300}
               height={50}

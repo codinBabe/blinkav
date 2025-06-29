@@ -63,14 +63,14 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <Image
-            src="/images/iper-logo.webp"
-            alt="Iper Home Logo"
-            width={250}
+            src="/images/logo-black.png"
+            alt="Blinkav Home Logo"
+            width={150}
             height={50}
           />
 
           <h5 className="sangBlue-font md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
-            Since 2016, Iper Home LTD has enhanced daily efficiency for
+            Since 2023, Blinkav Ltd has enhanced daily efficiency for
             individuals and corporations.
           </h5>
 
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center mt-8">
-          <p>&copy; {new Date().getFullYear()} Iper Home Ltd.</p>
+          <p>&copy; {new Date().getFullYear()} Blinkav Ltd.</p>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import AudioVisualSolution from "@/components/sections/Audio-Visual";
 
 export const metadata: Metadata = {
-  title: "Audio Visual Solutions - Iperhome",
+  title: "Audio Visual Solutions - Blinkav",
   description:
     "Explore our audio visual solutions for seamless integration and enhanced experiences.",
 };
