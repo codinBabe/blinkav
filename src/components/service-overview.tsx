@@ -100,7 +100,7 @@ const ServicesOverview = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           ref={containerRef}

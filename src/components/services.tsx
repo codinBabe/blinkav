@@ -23,7 +23,7 @@ const Services = () => {
   const listInView = useInView(listRef, { once: true, amount: 0.3 });
 
   return (
-    <section className="px-6 md:px-10">
+    <section id="services" className="px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={"hidden"}

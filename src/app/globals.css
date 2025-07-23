@@ -141,12 +141,6 @@
     background-size: 50%;
   }
 
-  .input-dotted:focus {
-    outline-style: dotted;
-    outline-width: 1px;
-    outline-color: black;
-  }
-
   ::selection {
     background-color: #ddd0c8;
   }
