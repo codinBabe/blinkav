@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import SocialIcon from "../icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -20,29 +20,13 @@ const Header: React.FC = () => {
     setMobileDropdownOpen(false);
   }, [pathname]);
 
-  const noBgPaths =
-    pathname === "/" ||
-    pathname === "/services/residential-solutions" ||
-    pathname === "/services/workspace-solutions" ||
-    pathname === "/services/audio-visual-solutions" ||
-    pathname === "/services/security-solutions";
+  const noBgPaths = pathname === "/" || pathname.startsWith("/services/");
 
   const menu = [
     { label: "Home", href: "/" },
     {
       label: "Our Services",
-      dropdown: [
-        {
-          label: "Residential Solutions",
-          href: "/services/residential-solutions",
-        },
-        { label: "Workspace Solutions", href: "/services/workspace-solutions" },
-        {
-          label: "Audio Visual Solutions",
-          href: "/services/audio-visual-solutions",
-        },
-        { label: "Security Solutions", href: "/services/security-solutions" },
-      ],
+      href: "/#services",
     },
     { label: "About Us", href: "/about-us" },
     { label: "Contact", href: "/contact" },
@@ -60,70 +44,26 @@ const Header: React.FC = () => {
         <Link href={"/"}>
           <Image
             src={
-              noBgPaths
-                ? "/images/iper-logo-white.webp"
-                : "/images/iper-logo.webp"
+              noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"
             }
-            alt="Company Logo"
-            width={300}
+            alt="Blinkav Logo"
+            width={200}
             height={50}
           />
         </Link>
 
         <nav className="hidden lg:flex items-center space-x-8">
-          {menu.map((item, index) =>
-            item.dropdown ? (
-              <div
-                key={index}
-                className="relative group cursor-pointer"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-              >
-                <span
-                  className={`${
-                    noBgPaths ? "text-white" : "text-black"
-                  } inline-flex items-center font-bold leading-[70px] text-[15px]`}
-                >
-                  {item.label}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="ml-1 w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </span>
-
-                {isDropdownOpen && (
-                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-xs py-2">
-                    {item.dropdown.map((subItem, subIdx) => (
-                      <li key={subIdx} className="px-3 py-2">
-                        <Link
-                          className="font-bold leading-loose text-[15px]"
-                          href={subItem.href}
-                        >
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={index}
-                className={`${
-                  noBgPaths ? "text-white" : "text-black"
-                } font-bold leading-[70px] text-[15px]`}
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+          {menu.map((item, index) => (
+            <Link
+              key={index}
+              className={`${
+                noBgPaths ? "text-white" : "text-black"
+              } font-bold leading-[70px] text-[15px]`}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -150,8 +90,8 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link href={"/"} className="flex justify-center">
             <Image
-              src="/images/iper-logo.webp"
-              alt="Logo"
+              src="/images/logo-black.png"
+              alt="Blinkav Logo"
               width={300}
               height={50}
             />
@@ -159,52 +99,16 @@ const Header: React.FC = () => {
 
           {/* Mobile Links */}
           <nav className="w-full flex flex-col mt-10 space-y-2">
-            {menu.map((item, idx) =>
-              item.dropdown ? (
-                <div key={idx} className="w-full text-center">
-                  <button
-                    onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
-                    className="w-full flex justify-between items-center font-bold text-[15px] py-2.5 border-b border-b-[#dddddd]"
-                  >
-                    <span className="w-full text-center">{item.label}</span>
-                    <svg
-                      className={`w-6 h-6 transition-transform ${
-                        isMobileDropdownOpen ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M6 9l6 6 6-6" />
-                    </svg>
-                  </button>
-                  {isMobileDropdownOpen && (
-                    <ul className="mt-2 space-y-2">
-                      {item.dropdown.map((sub, i) => (
-                        <li key={i}>
-                          <Link
-                            href={sub.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block text-[15px] font-bold py-2.5 border-b border-b-[#dddddd]"
-                          >
-                            {sub.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={idx}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
-                >
-                  {item.label}
-                </Link>
-              )
-            )}
+            {menu.map((item, idx) => (
+              <Link
+                key={idx}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Social Icons */}
