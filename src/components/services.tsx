@@ -52,7 +52,7 @@ const Services = () => {
                 viewport={{ once: true }}
                 className="sangBlue-font text-[40px] leading-tight mb-4"
               >
-                People we've worked for
+                People we&apos;ve worked for
               </motion.h2>
               <motion.p
                 initial={"hidden"}
@@ -61,8 +61,8 @@ const Services = () => {
                 variants={slideInLeft}
                 className="text-[17px] leading-loose md:w-2/3 md:ml-4 lg:w-auto"
               >
-                We've had the privilege of delivering smart solutions to a wide
-                range of clients across different industries
+                We&apos;ve had the privilege of delivering smart solutions to a
+                wide range of clients across different industries
               </motion.p>
 
               <motion.ul

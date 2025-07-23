@@ -9,15 +9,12 @@ import SocialIcon from "../icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
 
 const Header = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
   const showScroll = useScrollToTop();
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setMobileDropdownOpen(false);
   }, [pathname]);
 
   const noBgPaths = pathname === "/" || pathname.startsWith("/services/");

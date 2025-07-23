@@ -160,7 +160,7 @@ const Contact = () => {
                   variants={slideInBottom}
                   className="leading-loose text-[var(--muted-foreground)]"
                 >
-                  Tell us about your project and we'll provide a tailored
+                  Tell us about your project and we&apos;ll provide a tailored
                   solution
                 </Motion>
               </div>

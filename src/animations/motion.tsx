@@ -6,7 +6,6 @@ interface MotionProps extends React.HTMLAttributes<HTMLElement> {
   as?: React.ElementType;
   variants: Variants;
   className?: string;
-  delay?: number;
   once?: boolean;
   amount?: number;
   children: React.ReactNode;
@@ -16,7 +15,6 @@ export const Motion = ({
   as: Tag = "div",
   variants,
   className = "",
-  delay = 0.2,
   once = true,
   children,
   ...rest

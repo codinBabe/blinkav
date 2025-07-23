@@ -1,4 +1,4 @@
-import { contactSchema } from "@/schemas";
+import { ContactFormData, contactSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -12,11 +12,11 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: ContactFormData) => {
     console.log(data);
     setSubmitted(true);
     reset();
