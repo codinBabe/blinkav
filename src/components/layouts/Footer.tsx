@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
 
           <h5 className="sangBlue-font md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
-            Since 2016, Blinkav LTD has enhanced daily efficiency for
+            Since 2016, Blinkav Ltd has enhanced daily efficiency for
             individuals and corporations.
           </h5>
 

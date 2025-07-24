@@ -3,9 +3,9 @@ import "./globals.css";
 import { Header, Footer } from "@/components/layouts";
 
 export const metadata: Metadata = {
-  title: "Blinkav LTD",
+  title: "Blinkav Ltd",
   description:
-    "Blinkav LTD - Your Trusted Partner in Home and Office Solutions",
+    "Blinkav Ltd - Your Trusted Partner in Home and Office Solutions",
 };
 
 export default function RootLayout({

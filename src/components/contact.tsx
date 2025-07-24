@@ -32,8 +32,8 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 contact-bg">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <div className="py-20 contact-bg">
+      <section className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={"hidden"}
           animate={"visible"}
@@ -45,7 +45,7 @@ const Contact = () => {
             If you have any questions, feedback, or suggestions, we would love
             to hear from you.
           </p>
-          <SocialIcon bgColor="bg-gradient" />
+          <SocialIcon bgColor="bg-[color:var(--muted)]/80" />
         </motion.div>
 
         <motion.div
@@ -78,8 +78,8 @@ const Contact = () => {
                   >
                     {/* Front Side */}
                     <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
-                      <info.icon className="h-8 w-8 text-black" />
-                      <h3 className="text-lg md:text-2xl font-bold text-black">
+                      <info.icon className="h-8 w-8 text-[var(--primary)]" />
+                      <h3 className="text-lg md:text-2xl font-bold">
                         {info.title}
                       </h3>
                       <p className="text-base md:text-lg text-center">
@@ -88,8 +88,8 @@ const Contact = () => {
                     </div>
 
                     {/* Back Side */}
-                    <div className="absolute w-full h-full backface-hidden bg-black rounded-2xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-white">
-                      <info.icon className="h-8 w-8 text-white" />
+                    <div className="absolute w-full h-full backface-hidden bg-gradient rounded-2xl shadow-lg transform rotateY-180 flex flex-col items-center justify-center p-6 gap-4 text-black">
+                      <info.icon className="h-8 w-8 text-black" />
                       <h3 className="text-lg md:text-2xl font-bold">
                         {info.title}
                       </h3>
@@ -103,9 +103,9 @@ const Contact = () => {
             );
           })}
         </motion.div>
-      </div>
+      </section>
 
-      <div className="mt-28">
+      <section className="mt-28">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
           width="100%"
@@ -114,9 +114,9 @@ const Contact = () => {
           allowFullScreen
           loading="lazy"
         ></iframe>
-      </div>
+      </section>
 
-      <div className="container mx-auto py-20">
+      <section className="container mx-auto py-20">
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="consultation" className="w-full">
             <TabsList className="mx-auto mb-6 flex justify-center">
@@ -170,8 +170,8 @@ const Contact = () => {
             </TabsContent>
           </Tabs>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

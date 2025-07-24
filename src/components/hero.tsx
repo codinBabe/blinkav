@@ -13,11 +13,11 @@ const bgImages = [
 ];
 
 const bgTexts = [
-  "Work Smarter Live Better",
-  "Residential Solutions",
-  "Workplace Solutions",
-  "Audio Visual Solutions",
-  "Security Solutions",
+  "Smart Home Automation",
+  "Cinema & Audio Systems",
+  "Office Automation",
+  "Conference Room Solutions",
+  "Advanced CCTV Systems",
 ];
 
 const Hero = () => {
@@ -72,13 +72,13 @@ const Hero = () => {
             exit={{ opacity: 0, x: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {bgTexts[index] === "Work Smarter Live Better" ? (
+            {bgTexts[index] === "Smart Home Automation" ? (
               <>
                 <span className="block lg:inline whitespace-nowrap">
-                  Work Smarter
+                  Smart Home
                 </span>
                 <br className="hidden lg:block" />
-                <span className="block lg:inline">Live Better</span>
+                <span className="block lg:inline">Automation</span>
               </>
             ) : (
               bgTexts[index]

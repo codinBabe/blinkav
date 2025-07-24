@@ -19,11 +19,34 @@ const partnerImages = [
   "/images/patner.webp",
 ];
 
+const processSteps = [
+  {
+    step: "1",
+    title: "Consultation",
+    description: "We assess your needs and property requirements",
+  },
+  {
+    step: "2",
+    title: "Design",
+    description: "Custom solution design tailored to your space",
+  },
+  {
+    step: "3",
+    title: "Installation",
+    description: "Professional installation by certified technicians",
+  },
+  {
+    step: "4",
+    title: "Support",
+    description: "Ongoing maintenance and 24/7 technical support",
+  },
+];
+
 const AboutUs = () => {
   return (
-    <section className="py-20">
+    <div className="py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="w-full flex flex-col xl:flex-row items-center gap-8 lg:gap-12">
+        <section className="w-full flex flex-col xl:flex-row items-center gap-8 lg:gap-12">
           <Motion
             as={"div"}
             variants={slideInBottom}
@@ -51,7 +74,7 @@ const AboutUs = () => {
               className="space-y-4 leading-loose text-[17px]"
             >
               <p>
-                Since 2016, Blinkav LTD is a company dedicated to improving the
+                Since 2016, Blinkav Ltd is a company dedicated to improving the
                 effectiveness of the daily lives of individuals both in private
                 and corporate entities. We are confident that we have the
                 manpower and financial strength to execute the project in the
@@ -59,7 +82,7 @@ const AboutUs = () => {
               </p>
 
               <p>
-                Blinkav LTD has been providing sustainable designs for more than
+                Blinkav Ltd has been providing sustainable designs for more than
                 7 years. Our company has more than 18 employees in our Lagos
                 office with affiliate offices in the UK, USA, and Nigeria.
               </p>
@@ -78,9 +101,9 @@ const AboutUs = () => {
               className="w-full h-full object-cover"
             />
           </Motion>
-        </div>
+        </section>
 
-        <div className="relative mt-20 w-full h-auto flex flex-col lg:flex-row items-center gap-20">
+        <section className="relative mt-20 w-full h-auto flex flex-col lg:flex-row items-center gap-20">
           <div className="about-bg rounded-xl" />
           <Motion
             as={"div"}
@@ -118,9 +141,9 @@ const AboutUs = () => {
               seamless and effective
             </Motion>
           </div>
-        </div>
+        </section>
 
-        <div className="mt-24 w-full flex flex-col lg:flex-row items-center gap-20">
+        <section className="mt-24 w-full flex flex-col lg:flex-row items-center gap-20">
           <div className="w-full">
             <Motion
               as={"h2"}
@@ -154,10 +177,10 @@ const AboutUs = () => {
               className="w-full h-full object-cover"
             />
           </Motion>
-        </div>
+        </section>
 
         {/* our patners */}
-        <div className="mt-20 w-full">
+        <section className="mt-20 w-full">
           <div className="w-full flex flex-col md:flex-row items-start md:items-center md:justify-between">
             <Motion
               as={"h2"}
@@ -210,52 +233,52 @@ const AboutUs = () => {
               ))}
             </Carousel>
           </Motion>
-        </div>
+        </section>
 
-        <div className="w-full my-10 bg-[#DDD0C8] px-8 py-6 md:px-14 md:py-18 space-y-10 md:space-y-0 rounded-3xl flex flex-col md:flex-row items-center">
-          <Motion as={"div"} variants={slideInLeft}>
-            <h2 className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-2 md:mb-5">
-              E-Brochures
-            </h2>
-            <p className="leading-loose text-[17px] md:w-[60%]">
-              A list of brochures and promotional materials to make you get more
-              clarity about our company and products
-            </p>
-          </Motion>
+        {/* Our Process */}
+        <section className="mb-20 bg-[color:var(--muted)]/50 px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
+          <div className="max-w-7xl mx-auto">
+            <Motion
+              as={"div"}
+              variants={slideInBottom}
+              className="text-center mb-14"
+            >
+              <h2 className="sangBlue-font text-4xl text-[color:var(--foreground)] mb-4">
+                Our Process
+              </h2>
+              <p className="text-xl text-[color:var(--muted-foreground)] max-w-3xl mx-auto">
+                From initial consultation to ongoing support, we ensure a smooth
+                experience
+              </p>
+            </Motion>
 
-          <Motion
-            as={"div"}
-            variants={slideInRight}
-            className="flex-1 flex flex-col items-center gap-4"
-          >
-            <button className="w-full text-white text-lg flex items-center justify-center gap-1 bg-black px-12 py-3.5 rounded-md hover:bg-white hover:text-black transition-colors">
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 640 512"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline-block"
-                fill="currentColor"
-              >
-                <path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path>
-              </svg>
-              <span>Company Brochure</span>
-            </button>
-            <button className="w-full neue-font text-white text-lg flex items-center justify-center gap-1 bg-black px-12 py-3.5 rounded-md hover:bg-white hover:text-black transition-colors">
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 640 512"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline-block"
-                fill="currentColor"
-              >
-                <path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path>
-              </svg>
-              <span>Home Automation</span>
-            </button>
-          </Motion>
-        </div>
+            <div className="grid md:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => {
+                const slideIn = index < 2 ? slideInRight : slideInLeft;
+                return (
+                  <Motion
+                    as={"div"}
+                    variants={slideIn}
+                    key={index}
+                    className="text-center"
+                  >
+                    <div className="w-16 h-16 bg-[color:var(--primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                      {step.step}
+                    </div>
+                    <h3 className="sangBlue-font text-xl font-semibold text-[color:var(--foreground)] mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-[color:var(--muted-foreground)]">
+                      {step.description}
+                    </p>
+                  </Motion>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 

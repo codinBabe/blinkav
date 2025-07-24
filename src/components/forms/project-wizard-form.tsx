@@ -299,6 +299,7 @@ const ProjectWizardForm = () => {
               <Input
                 {...register("roomCount")}
                 placeholder="Number of rooms/zones"
+                className="bg-[var(--background)]"
               />
               {errors.roomCount && (
                 <p className="text-red-500">{errors.roomCount.message}</p>
