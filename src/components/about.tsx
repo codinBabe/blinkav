@@ -254,7 +254,7 @@ const AboutUs = () => {
 
             <div className="grid md:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
-                const slideIn = index < 2 ? slideInRight : slideInLeft;
+                const slideIn = index < 2 ? slideInLeft : slideInRight;
                 return (
                   <Motion
                     as={"div"}
