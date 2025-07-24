@@ -7,14 +7,18 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialIcon from "../icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
+import { motion } from "framer-motion";
 
-const Header = () => {
+const Header: React.FC = () => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
   const showScroll = useScrollToTop();
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMobileDropdownOpen(false);
   }, [pathname]);
 
   const noBgPaths = pathname === "/" || pathname.startsWith("/services/");
@@ -23,7 +27,18 @@ const Header = () => {
     { label: "Home", href: "/" },
     {
       label: "Our Services",
-      href: "/#services",
+      dropdown: [
+        {
+          label: "Residential Solutions",
+          href: "/services/residential-solutions",
+        },
+        { label: "Workspace Solutions", href: "/services/workspace-solutions" },
+        {
+          label: "Audio Visual Solutions",
+          href: "/services/audio-visual-solutions",
+        },
+        { label: "Security Solutions", href: "/services/security-solutions" },
+      ],
     },
     { label: "About Us", href: "/about-us" },
     { label: "Contact", href: "/contact" },
@@ -35,10 +50,22 @@ const Header = () => {
         noBgPaths
           ? "absolute top-0 left-0 right-0 bg-transparent"
           : "bg-[#edebe9]"
-      } p-6 z-50`}
+      } px-4 lg:px-0 py-4 z-50`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 md:px-6">
-        <Link href={"/"}>
+      <Link
+        href={"/"}
+        className="border-b border-b-[var(--border)] mb-4 w-full hidden lg:flex justify-center"
+      >
+        <Image
+          src={noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"}
+          alt="Blinkav Logo"
+          width={200}
+          height={50}
+          className="mb-2"
+        />
+      </Link>
+      <div className="max-w-7xl mx-auto flex lg:flex-col items-center justify-between lg:justify-center">
+        <Link href={"/"} className="lg:hidden">
           <Image
             src={
               noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"
@@ -49,18 +76,82 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center space-x-8">
-          {menu.map((item, index) => (
-            <Link
-              key={index}
-              className={`${
-                noBgPaths ? "text-white" : "text-black"
-              } font-bold leading-[70px] text-[15px]`}
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden lg:flex items-center justify-evenly w-full lg:-mt-5">
+          {menu.map((item, index) =>
+            item.dropdown ? (
+              <div
+                key={index}
+                className="relative group cursor-pointer"
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+              >
+                <span
+                  className={`${
+                    noBgPaths ? "text-white" : "text-black"
+                  } inline-flex items-center font-bold leading-[70px]`}
+                >
+                  {item.label}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-1 w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </span>
+
+                {/* {isDropdownOpen && (
+                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-xs py-2">
+                    {item.dropdown.map((subItem, subIdx) => (
+                      <li key={subIdx} className="px-3 py-2">
+                        <Link
+                          className="font-bold leading-loose hover:underline"
+                          href={subItem.href}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )} */}
+
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-1/2 right-0 top-[50px] ml-[-40vw] w-screen bg-white shadow-lg z-20 py-4"
+                  >
+                    <div className="max-w-7xl mx-auto px-4 flex justify-center gap-8">
+                      {item.dropdown.map((subItem, subIdx) => (
+                        <Link
+                          key={subIdx}
+                          href={subItem.href}
+                          className="text-sm font-semibold hover:underline whitespace-nowrap"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={index}
+                className={`${
+                  noBgPaths ? "text-white" : "text-black"
+                } font-bold leading-[70px]`}
+                href={item.href}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -96,16 +187,52 @@ const Header = () => {
 
           {/* Mobile Links */}
           <nav className="w-full flex flex-col mt-10 space-y-2">
-            {menu.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {menu.map((item, idx) =>
+              item.dropdown ? (
+                <div key={idx} className="w-full text-center">
+                  <button
+                    onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
+                    className="w-full flex justify-between items-center font-bold text-[15px] py-2.5 border-b border-b-[#dddddd]"
+                  >
+                    <span className="w-full text-center">{item.label}</span>
+                    <svg
+                      className={`w-6 h-6 transition-transform ${
+                        isMobileDropdownOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
+                  {isMobileDropdownOpen && (
+                    <ul className="mt-2 space-y-2">
+                      {item.dropdown.map((sub, i) => (
+                        <li key={i}>
+                          <Link
+                            href={sub.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block text-[15px] font-bold py-2.5 border-b border-b-[#dddddd]"
+                          >
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Social Icons */}

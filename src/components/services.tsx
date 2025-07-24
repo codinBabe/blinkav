@@ -23,7 +23,7 @@ const Services = () => {
   const listInView = useInView(listRef, { once: true, amount: 0.3 });
 
   return (
-    <section id="services" className="px-6 md:px-10">
+    <section id="services" className="px-6 py-10 md:px-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={"hidden"}
@@ -31,7 +31,7 @@ const Services = () => {
           variants={slideInRight}
           viewport={{ once: true }}
         >
-          <h2 className="sangBlue-font text-[48px] leading-tight text-center mt-6 md:mt-20">
+          <h2 className="sangBlue-font text-3xl md:text-[48px] leading-tight text-center mt-6 md:mt-20">
             Our Services
           </h2>
           <p className="text-lg text-center">
@@ -41,7 +41,7 @@ const Services = () => {
         </motion.div>
         <ServicesOverview />
 
-        <div className="relative overflow-hidden mt-18 md:mt-24 mb-10">
+        <div className="relative overflow-hidden mt-8">
           <div className="flex flex-col md:flex-row items-center gap-4 lg:justify-between">
             <div className="client-bg"></div>
             <div>

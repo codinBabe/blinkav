@@ -6,29 +6,76 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="py-20 px-4 md:px-10 lg:px-12 border-t border-t-black">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo-black.png"
-              alt="Blinkav Home Logo"
-              width={200}
-              height={50}
-            />
-          </Link>
-
-          <h5 className="sangBlue-font md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
-            Since 2016, Blinkav Ltd has enhanced daily efficiency for
-            individuals and corporations.
-          </h5>
-
-          <SocialIcon bgColor={"#DDD0C8"} />
+    <footer className="py-10 px-6 lg:px-12 border-t border-t-black">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-6 lg:gap-10 items-start">
+        <Link href="/" className="-mt-6">
+          <Image
+            src="/images/logo-black.png"
+            alt="Blinkav Home Logo"
+            width={200}
+            height={50}
+          />
+        </Link>
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font font-bold mb-4">Show Shows</h4>
         </div>
 
-        <div className="text-center mt-8">
-          <p>&copy; {new Date().getFullYear()} Blinkav Ltd.</p>
+        <div>
+          <h4 className="sangBlue-font font-bold mb-4">Categories</h4>
+          <ul className="space-y-4">
+            <li>
+              <Link
+                href="/services/residential-solutions"
+                className="hover:underline"
+              >
+                Residential Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/workspace-solutions"
+                className="hover:underline"
+              >
+                Workspace Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/audio-visual-solutions"
+                className="hover:underline"
+              >
+                Audio Visual Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/security-solutions"
+                className="hover:underline"
+              >
+                Security Solutions
+              </Link>
+            </li>
+          </ul>
         </div>
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font font-bold mb-4">About us</h4>
+          <p>
+            Blinkav Ltd is a leading provider of innovative solutions, dedicated
+            to enhancing the efficiency and productivity of our clients.
+          </p>
+        </div>
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font font-bold mb-4">Contact us</h4>
+          <p>
+            Have questions or need support? Reach out to us at{" "}
+            <a href="mailto:support@blinkav.com" className="hover:underline">
+              support@blinkav.com
+            </a>
+          </p>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto mt-8">
+        <SocialIcon bgColor={"#DDD0C8"} />
       </div>
     </footer>
   );

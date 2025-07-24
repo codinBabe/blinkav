@@ -2,3 +2,7 @@ export { default as About } from "./about";
 export { default as Contact } from "./contact";
 export { default as Hero } from "./hero";
 export { default as Services } from "./services";
+export { default as WorkspaceSolution } from "./workspace";
+export { default as ResidentialSolution } from "./residential";
+export { default as AudioVisualSolution } from "./audio-visual";
+export { default as SecuritySolution } from "./security";

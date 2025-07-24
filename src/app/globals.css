@@ -116,13 +116,48 @@
     background-size: 50%;
   }
 
+  .input-dotted:focus {
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-color: black;
+  }
+
+  .residential-bg,
+  .workspace-bg,
+  .audio-visual-bg,
+  .security-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .residential-bg {
+    background-image: url("/images/home-automation.jpg");
+  }
+
+  .workspace-bg {
+    background-image: url("/images/orange-room.jpg");
+  }
+
+  .audio-visual-bg {
+    background-image: url("/images/hero-4.jpg");
+  }
+
+  .security-bg {
+    background-image: url("/images/hero-5.jpg");
+  }
+
   ::selection {
     background-color: #ddd0c8;
   }
 
   .client-bg,
-  .about-bg {
-    background-image: url("/images/iperhomeclient2.jpg");
+  .about-bg,
+  .audio-bg,
+  .secure-bg {
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -132,6 +167,20 @@
     pointer-events: none;
   }
 
+  .client-bg,
+  .about-bg {
+    background-image: url("/images/iperhomeclient2.jpg");
+  }
+
+  .audio-bg {
+    background-image: url("/images/Workspace-5.webp");
+    border-radius: 12px;
+  }
+  .secure-bg {
+    background-image: url("/images/SECURITY-PAGE.jpg");
+    border-radius: 12px;
+  }
+
   .about-bg {
     transform: scaleX(-1);
     opacity: 0.8;
@@ -139,6 +188,13 @@
 
   /* Mobile fix */
   @media (max-width: 768px) {
+    .residential-bg,
+    .workspace-bg,
+    .audio-visual-bg,
+    .security-bg {
+      background-attachment: scroll;
+    }
+
     .client-bg {
       background-position: calc(100%) calc(100% - 40px);
       background-size: 85%;
@@ -148,18 +204,42 @@
       background-position: right top;
       background-size: 80%;
     }
+    .audio-bg {
+      background-repeat: repeat-y;
+      background-attachment: scroll;
+    }
+    .secure-bg {
+      background-position: bottom center;
+      background-attachment: fixed;
+      background-repeat: repeat-y;
+    }
   }
 
   /* Medium and up — enable parallax */
   @media (min-width: 768px) {
-    .client-bg {
+    .client-bg,
+    .audio-bg {
       background-attachment: fixed;
       background-size: 40%;
       background-position: top right;
     }
-    .about-bg {
+    .about-bg,
+    .secure-bg {
       background-size: 40%;
       background-position: right top;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .audio-bg {
+      background-image: none;
+    }
+    .secure-bg {
+      background-attachment: scroll;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border-radius: 12px;
     }
   }
 }
