@@ -20,7 +20,7 @@ const AudioVisualSolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Audiovisual solutions encompass a range of technologies and
@@ -62,7 +62,7 @@ const AudioVisualSolution = () => {
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+              className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
             >
               <p>
                 Audiovisual solutions also involve content creation and
@@ -110,7 +110,7 @@ const AudioVisualSolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               In the entertainment industry, audiovisual solutions are employed

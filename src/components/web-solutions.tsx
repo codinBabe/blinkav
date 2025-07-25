@@ -23,7 +23,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               At Blinkav, we craft modern web solutions that empower businesses
@@ -55,7 +55,7 @@ const WebSolution = () => {
 
         {/* Frontend Development */}
         <div className="relative flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -98,7 +98,7 @@ const WebSolution = () => {
 
         {/* Backend Development */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as="h2"
               variants={slideInRight}
@@ -143,7 +143,7 @@ const WebSolution = () => {
 
         {/* UI/UX Design */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -187,7 +187,7 @@ const WebSolution = () => {
 
         {/* Mobile App Development */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-28">
-          <div>
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInRight}

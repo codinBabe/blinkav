@@ -17,7 +17,7 @@ const ResidentialSolution = () => {
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16 md:space-y-28">
         <div className="flex flex-col md:flex-row-reverse items-center gap-20 mt-16 md:mt-28">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInRight}
@@ -64,7 +64,7 @@ const ResidentialSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-20 mb-20">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}

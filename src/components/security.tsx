@@ -21,7 +21,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Smart security solutions leverage advanced technologies to enhance
@@ -60,7 +60,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Another aspect of smart security solutions is access control. They
@@ -99,7 +99,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Furthermore, smart security solutions enable centralized

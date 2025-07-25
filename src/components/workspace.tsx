@@ -17,7 +17,7 @@ const WorkspaceSolution = () => {
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 space-y-16 md:space-y-28">
         <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-28">
-          <div className="md:max-w-xl space-y-6">
+          <div className="md:max-w-sm lg:max-w-xl space-y-6">
             <div>
               <Motion
                 as={"h2"}
@@ -82,7 +82,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -121,7 +121,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInRight}
@@ -160,7 +160,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
-          <div className="md:max-w-xl">
+          <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}
