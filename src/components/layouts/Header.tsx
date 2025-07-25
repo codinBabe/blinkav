@@ -37,7 +37,14 @@ const Header: React.FC = () => {
           label: "Audio Visual Solutions",
           href: "/services/audio-visual-solutions",
         },
-        { label: "Security Solutions", href: "/services/security-solutions" },
+        {
+          label: "Security Solutions",
+          href: "/services/security-solutions"
+        },
+        {
+          label: "Web Development Solutions",
+          href: "/services/web-development-solutions",
+        },
       ],
     },
     { label: "About Us", href: "/about-us" },

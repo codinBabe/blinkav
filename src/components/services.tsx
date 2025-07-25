@@ -102,7 +102,7 @@ const Services = () => {
             >
               <Image
                 unoptimized
-                src="/images/iperhomeclient.webp"
+                src="/images/clients2.jpg"
                 alt="Iper Home Logo"
                 width={600}
                 height={50}
