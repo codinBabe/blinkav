@@ -110,20 +110,6 @@
   }
 
   /* END OF SERVICE FILE */
-
-  .contact-bg {
-    background-image: url("/images/blob-grad.svg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-  }
-
-  .input-dotted:focus {
-    outline-style: dotted;
-    outline-width: 1px;
-    outline-color: black;
-  }
-
   .residential-bg,
   .workspace-bg,
   .audio-visual-bg,
