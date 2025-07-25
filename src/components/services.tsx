@@ -69,7 +69,7 @@ const Services = () => {
               variants={containerStagger}
               initial="hidden"
               animate={listInView ? "visible" : "hidden"}
-              className="flex flex-col flex-wrap gap-6 mt-8"
+              className="flex flex-col flex-wrap gap-6 mt-8 overflow-hidden"
             >
               {clients.map((client, index) => (
                 <motion.li
