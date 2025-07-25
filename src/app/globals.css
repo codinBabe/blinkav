@@ -31,11 +31,9 @@
     --input: hsl(30, 15%, 85%);
     --ring: hsl(25, 95%, 53%);
 
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--primary-glow))
-    );
+    --gradient-primary: linear-gradient(135deg,
+        hsl(var(--primary)),
+        hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(30 13% 89%), hsl(30 20% 85%));
     --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
     --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
@@ -108,6 +106,7 @@
   .rotateY-180 {
     transform: rotateY(180deg);
   }
+
   /* END OF SERVICE FILE */
 
   .contact-bg {
@@ -151,6 +150,7 @@
     background-image: url("/images/hero-5.jpg");
   }
 
+
   ::selection {
     background-color: #ddd0c8;
   }
@@ -158,7 +158,8 @@
   .client-bg,
   .about-bg,
   .audio-bg,
-  .secure-bg {
+  .secure-bg
+   {
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -170,15 +171,21 @@
 
   .client-bg,
   .about-bg {
-    background-image: url("/images/iperhomeclient2.jpg");
+    background-image: url("/images/clients.jpg");
   }
 
   .audio-bg {
     background-image: url("/images/Workspace-5.webp");
     border-radius: 12px;
   }
+
   .secure-bg {
     background-image: url("/images/SECURITY-PAGE.jpg");
+    border-radius: 12px;
+  }
+
+  .web-bg {
+    background-image: url("/images/bg2.jpg");
     border-radius: 12px;
   }
 
@@ -189,6 +196,7 @@
 
   /* Mobile fix */
   @media (max-width: 768px) {
+
     .residential-bg,
     .workspace-bg,
     .audio-visual-bg,
@@ -201,15 +209,24 @@
       background-size: 85%;
       background-attachment: scroll;
     }
+
     .about-bg {
       background-position: right top;
       background-size: 80%;
     }
+
     .audio-bg {
       background-repeat: repeat-y;
       background-attachment: scroll;
     }
+
     .secure-bg {
+      background-position: bottom center;
+      background-attachment: fixed;
+      background-repeat: repeat-y;
+    }
+
+    .web-bg {
       background-position: bottom center;
       background-attachment: fixed;
       background-repeat: repeat-y;
@@ -218,12 +235,14 @@
 
   /* Medium and up — enable parallax */
   @media (min-width: 768px) {
+
     .client-bg,
     .audio-bg {
       background-attachment: fixed;
       background-size: 40%;
       background-position: top right;
     }
+
     .about-bg,
     .secure-bg {
       background-size: 40%;
@@ -235,6 +254,7 @@
     .audio-bg {
       background-image: none;
     }
+
     .secure-bg {
       background-attachment: scroll;
       background-position: bottom center;
