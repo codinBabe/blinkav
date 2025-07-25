@@ -14,6 +14,7 @@ import { motion, useInView } from "framer-motion";
 import { containerStagger, slideInBottom } from "@/animations";
 import { useRef, useState } from "react";
 import { Button } from "./ui";
+import Image from "next/image";
 
 const services = [
   {
@@ -110,7 +111,7 @@ const services = [
 
 const ServicesOverview = () => {
   const containerRef = useRef(null);
-  const inView = useInView(containerRef, { once: true, amount: 0.3 });
+  const inView = useInView(containerRef, { once: true, amount: 0.1 });
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -143,15 +144,22 @@ const ServicesOverview = () => {
                   }}
                 >
                   {/* Front */}
-                  <div
-                    className="absolute w-full h-full flex flex-col items-center justify-center text-center backface-hidden bg-cover bg-center shadow-md rounded-lg text-white overflow-hidden"
-                    style={{
-                      backgroundImage: `url(${service.image})`,
-                    }}
-                  >
-                    {/* Optional Overlay */}
-                    <div className="absolute inset-0 bg-black/40 rounded-lg z-[1]" />
-                    <div className="relative z-[2] flex flex-col items-center justify-center px-6">
+                  <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-md text-white flex items-center justify-center">
+                    <div className="absolute inset-0">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover rounded-lg"
+                        priority={index === 0}
+                      />
+                    </div>
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40 z-[1]" />
+
+                    {/* Content */}
+                    <div className="relative z-[2] flex flex-col items-center justify-center text-center px-6">
                       <div className="w-12 h-12 bg-gradient rounded-lg flex items-center justify-center mb-4">
                         <Icon className="w-6 h-6 text-white" />
                       </div>

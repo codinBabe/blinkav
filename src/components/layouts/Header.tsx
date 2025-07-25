@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         },
         {
           label: "Security Solutions",
-          href: "/services/security-solutions"
+          href: "/services/security-solutions",
         },
         {
           label: "Web Development Solutions",
@@ -109,22 +109,7 @@ const Header: React.FC = () => {
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </span>
-
-                {/* {isDropdownOpen && (
-                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-xs py-2">
-                    {item.dropdown.map((subItem, subIdx) => (
-                      <li key={subIdx} className="px-3 py-2">
-                        <Link
-                          className="font-bold leading-loose hover:underline"
-                          href={subItem.href}
-                        >
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )} */}
-
+                {/* Dropdown Menu */}
                 {isDropdownOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
