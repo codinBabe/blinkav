@@ -31,9 +31,11 @@
     --input: hsl(30, 15%, 85%);
     --ring: hsl(25, 95%, 53%);
 
-    --gradient-primary: linear-gradient(135deg,
-        hsl(var(--primary)),
-        hsl(var(--primary-glow)));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
     --gradient-hero: linear-gradient(135deg, hsl(30 13% 89%), hsl(30 20% 85%));
     --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
     --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
@@ -125,7 +127,8 @@
   .residential-bg,
   .workspace-bg,
   .audio-visual-bg,
-  .security-bg {
+  .security-bg,
+  .web-bg {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -150,6 +153,9 @@
     background-image: url("/images/hero-5.jpg");
   }
 
+  .web-bg {
+    background-image: url("/images/bg3.jpg");
+  }
 
   ::selection {
     background-color: #ddd0c8;
@@ -158,8 +164,7 @@
   .client-bg,
   .about-bg,
   .audio-bg,
-  .secure-bg
-   {
+  .secure-bg {
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -184,11 +189,6 @@
     border-radius: 12px;
   }
 
-  .web-bg {
-    background-image: url("/images/bg2.jpg");
-    border-radius: 12px;
-  }
-
   .about-bg {
     transform: scaleX(-1);
     opacity: 0.8;
@@ -196,11 +196,11 @@
 
   /* Mobile fix */
   @media (max-width: 768px) {
-
     .residential-bg,
     .workspace-bg,
     .audio-visual-bg,
-    .security-bg {
+    .security-bg,
+    .web-bg {
       background-attachment: scroll;
     }
 
@@ -225,17 +225,10 @@
       background-attachment: fixed;
       background-repeat: repeat-y;
     }
-
-    .web-bg {
-      background-position: bottom center;
-      background-attachment: fixed;
-      background-repeat: repeat-y;
-    }
   }
 
   /* Medium and up — enable parallax */
   @media (min-width: 768px) {
-
     .client-bg,
     .audio-bg {
       background-attachment: fixed;

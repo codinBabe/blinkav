@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
-const ResidentialSolution: React.FC = () => {
+const ResidentialSolution = () => {
   return (
     <section>
-      <div className="residential-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="residential-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInBottom}
@@ -15,9 +15,9 @@ const ResidentialSolution: React.FC = () => {
           Residential Solutions
         </Motion>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-20 my-16 md:my-28">
-          <div>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16 md:space-y-28">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-20 mt-16 md:mt-28">
+          <div className="md:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInRight}
@@ -50,7 +50,7 @@ const ResidentialSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full max-w-2xl h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Residential-3.webp"
@@ -64,7 +64,7 @@ const ResidentialSolution: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-20 mb-20">
-          <div>
+          <div className="md:max-w-xl">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -92,7 +92,7 @@ const ResidentialSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInRight}
-            className="w-full max-w-2xl h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Residential-2.webp"

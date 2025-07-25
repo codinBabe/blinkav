@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { Motion, slideInBottom } from "@/animations";
 
-const AudioVisualSolution: React.FC = () => {
+const AudioVisualSolution = () => {
   return (
     <section>
-      <div className="audio-visual-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="audio-visual-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInBottom}
@@ -15,12 +15,12 @@ const AudioVisualSolution: React.FC = () => {
           Audio Visual Solutions
         </Motion>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16 md:space-y-28">
         <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-20">
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Audiovisual solutions encompass a range of technologies and
@@ -43,7 +43,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Audio-visual-1.webp"
@@ -56,13 +56,13 @@ const AudioVisualSolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="relative my-16 md:my-28 overflow-hidden">
+        <div className="relative overflow-hidden">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="audio-bg" />
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+              className="md:max-w-xl space-y-6 text-[17px] leading-loose"
             >
               <p>
                 Audiovisual solutions also involve content creation and
@@ -92,7 +92,7 @@ const AudioVisualSolution: React.FC = () => {
             <Motion
               as={"div"}
               variants={slideInBottom}
-              className="w-full md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+              className="w-full md:mt-20 h-full rounded-xl overflow-hidden"
             >
               <Image
                 src="/images/Audio-visual-2.webp"
@@ -110,7 +110,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               In the entertainment industry, audiovisual solutions are employed
@@ -130,7 +130,7 @@ const AudioVisualSolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Audio-visual-3.webp"

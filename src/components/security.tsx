@@ -4,10 +4,10 @@ import Image from "next/image";
 
 import { Motion, slideInBottom, slideInLeft } from "@/animations";
 
-const SecuritySolution: React.FC = () => {
+const SecuritySolution = () => {
   return (
     <section>
-      <div className="security-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="security-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInLeft}
@@ -16,12 +16,12 @@ const SecuritySolution: React.FC = () => {
           Security Solutions
         </Motion>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16 md:space-y-28">
         <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-28">
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Smart security solutions leverage advanced technologies to enhance
@@ -42,7 +42,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[54%] h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/security.jpg"
@@ -55,53 +55,51 @@ const SecuritySolution: React.FC = () => {
           </Motion>
         </div>
 
-        <div className="relative my-16 md:my-28">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="secure-bg" />
-            <Motion
-              as={"div"}
-              variants={slideInBottom}
-              className="md:w-[46%] space-y-6 text-[17px] leading-loose"
-            >
-              <p>
-                Another aspect of smart security solutions is access control.
-                They utilize technologies like biometric identification, smart
-                cards, or facial recognition to ensure only authorized
-                individuals can access specific areas or resources. Access
-                control systems can also track and log entry and exit events,
-                providing a comprehensive audit trail for security purposes.
-              </p>
-              <p>
-                Smart security solutions also incorporate automation and remote
-                management capabilities. They can integrate with other smart
-                devices, such as motion sensors, door locks, and alarm systems,
-                to automate security processes. For example, smart security
-                systems can arm or disarm alarms, lock or unlock doors, and
-                adjust lighting based on predefined rules or remote commands.
-              </p>
-            </Motion>
-            <Motion
-              as={"div"}
-              variants={slideInBottom}
-              className="w-full md:mr-16 mt-4 md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
-            >
-              <Image
-                src="/images/security-solution-1.webp"
-                alt="Security Solutions"
-                unoptimized
-                width={400}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </Motion>
-          </div>
+        <div className="relative flex flex-col md:flex-row items-center gap-10">
+          <div className="secure-bg" />
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
+          >
+            <p>
+              Another aspect of smart security solutions is access control. They
+              utilize technologies like biometric identification, smart cards,
+              or facial recognition to ensure only authorized individuals can
+              access specific areas or resources. Access control systems can
+              also track and log entry and exit events, providing a
+              comprehensive audit trail for security purposes.
+            </p>
+            <p>
+              Smart security solutions also incorporate automation and remote
+              management capabilities. They can integrate with other smart
+              devices, such as motion sensors, door locks, and alarm systems, to
+              automate security processes. For example, smart security systems
+              can arm or disarm alarms, lock or unlock doors, and adjust
+              lighting based on predefined rules or remote commands.
+            </p>
+          </Motion>
+          <Motion
+            as={"div"}
+            variants={slideInBottom}
+            className="w-full md:mr-16 mt-4 md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/security-solution-1.webp"
+              alt="Security Solutions"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
+          </Motion>
         </div>
 
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
+            className="md:max-w-xl space-y-6 text-[17px] leading-loose"
           >
             <p>
               Furthermore, smart security solutions enable centralized
@@ -132,7 +130,7 @@ const SecuritySolution: React.FC = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+            className="w-full h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/security-solution-2.webp"

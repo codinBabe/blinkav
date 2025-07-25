@@ -8,7 +8,7 @@ import {
   MicrophoneIcon,
   ShieldCheckIcon,
   SpeakerWaveIcon,
-  CodeBracketIcon
+  CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
 import { containerStagger, slideInBottom } from "@/animations";
@@ -98,15 +98,14 @@ const services = [
     title: "Web Development",
     description:
       "End-to-end web solutions including frontend, backend, UI/UX design, and mobile app development for modern businesses.",
-    image: "/images/bg2.jpg",
+    image: "/images/bg3.jpg",
     features: [
       "Responsive frontend",
       "Scalable backend",
       "Modern UI/UX design",
       "Cross-platform mobile apps (iOS & Android)",
     ],
-  }
-
+  },
 ];
 
 const ServicesOverview = () => {

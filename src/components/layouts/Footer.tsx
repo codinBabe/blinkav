@@ -16,10 +16,9 @@ const Footer = () => {
               alt="Blinkav Home Logo"
               width={200}
               height={50}
-              className="mb-4"
             />
           </Link>
-          <p className="text-sm text-gray-900 mt-8">
+          <p className="text-gray-700 mt-6">
             Blinkav Ltd is a leading provider of innovative solutions, dedicated
             to enhancing the efficiency and productivity of our clients.
           </p>
@@ -27,10 +26,8 @@ const Footer = () => {
 
         {/* Services */}
         <div className="max-w-xs">
-          <h4 className="sangBlue-font text-xl font-extrabold mb-4">
-            Services
-          </h4>
-          <ul className="space-y-3 text-sm text-gray-700">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">Services</h4>
+          <ul className="space-y-3 text-gray-700">
             <li>
               <Link
                 href="/services/residential-solutions"
@@ -76,16 +73,14 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="max-w-xs">
-          <h4 className="sangBlue-font text-xl font-extrabold mb-4">
-            Contact Us
-          </h4>
-          <p className="text-sm text-gray-700">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">Contact Us</h4>
+          <p className="text-gray-700">
             Want a quote? Fill out our{" "}
             <Link href="/contact" className="hover:underline text-blue-600">
               contact form
             </Link>
           </p>
-          <p className="text-sm text-gray-700 mt-4">
+          <p className="text-gray-700 mt-4">
             Have questions or need support? Reach out at{" "}
             <a
               href="mailto:support@blinkav.com"
@@ -98,16 +93,16 @@ const Footer = () => {
 
         {/* Socials */}
         <div className="max-w-xs">
-          <h4 className="sangBlue-font text-xl font-extrabold mb-4">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">
             Connect with us
           </h4>
-          <SocialIcon bgColor="#DDD0C8" />
+          <SocialIcon bgColor={"bg-#DDD0C8"} />
         </div>
       </div>
 
       {/* Footer bottom */}
       <div className="max-w-7xl mx-auto mt-12 text-center">
-        <p className="text-xs text-gray-600">
+        <p className="text-sm text-[var(--muted-foreground)]">
           &copy; {new Date().getFullYear()} Blinkav Ltd. All rights reserved.
         </p>
       </div>
