@@ -19,7 +19,6 @@ const clients = [
 
 const Services = () => {
   const listRef = useRef(null);
-
   const listInView = useInView(listRef, { once: true, amount: 0.3 });
 
   return (
