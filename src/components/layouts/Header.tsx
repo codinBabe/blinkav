@@ -237,7 +237,7 @@ const Header: React.FC = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6 mt-8">
-            <SocialIcon bgColor="bg-transparent" />
+            <SocialIcon bgColor="bg-transparent" className="shadow-none" />
           </div>
         </div>
       )}

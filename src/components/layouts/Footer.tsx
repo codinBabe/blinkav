@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-8">
-        <SocialIcon bgColor={"#DDD0C8"} />
+        <SocialIcon bgColor={"bg-transparent"} className="shadow-none" />
       </div>
     </footer>
   );

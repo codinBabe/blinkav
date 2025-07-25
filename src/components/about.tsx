@@ -236,7 +236,7 @@ const AboutUs = () => {
         </section>
 
         {/* Our Process */}
-        <section className="mb-20 bg-[color:var(--muted)]/50 px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
+        <section className="mb-20 bg-[#DDD0C8] px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
           <div className="max-w-7xl mx-auto">
             <Motion
               as={"div"}

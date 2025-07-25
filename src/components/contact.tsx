@@ -77,7 +77,7 @@ const Contact = () => {
                     }}
                   >
                     {/* Front Side */}
-                    <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
+                    <div className="absolute w-full h-full backface-hidden bg-white border border-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
                       <info.icon className="h-8 w-8 text-[var(--primary)]" />
                       <h3 className="text-lg md:text-2xl font-bold">
                         {info.title}
