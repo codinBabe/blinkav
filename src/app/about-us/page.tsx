@@ -1,11 +1,11 @@
-import AboutUs from "@/components/sections/About";
+import { About } from "@/components";
 
 export const metadata = {
-  title: "About Us - Iperhome",
+  title: "About Us - Blinkav Ltd",
   description:
-    "Learn more about Iperhome, our mission, and our commitment to enhancing daily lives through innovative solutions.",
+    "Learn more about Blinkav Ltd, our mission, and our commitment to enhancing daily lives through innovative solutions.",
 };
 
 export default function AboutUsPage() {
-  return <AboutUs />;
+  return <About />;
 }

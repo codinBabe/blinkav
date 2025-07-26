@@ -1,85 +1,111 @@
 "use client";
 
-import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import SocialIcon from "../icons/Social-Icon";
+import Link from "next/link";
 
-const Footer: React.FC = () => {
-  const icons = [
-    {
-      id: "phone",
-      icon: <DevicePhoneMobileIcon className="h-6 w-6 text-black" />,
-      link: "",
-    },
-    {
-      id: "email",
-      icon: <EnvelopeIcon className="h-6 w-6 text-black" />,
-      link: "mailto:",
-    },
-    {
-      id: "instagram",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-          className="h-6 w-6 text-black"
-        >
-          <path
-            fill="currentColor"
-            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 
-            114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 
-            189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 
-            74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 
-            74.7zm146.4-194.3c0 14.9-12 26.8-26.8 
-            26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 
-            26.8-26.8 26.8 12 26.8 26.8zm76.1 
-            27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 
-            0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 
-            93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 
-            67.7 36.2 93.9s58 34.4 93.9 36.2c37 
-            2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 
-            93.9-36.2 26.2-26.2 34.4-58 
-            36.2-93.9 2.1-37 2.1-147.8 
-            0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 
-            42.6-29.5 11.7-99.5 9-132.1 9s-102.7 
-            2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 
-            9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 
-            99.5-9 132.1-9s102.7-2.6 132.1 
-            9c19.6 7.8 34.7 22.9 42.6 
-            42.6 11.7 29.5 9 99.5 9 
-            132.1s2.7 102.7-9 132.1z"
-          />
-        </svg>
-      ),
-      link: "https://www.instagram.com/",
-    },
-  ];
-
+const Footer = () => {
   return (
-    <footer className="py-20 px-4 md:px-10 lg:px-12 border-t border-t-black">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          <Image
-            src="/images/iper-logo.webp"
-            alt="Iper Home Logo"
-            width={250}
-            height={50}
-          />
-
-          <h5 className="sangBlue-font md:text-xl lg:text-2xl max-w-lg text-center md:text-left">
-            Since 2016, Iper Home LTD has enhanced daily efficiency for
-            individuals and corporations.
-          </h5>
-
-          <SocialIcon bgColor={"#DDD0C8"} />
+    <footer className="py-6 px-6 lg:px-12 border-t border-t-black">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-4">
+        {/* Logo & About */}
+        <div>
+          <Link href="/">
+            <Image
+              src="/images/logo-black.png"
+              alt="Blinkav Home Logo"
+              width={200}
+              height={50}
+              className="-mt-4"
+            />
+          </Link>
+          <p className="text-gray-700 mt-6">
+            Blinkav Ltd is a leading provider of innovative solutions, dedicated
+            to enhancing the efficiency and productivity of our clients.
+          </p>
         </div>
 
-        <div className="text-center mt-8">
-          <p>&copy; {new Date().getFullYear()} Iper Home Ltd.</p>
+        {/* Services */}
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">Services</h4>
+          <ul className="space-y-3 text-gray-700">
+            <li>
+              <Link
+                href="/services/residential-solutions"
+                className="hover:underline"
+              >
+                Residential Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/workspace-solutions"
+                className="hover:underline"
+              >
+                Workspace Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/audio-visual-solutions"
+                className="hover:underline"
+              >
+                Audio Visual Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/security-solutions"
+                className="hover:underline"
+              >
+                Security Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/web-development-solutions"
+                className="hover:underline"
+              >
+                Web Development Solutions
+              </Link>
+            </li>
+          </ul>
         </div>
+
+        {/* Contact */}
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">Contact Us</h4>
+          <p className="text-gray-700">
+            Want a quote? Fill out our{" "}
+            <Link href="/contact" className="hover:underline text-blue-600">
+              contact form
+            </Link>
+          </p>
+          <p className="text-gray-700 mt-4">
+            Have questions or need support? Reach out at{" "}
+            <a
+              href="mailto:support@blinkav.com"
+              className="hover:underline text-blue-600"
+            >
+              support@blinkav.com
+            </a>
+          </p>
+        </div>
+
+        {/* Socials */}
+        <div className="max-w-xs">
+          <h4 className="sangBlue-font text-xl font-bold mb-4">
+            Connect with us
+          </h4>
+          <SocialIcon bgColor={"bg-#DDD0C8"} />
+        </div>
+      </div>
+
+      {/* Footer bottom */}
+      <div className="max-w-7xl mx-auto mt-12 text-center">
+        <p className="text-sm text-[var(--muted-foreground)]">
+          &copy; {new Date().getFullYear()} Blinkav Ltd. All rights reserved.
+        </p>
       </div>
     </footer>
   );

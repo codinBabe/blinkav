@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import Contact from "@/components/sections/Contact";
+import { Contact } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Contact - Iperhome",
+  title: "Contact - Blinkav Ltd",
   description:
-    "Get in touch with Iperhome for inquiries, support, or feedback.",
+    "Get in touch with Blinkav Ltd for inquiries, support, or feedback.",
 };
 
 export default function ContactPage() {

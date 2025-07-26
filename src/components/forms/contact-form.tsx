@@ -1,9 +1,10 @@
-import { contactSchema } from "@/schemas/contact.schema";
+import { ContactFormData, contactSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Button, Input, Textarea } from "../ui";
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const {
@@ -11,11 +12,11 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: ContactFormData) => {
     console.log(data);
     setSubmitted(true);
     reset();
@@ -23,58 +24,62 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="neue-font text-center mt-10 text-[17px]">
+      <div className="text-center mt-10 text-[17px]">
         Thanks for contacting us! We will be in touch with you shortly.
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="neue-font mx-auto mt-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-6">
       <div className="grid grid-cols-1 gap-5">
-        <input
+        <Input
           type="text"
           {...register("name")}
           placeholder="Your Full Name"
-          className="p-3.5 bg-white input-dotted outline-none"
+          className="bg-white"
         />
         {errors.name && <p className="text-red-500">{errors.name.message}</p>}
 
-        <input
+        <Input
           type="email"
           {...register("email")}
           placeholder="Your Email"
           autoComplete="email"
-          className="p-3.5 bg-white input-dotted outline-none"
+          className="bg-white"
         />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
-        <input
+        <Input
           type="text"
           {...register("phone")}
           placeholder="Your Contact Number"
-          className="p-3.5 bg-white input-dotted outline-none"
+          className="bg-white"
         />
         {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
       </div>
 
-      <textarea
+      <Textarea
         {...register("message")}
         name="message"
         placeholder="Your Message"
-        className="w-full mt-6 p-3.5 bg-white input-dotted outline-none"
+        className="w-full mt-6 bg-white"
         rows={5}
-      ></textarea>
+      ></Textarea>
       {errors.message && (
         <p className="text-red-500">{errors.message.message}</p>
       )}
 
-      <button
+      <Button
         type="submit"
-        className="mt-6 px-6 py-2 bg-[#DDD0C8] text-black font-semibold leading-loose rounded-lg transition-colors"
+        variant={"gradient"}
+        className="mt-6 font-semibold"
+        size={"lg"}
       >
         Submit
-      </button>
+      </Button>
     </form>
   );
-}
+};
+
+export default ContactForm;

@@ -1,9 +1,51 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --background: hsl(30, 13%, 92%);
+    --foreground: hsl(0, 0%, 0%);
+
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(0, 0%, 0%);
+
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(0, 0%, 0%);
+
+    --primary: hsl(25, 95%, 53%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --primary-glow: hsl(25, 85%, 63%);
+
+    --secondary: hsl(30, 20%, 83%);
+    --secondary-foreground: hsl(0, 0%, 0%);
+
+    --muted: hsl(30, 20%, 88%);
+    --muted-foreground: hsl(0, 0%, 40%);
+
+    --accent: hsl(30, 20%, 83%);
+    --accent-foreground: hsl(0, 0%, 0%);
+
+    --destructive: hsl(0, 84%, 60%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+
+    --border: hsl(30, 15%, 80%);
+    --input: hsl(30, 15%, 85%);
+    --ring: hsl(25, 95%, 53%);
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
+    --gradient-hero: linear-gradient(135deg, hsl(30 13% 89%), hsl(30 20% 85%));
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+}
+
 @font-face {
   font-family: "Helvetica Neue-LT";
   src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -19,7 +61,7 @@
 @font-face {
   font-family: "SangBleu Sans";
   src: url("/fonts/sangbleu-sans-light.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -32,166 +74,172 @@
   font-display: swap;
 }
 
-.sangBlue-font {
-  font-family: "SangBleu Sans", sans-serif;
-}
-.body-font {
-  font-family: "Helvetica Neue-LT", sans-serif;
-  line-height: 1.2;
-  font-size: 16px;
-  color: #000;
-  background-color: #edebe9;
-}
+@layer utilities {
+  .bg-gradient {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24, #f97316);
+  }
 
-/* SERVICES FILE */
-.perspective {
-  perspective: 1000px;
-  z-index: 0;
-}
+  .sangBlue-font {
+    font-family: "SangBleu Sans", sans-serif;
+  }
 
-.preserve-3d {
-  transform-style: preserve-3d;
-}
+  .body-font {
+    font-family: "Helvetica Neue-LT", sans-serif;
+    line-height: 1.2;
+    font-size: 16px;
+    color: #000;
+    background-color: #edebe9;
+  }
 
-.backface-hidden {
-  backface-visibility: hidden;
-}
+  /* SERVICES FILE */
+  .perspective {
+    perspective: 1000px;
+    z-index: 0;
+  }
 
-.rotateY-180 {
-  transform: rotateY(180deg);
-}
-/* END OF SERVICE FILE */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
 
-.contact-bg {
-  background-image: url("/images/blob-grad.svg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-}
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 
-.input-dotted:focus {
-  outline-style: dotted;
-  outline-width: 1px;
-  outline-color: black;
-}
+  .rotateY-180 {
+    transform: rotateY(180deg);
+  }
 
-.residential-bg,
-.workspace-bg,
-.audio-visual-bg,
-.security-bg {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.residential-bg {
-  background-image: url("/images/Residential-1.jpg");
-}
-
-.workspace-bg {
-  background-image: url("/images/Workspace-1.jpg");
-}
-
-.audio-visual-bg {
-  background-image: url("/images/Audio-visual.jpg");
-}
-
-.security-bg {
-  background-image: url("/images/SECURITY-PAGE.jpg");
-}
-
-::selection {
-  background-color: #ddd0c8;
-}
-
-.client-bg,
-.about-bg,
-.audio-bg,
-.secure-bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.client-bg,
-.about-bg {
-  background-image: url("/images/iperhomeclient2.jpg");
-}
-
-.audio-bg {
-  background-image: url("/images/Workspace-5.webp");
-  border-radius: 12px;
-}
-.secure-bg {
-  background-image: url("/images/SECURITY-PAGE.jpg");
-  border-radius: 12px;
-}
-
-.about-bg {
-  transform: scaleX(-1);
-  opacity: 0.8;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
+  /* END OF SERVICE FILE */
   .residential-bg,
   .workspace-bg,
   .audio-visual-bg,
-  .security-bg {
-    background-attachment: scroll;
-  }
-
-  .client-bg {
-    background-position: calc(100%) calc(100% - 40px);
-    background-size: 85%;
-    background-attachment: scroll;
-  }
-  .about-bg {
-    background-position: right top;
-    background-size: 80%;
-  }
-  .audio-bg {
-    background-repeat: repeat-y;
-    background-attachment: scroll;
-  }
-  .secure-bg {
-    background-position: bottom center;
+  .security-bg,
+  .web-bg {
     background-attachment: fixed;
-    background-repeat: repeat-y;
-  }
-}
-
-/* Medium and up — enable parallax */
-@media (min-width: 768px) {
-  .client-bg,
-  .audio-bg {
-    background-attachment: fixed;
-    background-size: 40%;
-    background-position: top right;
-  }
-  .about-bg,
-  .secure-bg {
-    background-size: 40%;
-    background-position: right top;
-  }
-}
-
-@media (max-width: 640px) {
-  .audio-bg {
-    background-image: none;
-  }
-  .secure-bg {
-    background-attachment: scroll;
-    background-position: bottom center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .residential-bg {
+    background-image: url("/images/home-automation.jpg");
+  }
+
+  .workspace-bg {
+    background-image: url("/images/orange-room.jpg");
+  }
+
+  .audio-visual-bg {
+    background-image: url("/images/hero-4.jpg");
+  }
+
+  .security-bg {
+    background-image: url("/images/hero-5.jpg");
+  }
+
+  .web-bg {
+    background-image: url("/images/bg3.jpg");
+  }
+
+  ::selection {
+    background-color: #ddd0c8;
+  }
+
+  .client-bg,
+  .about-bg,
+  .audio-bg,
+  .secure-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .client-bg,
+  .about-bg {
+    background-image: url("/images/clients.jpg");
+  }
+
+  .audio-bg {
+    background-image: url("/images/Workspace-5.webp");
     border-radius: 12px;
+  }
+
+  .secure-bg {
+    background-image: url("/images/SECURITY-PAGE.jpg");
+    border-radius: 12px;
+  }
+
+  .about-bg {
+    transform: scaleX(-1);
+    opacity: 0.8;
+  }
+
+  /* Mobile fix */
+  @media (max-width: 768px) {
+    .residential-bg,
+    .workspace-bg,
+    .audio-visual-bg,
+    .security-bg,
+    .web-bg {
+      background-attachment: scroll;
+    }
+
+    .client-bg {
+      background-position: calc(100%) calc(100% - 40px);
+      background-size: 85%;
+      background-attachment: scroll;
+    }
+
+    .about-bg {
+      background-position: right top;
+      background-size: 80%;
+    }
+
+    .audio-bg {
+      background-repeat: repeat-y;
+      background-attachment: scroll;
+    }
+
+    .secure-bg {
+      background-position: bottom center;
+      background-attachment: fixed;
+      background-repeat: repeat-y;
+    }
+  }
+
+  /* Medium and up — enable parallax */
+  @media (min-width: 768px) {
+    .client-bg,
+    .audio-bg {
+      background-attachment: fixed;
+      background-size: 40%;
+      background-position: top right;
+    }
+
+    .about-bg,
+    .secure-bg {
+      background-size: 40%;
+      background-position: right top;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .audio-bg {
+      background-image: none;
+    }
+
+    .secure-bg {
+      background-attachment: scroll;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border-radius: 12px;
+    }
   }
 }

@@ -2,12 +2,17 @@ import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import { cn } from "@/lib/utils";
 
 interface SocialIconProps {
-  bgColor: string;
+  bgColor?: string; // optional in case you want to default
+  className?: string; // allow external override too
 }
 
-const SocialIcon: React.FC<SocialIconProps> = ({ bgColor }) => {
+const SocialIcon: React.FC<SocialIconProps> = ({
+  bgColor = "bg-white",
+  className,
+}) => {
   const icons = [
     {
       id: "phone",
@@ -59,14 +64,18 @@ const SocialIcon: React.FC<SocialIconProps> = ({ bgColor }) => {
   ];
 
   return (
-    <div className="flex flex-wrap items-center gap-4">
+    <div className={cn("flex flex-wrap items-center gap-4")}>
       {icons.map(({ id, icon, link }) => (
         <a
           key={id}
           href={link || "#"}
           target={link?.startsWith("http") ? "_blank" : "_self"}
           rel={link?.startsWith("http") ? "noopener noreferrer" : undefined}
-          className={`w-12 h-12 rounded-full ${bgColor} flex items-center justify-center shadow cursor-pointer transition hover:scale-105`}
+          className={cn(
+            "w-12 h-12 rounded-full flex items-center justify-center shadow cursor-pointer transition hover:scale-105",
+            bgColor,
+            className
+          )}
         >
           {icon}
         </a>

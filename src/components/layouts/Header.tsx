@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialIcon from "../icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
+import { motion } from "framer-motion";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -20,12 +21,7 @@ const Header: React.FC = () => {
     setMobileDropdownOpen(false);
   }, [pathname]);
 
-  const noBgPaths =
-    pathname === "/" ||
-    pathname === "/services/residential-solutions" ||
-    pathname === "/services/workspace-solutions" ||
-    pathname === "/services/audio-visual-solutions" ||
-    pathname === "/services/security-solutions";
+  const noBgPaths = pathname === "/" || pathname.startsWith("/services/");
 
   const menu = [
     { label: "Home", href: "/" },
@@ -41,7 +37,14 @@ const Header: React.FC = () => {
           label: "Audio Visual Solutions",
           href: "/services/audio-visual-solutions",
         },
-        { label: "Security Solutions", href: "/services/security-solutions" },
+        {
+          label: "Security Solutions",
+          href: "/services/security-solutions",
+        },
+        {
+          label: "Web Development Solutions",
+          href: "/services/web-development-solutions",
+        },
       ],
     },
     { label: "About Us", href: "/about-us" },
@@ -54,23 +57,35 @@ const Header: React.FC = () => {
         noBgPaths
           ? "absolute top-0 left-0 right-0 bg-transparent"
           : "bg-[#edebe9]"
-      } p-6 z-50`}
+      } px-4 lg:px-0 py-4 z-50`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 md:px-6">
-        <Link href={"/"}>
+      <Link
+        href={"/"}
+        className="border-b border-b-[var(--border)] mb-4 w-full hidden lg:flex justify-center"
+      >
+        <Image
+          src={noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"}
+          alt="Blinkav Logo"
+          width={200}
+          height={50}
+          priority
+          className="mb-2"
+        />
+      </Link>
+      <div className="max-w-7xl mx-auto flex lg:flex-col items-center justify-between lg:justify-center">
+        <Link href={"/"} className="lg:hidden">
           <Image
             src={
-              noBgPaths
-                ? "/images/iper-logo-white.webp"
-                : "/images/iper-logo.webp"
+              noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"
             }
-            alt="Company Logo"
-            width={300}
+            alt="Blinkav Logo"
+            width={200}
             height={50}
+            priority
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center justify-evenly w-full lg:-mt-5">
           {menu.map((item, index) =>
             item.dropdown ? (
               <div
@@ -82,7 +97,7 @@ const Header: React.FC = () => {
                 <span
                   className={`${
                     noBgPaths ? "text-white" : "text-black"
-                  } inline-flex items-center font-bold leading-[70px] text-[15px]`}
+                  } inline-flex items-center font-bold leading-[70px]`}
                 >
                   {item.label}
                   <svg
@@ -96,20 +111,27 @@ const Header: React.FC = () => {
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </span>
-
+                {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <ul className="absolute left-0 top-full w-56 bg-white shadow-lg z-10 rounded-xs py-2">
-                    {item.dropdown.map((subItem, subIdx) => (
-                      <li key={subIdx} className="px-3 py-2">
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-1/2 right-0 top-[50px] ml-[-40vw] w-screen bg-white shadow-lg z-20 py-4"
+                  >
+                    <div className="max-w-7xl mx-auto px-4 flex justify-center gap-8">
+                      {item.dropdown.map((subItem, subIdx) => (
                         <Link
-                          className="font-bold leading-loose text-[15px]"
+                          key={subIdx}
                           href={subItem.href}
+                          className="text-sm font-semibold hover:underline whitespace-nowrap"
                         >
                           {subItem.label}
                         </Link>
-                      </li>
-                    ))}
-                  </ul>
+                      ))}
+                    </div>
+                  </motion.div>
                 )}
               </div>
             ) : (
@@ -117,7 +139,7 @@ const Header: React.FC = () => {
                 key={index}
                 className={`${
                   noBgPaths ? "text-white" : "text-black"
-                } font-bold leading-[70px] text-[15px]`}
+                } font-bold leading-[70px]`}
                 href={item.href}
               >
                 {item.label}
@@ -150,8 +172,8 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link href={"/"} className="flex justify-center">
             <Image
-              src="/images/iper-logo.webp"
-              alt="Logo"
+              src="/images/logo-black.png"
+              alt="Blinkav Logo"
               width={300}
               height={50}
             />
@@ -209,7 +231,7 @@ const Header: React.FC = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-6 mt-8">
-            <SocialIcon bgColor="bg-transparent" />
+            <SocialIcon bgColor="bg-transparent" className="shadow-none" />
           </div>
         </div>
       )}
