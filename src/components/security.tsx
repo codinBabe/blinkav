@@ -6,8 +6,8 @@ import { Motion, slideInBottom, slideInLeft } from "@/animations";
 
 const SecuritySolution = () => {
   return (
-    <section>
-      <div className="security-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
+    <section className="overflow-hidden">
+      <div className="security-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInLeft}
@@ -21,7 +21,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Smart security solutions leverage advanced technologies to enhance
@@ -42,7 +42,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[54%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/security.jpg"
@@ -60,7 +60,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Another aspect of smart security solutions is access control. They
@@ -82,7 +82,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full md:mr-16 mt-4 md:mt-20 md:w-[45%] h-full rounded-xl overflow-hidden"
+            className="w-full md:mr-16 mt-4 md:mt-20 md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/security-solution-1.webp"
@@ -99,7 +99,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:w-[46%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               Furthermore, smart security solutions enable centralized
@@ -130,7 +130,7 @@ const SecuritySolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/security-solution-2.webp"

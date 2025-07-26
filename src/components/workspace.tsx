@@ -5,8 +5,8 @@ import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const WorkspaceSolution = () => {
   return (
-    <section>
-      <div className="workspace-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
+    <section className="overflow-hidden">
+      <div className="workspace-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInBottom}
@@ -17,7 +17,7 @@ const WorkspaceSolution = () => {
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 space-y-16 md:space-y-28">
         <div className="w-full flex flex-col md:flex-row-reverse items-center gap-10 mt-16 md:mt-28">
-          <div className="md:max-w-sm lg:max-w-xl space-y-6">
+          <div className="md:w-[46%] space-y-6">
             <div>
               <Motion
                 as={"h2"}
@@ -68,7 +68,7 @@ const WorkspaceSolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Workspace-2.webp"
@@ -82,7 +82,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[47%]">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -107,7 +107,7 @@ const WorkspaceSolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Workspace-3.webp"
@@ -121,7 +121,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[47%]">
             <Motion
               as={"h2"}
               variants={slideInRight}
@@ -146,7 +146,7 @@ const WorkspaceSolution = () => {
           <Motion
             as={"div"}
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Workspace-4.webp"
@@ -160,7 +160,7 @@ const WorkspaceSolution = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-10 mb-20">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[47%]">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -185,7 +185,7 @@ const WorkspaceSolution = () => {
           <Motion
             as={"div"}
             variants={slideInRight}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/Workspace-5.webp"

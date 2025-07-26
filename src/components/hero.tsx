@@ -25,6 +25,10 @@ const slides = [
     image: "/images/hero-5.jpg",
     title: "Advanced CCTV Systems",
   },
+  {
+    image: "/images/hero-6.jpg",
+    title: "Web Development Solutions",
+  },
 ];
 
 const Hero = () => {

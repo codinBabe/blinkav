@@ -22,7 +22,7 @@ const Services = () => {
   const listInView = useInView(listRef, { once: true, amount: 0.3 });
 
   return (
-    <section id="services" className="px-6 py-10 md:px-10">
+    <section id="services" className="overflow-hidden px-6 py-10 md:px-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={"hidden"}

@@ -68,6 +68,7 @@ const Header: React.FC = () => {
           alt="Blinkav Logo"
           width={200}
           height={50}
+          priority
           className="mb-2"
         />
       </Link>
@@ -80,6 +81,7 @@ const Header: React.FC = () => {
             alt="Blinkav Logo"
             width={200}
             height={50}
+            priority
           />
         </Link>
 

@@ -5,7 +5,7 @@ import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const ResidentialSolution = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="residential-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
         <Motion
           as="h1"
@@ -15,8 +15,8 @@ const ResidentialSolution = () => {
           Residential Solutions
         </Motion>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16 md:space-y-28">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-20 mt-16 md:mt-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-20 my-16 md:my-28">
           <div className="md:max-w-sm lg:max-w-xl">
             <Motion
               as={"h2"}

@@ -32,7 +32,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-20 contact-bg">
+    <div className="overflow-hidden py-20">
       <section className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={"hidden"}

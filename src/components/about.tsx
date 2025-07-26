@@ -44,7 +44,7 @@ const processSteps = [
 
 const AboutUs = () => {
   return (
-    <div className="py-20">
+    <div className="overflow-hidden py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <section className="w-full flex flex-col xl:flex-row items-center gap-8 lg:gap-12">
           <Motion

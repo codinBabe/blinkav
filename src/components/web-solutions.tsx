@@ -5,13 +5,13 @@ import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const WebSolution = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       {/* Hero Section */}
-      <div className="web-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="web-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center px-4">
         <Motion
           as="h1"
           variants={slideInLeft}
-          className="sangBlue-font text-white text-[60px] md:leading-loose lg:text-[65px]"
+          className="sangBlue-font text-white text-[60px] lg:text-[65px]"
         >
           Web Development Solutions
         </Motion>
@@ -23,7 +23,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="md:max-w-sm lg:max-w-xl space-y-6 text-[17px] leading-loose"
+            className="md:w-[50%] space-y-6 text-[17px] leading-loose"
           >
             <p>
               At Blinkav, we craft modern web solutions that empower businesses
@@ -40,7 +40,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/frontend-dev.jpg"
@@ -55,7 +55,7 @@ const WebSolution = () => {
 
         {/* Frontend Development */}
         <div className="relative flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:max-w-[50%]">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -83,7 +83,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/frontend-dev.jpg"
@@ -98,7 +98,7 @@ const WebSolution = () => {
 
         {/* Backend Development */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[50%]">
             <Motion
               as="h2"
               variants={slideInRight}
@@ -128,7 +128,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/backend-dev.jpg"
@@ -143,7 +143,7 @@ const WebSolution = () => {
 
         {/* UI/UX Design */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[50%]">
             <Motion
               as={"h2"}
               variants={slideInLeft}
@@ -172,7 +172,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/ui-ux.jpg"
@@ -187,7 +187,7 @@ const WebSolution = () => {
 
         {/* Mobile App Development */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 mb-28">
-          <div className="md:max-w-sm lg:max-w-xl">
+          <div className="md:w-[50%]">
             <Motion
               as={"h2"}
               variants={slideInRight}
@@ -216,7 +216,7 @@ const WebSolution = () => {
           <Motion
             as="div"
             variants={slideInBottom}
-            className="w-full h-full rounded-xl overflow-hidden"
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
               src="/images/mobile-app.jpg"

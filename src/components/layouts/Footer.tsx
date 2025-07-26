@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="py-10 px-6 lg:px-12 border-t border-t-black">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="py-6 px-6 lg:px-12 border-t border-t-black">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-4">
         {/* Logo & About */}
         <div>
           <Link href="/">
@@ -16,6 +16,7 @@ const Footer = () => {
               alt="Blinkav Home Logo"
               width={200}
               height={50}
+              className="-mt-4"
             />
           </Link>
           <p className="text-gray-700 mt-6">
