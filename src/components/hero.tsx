@@ -124,8 +124,8 @@ const Hero = () => {
             }}
             className={`w-10 h-1 rounded-md border border-white transition-all duration-300 ${
               index === currentSlide
-                ? "bg-[color:var(--primary)] scale-125"
-                : "bg-white/40"
+                ? "bg-[color:var(--primary)] scale-125 border-0"
+                : "bg-white"
             }`}
           />
         ))}

@@ -77,7 +77,10 @@ const Footer = () => {
           <h4 className="sangBlue-font text-xl font-bold mb-4">Contact Us</h4>
           <p className="text-gray-700">
             Want a quote? Fill out our{" "}
-            <Link href="/contact" className="hover:underline text-blue-600">
+            <Link
+              href="/contact"
+              className="hover:underline text-[var(--footer)]"
+            >
               contact form
             </Link>
           </p>
@@ -85,7 +88,7 @@ const Footer = () => {
             Have questions or need support? Reach out at{" "}
             <a
               href="mailto:support@blinkav.com"
-              className="hover:underline text-blue-600"
+              className="hover:underline text-[var(--footer)]"
             >
               support@blinkav.com
             </a>
