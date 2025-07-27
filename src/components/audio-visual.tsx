@@ -5,8 +5,8 @@ import { Motion, slideInBottom } from "@/animations";
 
 const AudioVisualSolution = () => {
   return (
-    <section>
-      <div className="audio-visual-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+    <section className="overflow-hidden">
+      <div className="audio-visual-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInBottom}

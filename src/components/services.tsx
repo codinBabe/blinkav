@@ -30,7 +30,7 @@ const Services = () => {
           variants={slideInRight}
           viewport={{ once: true }}
         >
-          <h2 className="sangBlue-font text-3xl md:text-[48px] leading-tight text-center mt-6 md:mt-20">
+          <h2 className="sangBlue-font text-3xl md:text-[48px] leading-tight text-center mt-6 md:mt-16">
             Our Services
           </h2>
           <p className="text-lg text-center">

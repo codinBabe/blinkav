@@ -7,7 +7,7 @@ const WebSolution = () => {
   return (
     <section className="overflow-hidden">
       {/* Hero Section */}
-      <div className="web-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center px-4">
+      <div className="web-bg relative w-full h-[80vh] flex items-center justify-center text-center px-4">
         <Motion
           as="h1"
           variants={slideInLeft}

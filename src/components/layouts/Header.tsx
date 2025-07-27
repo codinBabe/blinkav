@@ -9,7 +9,7 @@ import SocialIcon from "../icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
 import { motion } from "framer-motion";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);

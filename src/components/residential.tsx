@@ -6,7 +6,7 @@ import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 const ResidentialSolution = () => {
   return (
     <section className="overflow-hidden">
-      <div className="residential-bg relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="residential-bg relative w-full h-[80vh] flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInBottom}

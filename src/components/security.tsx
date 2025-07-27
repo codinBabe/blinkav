@@ -7,7 +7,7 @@ import { Motion, slideInBottom, slideInLeft } from "@/animations";
 const SecuritySolution = () => {
   return (
     <section className="overflow-hidden">
-      <div className="security-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] overflow-hidden flex items-center justify-center text-center">
+      <div className="security-bg relative w-full h-[80vh] md:h-[75vh] lg:h-[72vh] flex items-center justify-center text-center">
         <Motion
           as="h1"
           variants={slideInLeft}

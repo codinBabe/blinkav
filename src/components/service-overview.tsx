@@ -115,14 +115,14 @@ const ServicesOverview = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 bg-background">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-16">
+      <div className="w-full mx-auto px-4">
         <motion.div
           ref={containerRef}
           variants={containerStagger}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
         >
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -200,7 +200,7 @@ const ServicesOverview = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <Button
-            className="mx-auto mt-12 block font-semibold"
+            className="mx-auto mt-12 block font-semibold shadow-lg"
             size="lg"
             variant={"gradient"}
             onClick={() => (window.location.href = "/contact")}

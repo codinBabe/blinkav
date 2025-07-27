@@ -11,9 +11,9 @@
     --popover: hsl(0, 0%, 100%);
     --popover-foreground: hsl(0, 0%, 0%);
 
-    --primary: hsl(25, 95%, 53%);
+    --primary: hsl(29, 82%, 53%);
     --primary-foreground: hsl(0, 0%, 100%);
-    --primary-glow: hsl(25, 85%, 63%);
+    --primary-glow: hsl(29, 72%, 63%);
 
     --secondary: hsl(30, 20%, 83%);
     --secondary-foreground: hsl(0, 0%, 0%);
@@ -29,7 +29,8 @@
 
     --border: hsl(30, 15%, 80%);
     --input: hsl(30, 15%, 85%);
-    --ring: hsl(25, 95%, 53%);
+    --ring: hsl(29, 82%, 53%);
+    --footer: hsl(219, 65%, 14%);
 
     --gradient-primary: linear-gradient(
       135deg,
@@ -76,7 +77,7 @@
 
 @layer utilities {
   .bg-gradient {
-    background: linear-gradient(135deg, #f59e0b, #fbbf24, #f97316);
+    background: linear-gradient(135deg, hsl(29, 82%, 53%), hsl(29, 72%, 63%));
   }
 
   .sangBlue-font {
