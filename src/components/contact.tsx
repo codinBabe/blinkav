@@ -32,7 +32,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="overflow-hidden py-20">
+    <div className="overflow-hidden py-10 md:py-20 space-y-16 md:space-y-28">
       <section className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={"hidden"}
@@ -105,7 +105,7 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      <section className="mt-28">
+      <section>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
           width="100%"
@@ -116,7 +116,7 @@ const Contact = () => {
         ></iframe>
       </section>
 
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="consultation" className="w-full">
             <TabsList className="mx-auto mb-6 flex justify-center">
