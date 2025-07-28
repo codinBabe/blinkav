@@ -1,6 +1,6 @@
+"use client";
 import * as React from "react";
-import { motion } from "framer-motion";
-import { Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface MotionProps extends React.HTMLAttributes<HTMLElement> {
   as?: React.ElementType;
