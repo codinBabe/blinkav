@@ -43,7 +43,7 @@ const ServiceLayout = ({ pageTitle, bgImage, sections }: ServicePageData) => (
                       ? slideInRight
                       : slideInBottom
                   }
-                  className="sangBlue-font text-[40px] lg:text-6xl mb-4 leading-tight"
+                  className="sangBlue-font text-[40px] lg:text-[55px] mb-4 leading-tight"
                 >
                   {sec.title}
                 </Motion>
