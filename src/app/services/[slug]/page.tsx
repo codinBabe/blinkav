@@ -21,3 +21,5 @@ export async function generateStaticParams() {
     slug: page.slug,
   }));
 }
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
