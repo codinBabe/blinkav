@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -27,6 +29,99 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ProjectWizardData, projectWizardSchema } from "@/schemas";
 import { useState } from "react";
+
+// Pricing Maps
+const projectTypePrices: Record<string, number> = {
+  surveillance: 500,
+  conference: 800,
+  cinema: 1200,
+  multiroom: 700,
+  automation: 1000,
+};
+
+const propertyTypePrices: Record<string, number> = {
+  residential: 100,
+  commercial: 300,
+  hospitality: 500,
+};
+
+// Room pricing varies by property type
+const roomPricing: Record<string, number> = {
+  residential: 100,
+  commercial: 250,
+  hospitality: 400,
+};
+
+// Flat fees for subtypes
+const subtypeAddons: Record<string, number> = {
+  Apartment: 200,
+  Duplex: 300,
+  Office: 500,
+  Lounge: 350,
+  Store: 250,
+  "Event Center": 1000,
+  "Hotel/Shelter": 1200,
+  Hospital: 1500,
+};
+
+const wiringPrices: Record<string, number> = {
+  yes: 0,
+  no: 200,
+  partial: 100,
+};
+
+const getPriceBreakdown = (data: ProjectWizardData) => {
+  const breakdown = [];
+
+  const {
+    projectType,
+    propertyType,
+    propertySubtype,
+    hasExistingWiring,
+    roomCount,
+  } = data;
+
+  if (projectType) {
+    breakdown.push({
+      label: `Project Type (${projectType})`,
+      price: projectTypePrices[projectType] || 0,
+    });
+  }
+
+  if (propertyType) {
+    breakdown.push({
+      label: `Property Type (${propertyType})`,
+      price: propertyTypePrices[propertyType] || 0,
+    });
+  }
+
+  if (propertySubtype && subtypeAddons[propertySubtype]) {
+    breakdown.push({
+      label: `Building Description (${propertySubtype})`,
+      price: subtypeAddons[propertySubtype],
+    });
+  }
+
+  if (hasExistingWiring) {
+    breakdown.push({
+      label: `Wiring (${hasExistingWiring})`,
+      price: wiringPrices[hasExistingWiring] || 0,
+    });
+  }
+
+  const parsedRoomCount = Number(roomCount) || 0;
+  const roomRate = roomPricing[propertyType] || 0;
+
+  if (parsedRoomCount > 0) {
+    breakdown.push({
+      label: `Room Count (${parsedRoomCount} × ₦${roomRate})`,
+      price: parsedRoomCount * roomRate,
+    });
+  }
+
+  const total = breakdown.reduce((sum, item) => sum + item.price, 0);
+  return { breakdown, total };
+};
 
 const ProjectWizardForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -116,11 +211,23 @@ const ProjectWizardForm = () => {
 
   const propertyType = watch("propertyType");
   const propertySubtype = watch("propertySubtype");
+
   const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 4));
   const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
   const onSubmit = (data: ProjectWizardData) => {
-    console.log("Submitted data:", data);
+    const pricing = getPriceBreakdown(data);
+    const submission = { ...data, pricing };
+
+    console.log("Submitted data:", submission);
+
+    // Example: send to email API
+    // await fetch("/api/project-wizard", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(submission),
+    // });
+
     setIsSubmitted(true);
     reset();
   };
@@ -132,10 +239,13 @@ const ProjectWizardForm = () => {
       </div>
     );
   }
+
+  const breakdown = getPriceBreakdown(watch());
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* Step Progress */}
-      <div className="flex items-center justify-center mb-8">
+      {/* Progress */}
+      <div className="flex justify-center mb-8">
         {[1, 2, 3, 4].map((step) => (
           <div key={step} className="flex items-center">
             <div
@@ -153,7 +263,7 @@ const ProjectWizardForm = () => {
             </div>
             {step < 4 && (
               <div
-                className={`w-16 h-0.5 transition-all ${
+                className={`w-16 h-0.5 ${
                   step < currentStep
                     ? "bg-[var(--primary)]"
                     : "bg-[var(--border)]"
@@ -166,13 +276,13 @@ const ProjectWizardForm = () => {
 
       <Card className="shadow-[var(--elegant)]">
         <CardContent className="p-8">
-          {/* Step 1: Project Type */}
+          {/* Step 1 */}
           {currentStep === 1 && (
-            <div>
+            <>
               <CardHeader className="px-0 pt-0">
                 <CardTitle>Select Project Type</CardTitle>
                 <CardDescription>
-                  What type of system are you looking to install?
+                  What system do you want to install?
                 </CardDescription>
               </CardHeader>
               <Controller
@@ -181,9 +291,7 @@ const ProjectWizardForm = () => {
                 render={({ field }) => (
                   <RadioGroup
                     value={field.value}
-                    onValueChange={(value) => {
-                      field.onChange(value);
-                    }}
+                    onValueChange={field.onChange}
                     className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4"
                   >
                     {projectTypes.map(
@@ -191,7 +299,7 @@ const ProjectWizardForm = () => {
                         <Label
                           key={id}
                           htmlFor={id}
-                          className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all hover:border-primary/50 ${
+                          className={`flex items-start space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-all ${
                             field.value === id
                               ? "border-[var(--primary)] bg-[var(--primary)]/5"
                               : "border-[var(--border)]"
@@ -208,6 +316,9 @@ const ProjectWizardForm = () => {
                             <div className="text-sm text-[var(--muted-foreground)]">
                               {description}
                             </div>
+                            <div className="text-sm font-semibold text-[var(--primary)]">
+                              ₦{projectTypePrices[id].toLocaleString()}
+                            </div>
                           </div>
                         </Label>
                       )
@@ -220,12 +331,12 @@ const ProjectWizardForm = () => {
                   {errors.projectType.message}
                 </p>
               )}
-            </div>
+            </>
           )}
 
-          {/* Step 2: Property Type */}
+          {/* Step 2 */}
           {currentStep === 2 && (
-            <div>
+            <>
               <CardHeader className="px-0 pt-0">
                 <CardTitle>Select Property Type</CardTitle>
               </CardHeader>
@@ -235,9 +346,7 @@ const ProjectWizardForm = () => {
                 render={({ field }) => (
                   <RadioGroup
                     value={field.value}
-                    onValueChange={(value) => {
-                      field.onChange(value);
-                    }}
+                    onValueChange={field.onChange}
                     className="space-y-4 mb-6 mt-4"
                   >
                     {propertyTypes.map(({ id, label, icon: Icon }) => (
@@ -256,7 +365,12 @@ const ProjectWizardForm = () => {
                           className="sr-only"
                         />
                         <Icon className="w-6 h-6 text-[var(--primary)]" />
-                        <div>{label}</div>
+                        <div className="flex flex-col">
+                          <span>{label}</span>
+                          <span className="text-sm font-semibold text-[var(--primary)]">
+                            ₦{propertyTypePrices[id].toLocaleString()}
+                          </span>
+                        </div>
                       </Label>
                     ))}
                   </RadioGroup>
@@ -273,7 +387,7 @@ const ProjectWizardForm = () => {
                         variant={
                           propertySubtype === sub ? "default" : "outline"
                         }
-                        className={`cursor-pointer hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors ${
+                        className={`cursor-pointer ${
                           propertySubtype === sub
                             ? "bg-[var(--primary)] text-white"
                             : ""
@@ -284,16 +398,16 @@ const ProjectWizardForm = () => {
                       </Badge>
                     ))}
                 </div>
-                {errors.propertySubtype && (
-                  <p className="text-red-500 mt-2">
-                    {errors.propertySubtype.message}
-                  </p>
-                )}
               </div>
-            </div>
+              {errors.propertySubtype && (
+                <p className="text-red-500 mt-2">
+                  {errors.propertySubtype.message}
+                </p>
+              )}
+            </>
           )}
 
-          {/* Step 3: Details */}
+          {/* Step 3 */}
           {currentStep === 3 && (
             <div className="space-y-6">
               <Input
@@ -313,9 +427,7 @@ const ProjectWizardForm = () => {
                 render={({ field }) => (
                   <RadioGroup
                     value={field.value}
-                    onValueChange={(value) => {
-                      field.onChange(value);
-                    }}
+                    onValueChange={field.onChange}
                   >
                     {["yes", "no", "partial"].map((option) => (
                       <div key={option} className="flex items-center space-x-2">
@@ -325,7 +437,8 @@ const ProjectWizardForm = () => {
                             ? "Yes, I have existing infrastructure"
                             : option === "no"
                             ? "No, this is a new installation"
-                            : "Some existing, needs upgrade"}
+                            : "Some existing, needs upgrade"}{" "}
+                          – ₦{wiringPrices[option].toLocaleString()}
                         </Label>
                       </div>
                     ))}
@@ -340,51 +453,71 @@ const ProjectWizardForm = () => {
             </div>
           )}
 
-          {/* Step 4: Contact */}
+          {/* Step 4 */}
           {currentStep === 4 && (
-            <div className="space-y-4">
-              <Input
-                {...register("contactInfo.name")}
-                placeholder="Full Name"
-                className="bg-[var(--background)]"
-              />
-              {errors.contactInfo?.name && (
-                <p className="text-red-500">
-                  {errors.contactInfo.name.message}
-                </p>
-              )}
+            <>
+              <div className="mb-6">
+                <Card className="bg-[color:var(--primary)]/15 border-2 border-dotted p-4">
+                  <h4 className="text-base font-medium mb-2">Cost Breakdown</h4>
+                  <ul className="space-y-1 text-sm">
+                    {breakdown.breakdown.map((item, idx) => (
+                      <li key={idx} className="flex justify-between">
+                        <span>{item.label}</span>
+                        <span className="font-medium">
+                          ₦{item.price.toLocaleString()}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-3 font-semibold text-base border-t pt-2 flex justify-between">
+                    <span>Total</span>
+                    <span className="text-[var(--primary)]">
+                      ₦{breakdown.total.toLocaleString()}
+                    </span>
+                  </div>
+                </Card>
+              </div>
 
-              <Input
-                {...register("contactInfo.phone")}
-                placeholder="Phone Number"
-                className="bg-[var(--background)]"
-              />
-              {errors.contactInfo?.phone && (
-                <p className="text-red-500">
-                  {errors.contactInfo.phone.message}
-                </p>
-              )}
+              <div className="space-y-4">
+                <Input
+                  {...register("contactInfo.name")}
+                  placeholder="Full Name"
+                />
+                {errors.contactInfo?.name && (
+                  <p className="text-red-500">
+                    {errors.contactInfo.name.message}
+                  </p>
+                )}
 
-              <Input
-                {...register("contactInfo.email")}
-                placeholder="Email Address"
-                className="bg-[var(--background)]"
-              />
-              {errors.contactInfo?.email && (
-                <p className="text-red-500">
-                  {errors.contactInfo.email.message}
-                </p>
-              )}
+                <Input
+                  {...register("contactInfo.phone")}
+                  placeholder="Phone Number"
+                />
+                {errors.contactInfo?.phone && (
+                  <p className="text-red-500">
+                    {errors.contactInfo.phone.message}
+                  </p>
+                )}
 
-              <Textarea
-                {...register("contactInfo.additionalInfo")}
-                placeholder="Additional Information"
-                className="bg-[var(--background)]"
-              />
-            </div>
+                <Input
+                  {...register("contactInfo.email")}
+                  placeholder="Email Address"
+                />
+                {errors.contactInfo?.email && (
+                  <p className="text-red-500">
+                    {errors.contactInfo.email.message}
+                  </p>
+                )}
+
+                <Textarea
+                  {...register("contactInfo.additionalInfo")}
+                  placeholder="Additional Info"
+                />
+              </div>
+            </>
           )}
 
-          {/* Navigation Buttons */}
+          {/* Navigation */}
           <div className="flex justify-between mt-10">
             <Button
               type="button"
@@ -396,16 +529,12 @@ const ProjectWizardForm = () => {
               Back
             </Button>
             {currentStep < 4 ? (
-              <Button type="button" onClick={nextStep} variant={"gradient"}>
+              <Button type="button" onClick={nextStep} variant="gradient">
                 Next
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Button>
             ) : (
-              <Button
-                type="submit"
-                variant={"gradient"}
-                className="flex items-center transition-all"
-              >
+              <Button type="submit" variant="gradient">
                 Get My Quote
                 <CheckCircleIcon className="w-4 h-4 ml-2" />
               </Button>
