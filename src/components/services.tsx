@@ -12,9 +12,9 @@ import {
 import ServicesOverview from "./service-overview";
 
 const clients = [
-  " Homespired LTD, Nigeria",
+  " Homespired Ltd, Nigeria",
   " Royal Pine Estate, Nigeria",
-  " Brief & Concise chambers",
+  " Brief & Concise Chambers",
 ];
 
 const Services = () => {
@@ -34,8 +34,9 @@ const Services = () => {
             Our Services
           </h2>
           <p className="text-lg text-center">
-            Comprehensive smart technology solutions for residential,
-            commercial, and hospitality properties
+            At <b>Blinkav</b>, we specialize in smart, secure, and seamless technology solutions for modern spaces.<br />
+            Whether it's your home, office, or commercial property,<br />
+            we deliver tailored systems that elevate comfort, convenience, and control.
           </p>
         </motion.div>
         <ServicesOverview />

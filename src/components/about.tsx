@@ -10,13 +10,12 @@ import "react-multi-carousel/lib/styles.css";
 import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const partnerImages = [
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
+  "/images/partners/1.png",
+  "/images/partners/2.png",
+  "/images/partners/3.png",
+  "/images/partners/4.png",
+  "/images/partners/5.png",
+  "/images/partners/6.png"
 ];
 
 const processSteps = [
@@ -74,17 +73,11 @@ const AboutUs = () => {
               className="space-y-4 leading-loose text-[17px]"
             >
               <p>
-                Since 2016, Blinkav Ltd is a company dedicated to improving the
-                effectiveness of the daily lives of individuals both in private
-                and corporate entities. We are confident that we have the
-                manpower and financial strength to execute the project in the
-                highest professional manner.
-              </p>
-
-              <p>
-                Blinkav Ltd has been providing sustainable designs for more than
-                7 years. Our company has more than 18 employees in our Lagos
-                office with affiliate offices in the UK, USA, and Nigeria.
+                <b>Founded in 2019</b>, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
+                security, and connectivity. Backed by a skilled team of over 10 professionals, we bring innovation; precision, and reliability to every
+                project we execute.<br></br>
+                We serve residential, commercial, and hospitality spaces with tailored, future-ready systems.</p>
+                <p>At Blinkav, our goal is simple - <b>to connect people to their spaces through intelligient technology</b>
               </p>
             </Motion>
           </div>
@@ -94,7 +87,7 @@ const AboutUs = () => {
             className="hidden md:block w-full xl:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/About-Us.webp"}
+              src={"/images/aboutus/about (2).jpeg"}
               alt="About Us"
               width={600}
               height={600}
@@ -111,7 +104,7 @@ const AboutUs = () => {
             className="ml-12 mt-12 w-[90%] md:ml-28 md:w-[75%] lg:w-[40%] md:mt-18 h-96 rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/what-we-offer.webp"}
+              src={"/images/aboutus/about (5).jpeg"}
               alt="What We Offer"
               unoptimized
               width={400}
@@ -132,13 +125,15 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              As a collective group, we offer global consulting to assist our
-              clients in planning, development, design, construction, operation,
-              and maintenance of critical infrastructure and smart home
-              installations for private owners who are looking to improve
-              security, convenience, and energy management in their homes. We
-              also corporate owners who require their work operations to be
-              seamless and effective
+              As a collective team, we provide global consulting and technical expertise to support our clients in the <b>planning, design, development, construction, operation and maintenance</b> of critical infrastructure and smart technology systems.
+            </Motion>
+            <br></br>
+            <Motion
+              as={"p"}
+              variants={slideInBottom}
+              className="leading-loose text-[17px]"
+            >
+              We serve <b>private homeowners</b> seeking to enhance security, convenience, and energy efficiency through intelligent home installations, as well as <b>corporate clients</b> looking to streamline operations and improve productivity through integrated, future-ready solutions.
             </Motion>
           </div>
         </section>
@@ -157,10 +152,10 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px] list-disc pl-12"
             >
-              <li>Dedicated support team</li>
-              <li>Extron, Leviton & Creston certified.</li>
-              <li>CEDIA certified operations team</li>
-              <li>Committed to exceptional customer experience</li>
+              <li>Dedicated Support Team</li>
+              <li>Industry Recognized Certification (CTS, AVIXA, CEDIA)</li>
+              <li>ELAN, URC, HDL & Lutron Certified</li>
+              <li>Excellent After Sales Services</li>
             </Motion>
           </div>
           <Motion
@@ -169,7 +164,7 @@ const AboutUs = () => {
             className="w-full lg:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/why-choose-us.webp"}
+              src={"/images/aboutus/about (5).jpeg"}
               alt="Why Choose Us"
               unoptimized
               width={600}
@@ -194,9 +189,7 @@ const AboutUs = () => {
               variants={slideInRight}
               className="md:w-[60%] leading-loose text-[17px]"
             >
-              We have partnered with the best brands and leading product
-              manufacturers to ensure our solutions meets global standards and
-              best practice in the industry.
+              At Blinkav, we pride ourselves on delivering premium, reliable and innovative technology solutions. To ensure this, we've strategically partnered with globally recognized brands that are leaders in their respective industries. These partnerships are more than just business relationships - they represent our commitment to excellence. By aligning with these industry leaders. We ensures our clients benefit from the most innovative, future-proof technologies on the market today.
             </Motion>
           </div>
           <Motion

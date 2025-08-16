@@ -17,7 +17,7 @@ const Contact = () => {
     {
       icon: PhoneIcon,
       title: "Call Us",
-      content: "+234 123 4567",
+      content: "+234 916 3244 921",
     },
     {
       icon: MapPinIcon,
@@ -104,10 +104,10 @@ const Contact = () => {
           })}
         </motion.div>
       </section>
-
+      
       <section>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789012!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b123456789012%3A0x1234567890123456!2sIper%20Home%20Ltd.!5e0!3m2!1sen!2sng!4v1234567890123456"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253737.9494019069!2d2.8222842803047024!3d6.438276036856594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b8f36a5d50d%3A0x6a8fdc4a0e82c392!2sNational%20Theatre!5e0!3m2!1sen!2sng!4v1755315270285!5m2!1sen!2sng"
           width="100%"
           height="450"
           style={{ border: 0 }}

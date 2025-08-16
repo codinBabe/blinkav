@@ -37,42 +37,63 @@ export const servicePages: ServicePageData[] = [
         content: [
           {
             type: "paragraph",
-            text: "Smart home automation empowers homeowners to have greater control over their living spaces, optimize energy consumption, enhance security, and enjoy a seamless and convenient lifestyle.",
+            text: "Smart home automation gives homeowners full control over their living spaces—enhancing comfort, boosting energy efficiency, improving security, and creating a seamless, connected lifestyle.",
           },
           {
             type: "paragraph",
-            text: "Our Smart home solutions encompasses several areas such as",
+            text: "Our integrated smart home solutions cover a wide range of systems, including:",
           },
           {
             type: "list",
             items: [
-              "Lighting",
-              "Climate control",
-              "Security systems",
-              "Home cinema",
-              "Distributed Music system",
-              "Smart Mirror TV",
-              "Motorized shades",
+              "Automated Lighting",
+              "Climate Control & Thermostats",
+              "Advanced Security & Surveillance",
+              "Home Cinema Systems",
+              "Multiroom Music Distribution",
+              "Smart Mirror TVs",
+              "Motorized Blinds & Shades",
             ],
           },
         ],
       },
 
       {
-        title: "Entertainment Unleashed",
+        title: "Intercom",
         titleAnimation: "left",
         content: [
           {
             type: "list",
-            items: ["Home theater systems", "Audio speakers"],
+            items: [],
           },
           {
             type: "paragraph",
-            text: "Seamlessly connected, allowing users to control their multimedia experience throughout the house. Integration with virtual assistants enables voice commands for a hands-free and immersive entertainment setup.",
+            text: "Stay connected and in control with a modern intercom system designed for today's smart homes. we install easy-to-use audio and video intercoms that let you communicate within your home and safely mnage who comes to your door. Whether you're speaking to a visitor at the gate, checking in on a family member in another room, or answering from your phone while you're away, our intercom solutions offer convenience, security, and peace of mind.",
           },
         ],
-        image: "/images/Residential-2.webp",
+        image: "/images/intercom.png",
         imagePosition: "left",
+      },
+
+      {
+        title: "Internet Distribution",
+        titleAnimation: "right",
+        content: [
+          {
+            type: "list",
+            items: [],
+          },
+          {
+            type: "paragraph",
+            text: " A modern smart home needs more than just Wi-Fi — it needs a reliable, high speed network that reaches every corner of the house. At BlinkAV, we design and install robust internet and network distribution systems that ensure fast, stable, and secure connectivity for all your devices.",
+          },
+          {
+            type: "paragraph",
+            text: "Whether you’re streaming movies, gaming, working from home, or controlling smart devices, our solutions keep you connected without lag or dead zones.",
+          },
+        ],
+        image: "/images/Internet distribution.jpg",
+        imagePosition: "right",
       },
     ],
   },
@@ -191,45 +212,37 @@ export const servicePages: ServicePageData[] = [
     bgImage: "/images/orange-room.jpg",
     sections: [
       {
-        title: "Digital Signage",
+        title: "Video Conferencing",
         content: [
           {
             type: "paragraph",
-            text: "Our workplace solutions leverage technology to optimize and enhance productivity in the workplace. By integrating various devices, systems, and software, these solutions create a connected and intelligent environment. They offer a range of benefits, including increased efficiency, improved collaboration, and enhanced comfort.",
-          },
-          {
-            type: "h3",
-            text: "One touch experience",
-          },
-          {
-            type: "paragraph",
-            text: "One key aspect of smart office solutions is automation. They automate routine tasks like adjusting lighting, controlling temperature, and managing energy usage. This not only saves time but also reduces energy costs and promotes sustainability. For example, motion sensors can detect occupancy and adjust lighting and HVAC systems accordingly, ensuring optimal comfort and energy efficiency.",
-          },
+            text: "We design and deploy state-of-the-art video conferencing systems tailored to your business needs.From huddle rooms to large boardrooms, we integrate high- quality cameras, microphones, displays, and cloud platforms like Zoom, Microsoft Teams, and Google Meet—ensuring crystal - clear communication, seamless collaboration, and a professional meeting experience every time.",
+          }
         ],
-        image: "/images/Workspace-2.webp",
+        image: "/images/Commercial service 1.jpeg",
         imagePosition: "right",
       },
       {
-        title: "Audio Visual solutions",
+        title: " Network Infrastructure",
         content: [
           {
             type: "paragraph",
-            text: "Collaboration is another area where smart office solutions excel. They enable seamless communication and information sharing among employees, regardless of their location. Video conferencing, instant messaging, and shared virtual workspaces foster real-time collaboration and teamwork. Additionally, smart whiteboards, interactive displays, and smart projectors enhance presentation capabilities, making meetings more interactive and engaging.",
+            text: " BlinkAV delivers high-performance network and internet infrastructure tailored for commercial environments.We deploy enterprise- grade firewalls, switches, structured cabling, and seamless Wi - Fi systems to support VoIP, video conferencing, security, and business - critical applications.Our solutions ensure secure, reliable, and scalable connectivity—built to handle the demands of modern offices, retail, and corporate spaces.",
           },
         ],
-        image: "/images/Workspace-3.webp",
+        image: "/images/Network Infrastructure.jpg",
         imagePosition: "left",
       },
       {
-        title: "Security and Access control",
+        title: "Digital Signage & Entertainment",
         titleAnimation: "right",
         content: [
           {
             type: "paragraph",
-            text: "Furthermore, smart office solutions enhance security and access control. Advanced authentication methods such as biometric identification and smart card systems ensure only authorized personnel can access sensitive areas. Additionally, smart surveillance systems with video analytics provide real-time monitoring, alerts, and deterrence against potential security threats.",
+            text: " Deliver dynamic digital signage and commercial entertainment systems that engage, inform, and elevate brand experiences.From LED displays to video walls and integrated audio solutions, these systems are tailored for retail, hospitality, and corporate environments—powered by reliable control platforms for seamless content scheduling, real- time updates, and immersive visual impact.",
           },
         ],
-        image: "/images/Workspace-4.webp",
+        image: "/images/Digital Signage and entertainment.png",
         imagePosition: "right",
       },
       {

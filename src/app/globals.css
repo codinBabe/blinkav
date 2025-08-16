@@ -30,7 +30,7 @@
     --border: hsl(30, 15%, 80%);
     --input: hsl(30, 15%, 85%);
     --ring: hsl(29, 82%, 53%);
-    --footer: hsl(219, 65%, 14%);
+    --footer: hsl(218, 71%, 11%);
 
     --gradient-primary: linear-gradient(
       135deg,
@@ -88,7 +88,7 @@
     font-family: "Helvetica Neue-LT", sans-serif;
     line-height: 1.2;
     font-size: 16px;
-    color: #000;
+    color: #0b1f3c;
     background-color: #edebe9;
   }
 

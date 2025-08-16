@@ -81,16 +81,16 @@ const Footer = () => {
               href="/contact"
               className="hover:underline text-[var(--footer)]"
             >
-              contact form
+              <b>contact form</b>
             </Link>
           </p>
           <p className="text-gray-700 mt-4">
             Have questions or need support? Reach out at{" "}
             <a
-              href="mailto:support@blinkav.com"
+              href="mailto:info@blinkav.co"
               className="hover:underline text-[var(--footer)]"
             >
-              support@blinkav.com
+              <b>info@blinkav.co</b>
             </a>
           </p>
         </div>

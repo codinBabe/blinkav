@@ -11,7 +11,7 @@ const slides = [
   },
   {
     image: "/images/hero-2.jpg",
-    title: "Cinema & Audio Systems",
+    title: "Cinema & Media Rooms",
   },
   {
     image: "/images/hero-3.jpg",

@@ -1,3 +1,90 @@
+// import { ContactFormData, contactSchema } from "@/schemas";
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { useState } from "react";
+// import { useForm } from "react-hook-form";
+// import { Button, Input, Textarea } from "../ui";
+
+// const ContactForm = () => {
+//   const [submitted, setSubmitted] = useState(false);
+
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors },
+//     reset,
+//   } = useForm<ContactFormData>({
+//     resolver: zodResolver(contactSchema),
+//   });
+
+//   const onSubmit = (data: ContactFormData) => {
+//     console.log(data);
+//     setSubmitted(true);
+//     reset();
+//   };
+
+//   if (submitted) {
+//     return (
+//       <div className="text-center mt-10 text-[17px]">
+//         Thanks for contacting us! We will be in touch with you shortly.
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-6">
+//       <div className="grid grid-cols-1 gap-5">
+//         <Input
+//           type="text"
+//           {...register("name")}
+//           placeholder="Your Full Name"
+//           className="bg-white"
+//         />
+//         {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+
+//         <Input
+//           type="email"
+//           {...register("email")}
+//           placeholder="Your Email"
+//           autoComplete="email"
+//           className="bg-white"
+//         />
+//         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+
+//         <Input
+//           type="text"
+//           {...register("phone")}
+//           placeholder="Your Contact Number"
+//           className="bg-white"
+//         />
+//         {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
+//       </div>
+
+//       <Textarea
+//         {...register("message")}
+//         name="message"
+//         placeholder="Your Message"
+//         className="w-full mt-6 bg-white"
+//         rows={5}
+//       ></Textarea>
+//       {errors.message && (
+//         <p className="text-red-500">{errors.message.message}</p>
+//       )}
+
+//       <Button
+//         type="submit"
+//         variant={"gradient"}
+//         className="mt-6 font-semibold"
+//         size={"lg"}
+//       >
+//         Submit
+//       </Button>
+//     </form>
+//   );
+// };
+
+// export default ContactForm;
+
+
 import { ContactFormData, contactSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -6,6 +93,7 @@ import { Button, Input, Textarea } from "../ui";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -16,10 +104,25 @@ const ContactForm = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-    setSubmitted(true);
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send email");
+
+      setSubmitted(true);
+      reset();
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -33,50 +136,21 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mt-6">
       <div className="grid grid-cols-1 gap-5">
-        <Input
-          type="text"
-          {...register("name")}
-          placeholder="Your Full Name"
-          className="bg-white"
-        />
+        <Input type="text" {...register("name")} placeholder="Your Full Name" className="bg-white" />
         {errors.name && <p className="text-red-500">{errors.name.message}</p>}
 
-        <Input
-          type="email"
-          {...register("email")}
-          placeholder="Your Email"
-          autoComplete="email"
-          className="bg-white"
-        />
+        <Input type="email" {...register("email")} placeholder="Your Email" autoComplete="email" className="bg-white" />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
-        <Input
-          type="text"
-          {...register("phone")}
-          placeholder="Your Contact Number"
-          className="bg-white"
-        />
+        <Input type="text" {...register("phone")} placeholder="Your Contact Number" className="bg-white" />
         {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
       </div>
 
-      <Textarea
-        {...register("message")}
-        name="message"
-        placeholder="Your Message"
-        className="w-full mt-6 bg-white"
-        rows={5}
-      ></Textarea>
-      {errors.message && (
-        <p className="text-red-500">{errors.message.message}</p>
-      )}
+      <Textarea {...register("message")} placeholder="Your Message" className="w-full mt-6 bg-white" rows={5}></Textarea>
+      {errors.message && <p className="text-red-500">{errors.message.message}</p>}
 
-      <Button
-        type="submit"
-        variant={"gradient"}
-        className="mt-6 font-semibold"
-        size={"lg"}
-      >
-        Submit
+      <Button type="submit" variant={"gradient"} className="mt-6 font-semibold" size={"lg"} disabled={loading}>
+        {loading ? "Sending..." : "Submit"}
       </Button>
     </form>
   );
