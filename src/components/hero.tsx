@@ -27,7 +27,7 @@ const slides = [
   },
   {
     image: "/images/hero-6.jpg",
-    title: "Web Development Solutions",
+    title: "Development Solutions",
   },
 ];
 

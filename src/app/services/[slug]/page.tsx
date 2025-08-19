@@ -30,7 +30,7 @@ export async function generateStaticParams() {
     { slug: "audio-visual-solutions" },
     { slug: "security-solutions" },
     { slug: "workspace-solutions"},
-    { slug: "web-development-solutions"},
+    { slug: "development-solutions"},
   ]
 }
 // export const dynamic = "force-dynamic";

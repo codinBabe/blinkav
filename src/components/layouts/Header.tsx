@@ -42,8 +42,8 @@ const Header = () => {
           href: "/services/security-solutions",
         },
         {
-          label: "Web Development Solutions",
-          href: "/services/web-development-solutions",
+          label: "Development Solutions",
+          href: "/services/development-solutions",
         },
       ],
     },

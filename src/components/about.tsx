@@ -72,12 +72,11 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="space-y-4 leading-loose text-[17px]"
             >
-              <p>
-                <b>Founded in 2023</b>, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
+              <p>Founded in 2023, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
                 security, and connectivity. Backed by a skilled team of over 10 professionals, we bring innovation; precision, and reliability to every
                 project we execute.<br></br>
                 We serve residential, commercial, and hospitality spaces with tailored, future-ready systems.</p>
-                <p>At Blinkav, our goal is simple - <b>to connect people to their spaces through intelligient technology</b>
+                <p>At Blinkav, our goal is simple - to connect people to their spaces through intelligient technology
               </p>
             </Motion>
           </div>
@@ -104,7 +103,7 @@ const AboutUs = () => {
             className="ml-12 mt-12 w-[90%] md:ml-28 md:w-[75%] lg:w-[40%] md:mt-18 h-96 rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/aboutus/about (5).jpeg"}
+              src={"/images/aboutus/about (4).jpeg"}
               alt="What We Offer"
               unoptimized
               width={400}
@@ -125,7 +124,7 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              As a collective team, we provide global consulting and technical expertise to support our clients in the <b>planning, design, development, construction, operation and maintenance</b> of critical infrastructure and smart technology systems.
+              As a collective team, we provide global consulting and technical expertise to support our clients in the planning, design, development, construction, operation and maintenance of critical infrastructure and smart technology systems.
             </Motion>
             <br></br>
             <Motion
@@ -133,7 +132,7 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              We serve <b>private homeowners</b> seeking to enhance security, convenience, and energy efficiency through intelligent home installations, as well as <b>corporate clients</b> looking to streamline operations and improve productivity through integrated, future-ready solutions.
+              We serve private homeowners seeking to enhance security, convenience, and energy efficiency through intelligent home installations, as well as corporate clients looking to streamline operations and improve productivity through integrated, future-ready solutions.
             </Motion>
           </div>
         </section>
@@ -164,10 +163,10 @@ const AboutUs = () => {
             className="w-full lg:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/aboutus/about (5).jpeg"}
+              src={"/images/aboutus/about (3).jpeg"}
               alt="Why Choose Us"
               unoptimized
-              width={600}
+              width={500}
               height={100}
               className="w-full h-full object-cover"
             />
@@ -229,7 +228,7 @@ const AboutUs = () => {
         </section>
 
         {/* Our Process */}
-        <section className="mb-20 bg-[#DDD0C8] px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
+        <section className="mb-20 bg-[#c7d1df] px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
           <div className="max-w-7xl mx-auto">
             <Motion
               as={"div"}

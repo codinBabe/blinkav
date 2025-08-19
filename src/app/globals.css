@@ -32,45 +32,28 @@
     --ring: hsl(29, 82%, 53%);
     --footer: hsl(218, 71%, 11%);
 
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--primary-glow))
-    );
+    --gradient-primary: linear-gradient(135deg,
+        hsl(var(--primary)),
+        hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(30 13% 89%), hsl(30 20% 85%));
     --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
     --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
   }
 }
 
+/* @font-face for local Klavika files */
 @font-face {
-  font-family: "Helvetica Neue-LT";
-  src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-family: "Klavika";
+  src: url("/fonts/Klavika-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SangBleu Sans";
-  src: url("/fonts/sangbleu-sans-light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SangBleu Sans Regular";
-  src: url("/fonts/sangbleu-sans-regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Klavika";
+  src: url("/fonts/Klavika-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -81,18 +64,19 @@
   }
 
   .sangBlue-font {
-    font-family: "SangBleu Sans", sans-serif;
+    /* Retaining the class name so you don't need to rename anything */
+    font-family: "Klavika", sans-serif;
   }
 
   .body-font {
-    font-family: "Helvetica Neue-LT", sans-serif;
+    font-family: "Klavika", sans-serif;
     line-height: 1.2;
     font-size: 16px;
     color: #0b1f3c;
     background-color: #edebe9;
   }
 
-  /* SERVICES FILE */
+  /* rest of your utility classes... */
   .perspective {
     perspective: 1000px;
     z-index: 0;
@@ -110,7 +94,6 @@
     transform: rotateY(180deg);
   }
 
-  /* END OF SERVICE FILE */
   ::selection {
     background-color: #ddd0c8;
   }
@@ -123,12 +106,14 @@
     pointer-events: none;
     background-repeat: no-repeat;
     z-index: -1;
-    pointer-events: none;
   }
 
-  .client-bg,
-  .about-bg {
+  .client-bg {
     background-image: url("/images/clients.jpg");
+  }
+
+  .about-bg {
+    background-image: url("/images/aboutus/about (5).jpeg");
   }
 
   .about-bg {
@@ -136,7 +121,6 @@
     opacity: 0.8;
   }
 
-  /* Mobile fix */
   @media (max-width: 768px) {
     .client-bg {
       background-position: calc(100%) calc(100% - 40px);
@@ -150,7 +134,6 @@
     }
   }
 
-  /* Medium and up — enable parallax */
   @media (min-width: 768px) {
     .client-bg {
       background-attachment: fixed;

@@ -63,10 +63,10 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/services/web-development-solutions"
+                href="/services/development-solutions"
                 className="hover:underline"
               >
-                Web Development Solutions
+                Development Solutions
               </Link>
             </li>
           </ul>

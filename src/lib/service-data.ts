@@ -240,8 +240,8 @@ export const servicePages: ServicePageData[] = [
     ],
   },
   {
-    slug: "web-development-solutions",
-    pageTitle: "Web Development Solutions",
+    slug: "development-solutions",
+    pageTitle: "Development Solutions",
     bgImage: "/images/bg3.jpg",
     sections: [
       {
