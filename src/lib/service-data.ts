@@ -107,46 +107,38 @@ export const servicePages: ServicePageData[] = [
         content: [
           {
             type: "paragraph",
-            text: "Audiovisual solutions encompass a range of technologies and services designed to enhance audio and visual experiences in various settings. These solutions leverage audio and visual components to create immersive and engaging environments for entertainment, communication, education, and business purposes.",
-          },
-          {
-            type: "paragraph",
-            text: "One key aspect of audiovisual solutions is the integration of audio and visual equipment. This includes high-quality displays, projectors, screens, and audio systems that work together to deliver clear and impactful visuals and sound. These components can be used in conference rooms, classrooms, theaters, event spaces, and other venues to create captivating experiences for the audience.",
-          },
+            text: "Imagine stepping into a room where sound moves all around you, dialogue is crisp, visuals are razor- sharp, and every detail is felt as much as it is seen.This is not the future—this is today’s media room, engineered with cutting - edge audiovisual technology and world- class design.",
+          }
         ],
-        image: "/images/Audio-visual-1.webp",
+        image: "/images/audio/1.jpeg",
         imagePosition: "right",
       },
       {
         content: [
           {
             type: "paragraph",
-            text: "Audiovisual solutions also involve content creation and management. They enable the production and distribution of multimedia content, such as videos, presentations, and interactive displays. Content management systems allow for seamless control and scheduling of audiovisual content, ensuring the right media is displayed at the right time and in the right location.",
+            text: "At the heart of the modern AV experience lies the Dolby Atmos-powered media room.Unlike traditional surround sound, Dolby Atmos delivers three - dimensional, immersive audio that flows above and around you—pulling you deeper into your favorite movies, games, or music performances.",
           },
           {
             type: "paragraph",
-            text: "Furthermore, audiovisual solutions often incorporate advanced technologies to enhance the user experience. This may include interactive touchscreens, virtual reality (VR) or augmented reality (AR) experiences, immersive sound systems, and video conferencing capabilities. These technologies enable interactive engagement, remote collaboration, and realistic simulations.",
-          },
-          {
-            type: "paragraph",
-            text: " In the business environment, audiovisual solutions are utilized for effective presentations, video conferencing, and digital signage. They enhance communication and collaboration among teams, facilitate remote meetings, and provide visually appealing displays for advertising and informational purposes",
-          },
+            text: "Whether it's the roar of a helicopter flying overhead or the quiet drop of rain behind you, every sound has its place,making your home entertainment feel larger than life.",
+          }
         ],
-        image: "/images/Audio-visual-2.webp",
+        image: "/images/audio/2.jpeg",
         imagePosition: "left",
       },
       {
         content: [
           {
             type: "paragraph",
-            text: "In the entertainment industry, audiovisual solutions are employed in theaters, stadiums, and theme parks to create captivating experiences for audiences. They enhance the visual effects, audio quality, and overall immersion of live performances, movies, concerts, and sporting events.",
+            text: "Modern audiovisual systems are no longer confined to home theaters. They're now shaping executive boardrooms, retail environments, hospitality venues, and smart homes—creating immersive spaces where communication, branding, and ambiance are elevated to new levels."
           },
           {
             type: "paragraph",
-            text: "In educational settings, audiovisual solutions aid in delivering engaging and interactive lessons. They enable the use of multimedia content, virtual simulations, and interactive displays to enhance learning experiences and improve information retention.",
-          },
+            text: " Whether it’s a sleek digital signage display in a hotel lobby or a high performing Zoom Room with auto - framing cameras and acoustic echo cancellation, the impact of AV technology is everywhere."
+          }
         ],
-        image: "/images/Audio-visual-3.webp",
+        image: "/images/audio/3.jpeg",
         imagePosition: "right",
       },
     ],
@@ -161,12 +153,8 @@ export const servicePages: ServicePageData[] = [
         content: [
           {
             type: "paragraph",
-            text: "Smart security solutions leverage advanced technologies to enhance the safety and protection of people, assets, and properties. These solutions combine various components, such as sensors, cameras, access control systems, and analytics, to create intelligent and proactive security systems.",
-          },
-          {
-            type: "paragraph",
-            text: "One key feature of smart security solutions is real-time monitoring and alerts. They employ video surveillance cameras with advanced analytics capabilities to detect and identify potential security threats. These systems can automatically generate alerts for suspicious activities, intrusions, or unauthorized access, allowing for immediate response and intervention.",
-          },
+            text: "Our CCTV systems are designed to give you full visibility of your property— whether it's a private home, a gated estate, or a commercial facility. We deploy high-resolution cameras with features like night vision, wide-angle coverage, motion-triggered recording, and cloud storage. From discreet dome cameras in homes to rugged outdoor PTZ cameras in warehouses or needs of each location.",
+          }
         ],
         image: "/images/security.jpg",
         imagePosition: "right",
@@ -175,32 +163,24 @@ export const servicePages: ServicePageData[] = [
         content: [
           {
             type: "paragraph",
-            text: "Another aspect of smart security solutions is access control. They utilize technologies like biometric identification, smart cards, or facial recognition to ensure only authorized individuals can access specific areas or resources. Access control systems can also track and log entry and exit events, providing a comprehensive audit trail for security purposes.",
+            text: "Security isn’t just about recording what happened—it’s about responding in real-time. Our systems support both local monitoring(via indoor screens or control rooms) and remote access through secure mobile apps or web portals.Monitor your property from anywhere in the world, receive instant push notifications, and even communicate through two- way audio with visitors or intruders.",
           },
           {
             type: "paragraph",
-            text: " Smart security solutions also incorporate automation and remote management capabilities. They can integrate with other smart devices, such as motion sensors, door locks, and alarm systems, to automate security processes. For example, smart security systems can arm or disarm alarms, lock or unlock doors, and adjust lighting based on predefined rules or remote commands.",
+            text: "For estates, commercial buildings, or multi-tenant properties, we offer centralized monitoring setups that allow security personnel to supervise multiple cameras and sensors from a single location—ensuring faster, smarter response",
           },
         ],
-        image: "/images/security-solution-1.webp",
+        image: "/images/security/2.jpeg",
         imagePosition: "left",
       },
       {
         content: [
           {
             type: "paragraph",
-            text: " Furthermore, smart security solutions enable centralized monitoring and management. Through a unified platform or software, security personnel can monitor and control multiple security systems and devices from a single interface. This simplifies operations, improves response times, and enhances situational awareness.",
-          },
-          {
-            type: "paragraph",
-            text: "Data analytics and insights are also integral to smart security solutions. By analyzing data from various sources, such as security cameras, access logs, and environmental sensors, these solutions can identify patterns, detect anomalies, and provide valuable insights for improving security measures and decision-making.",
-          },
-          {
-            type: "paragraph",
-            text: "Additionally, smart security solutions may incorporate features like video analytics, facial recognition, and object tracking to enhance surveillance and threat detection capabilities. These technologies enable intelligent video analysis, behavior recognition, and proactive identification of potential risks or threats.",
-          },
+            text: " Pair your cameras with intelligent intrusion detection. Our motion sensors and smart alarm systems are the first line of defense against unauthorized access.Using infrared or microwave technology, these devices can detect movement even in low- light conditions and trigger immediate alerts or alarms. Integrated systems can also activate lights, lock doors, or send instant notifications to your mobile device.",
+          }
         ],
-        image: "/images/security-solution-2.webp",
+        image: "/images/security/3.jpeg",
         imagePosition: "right",
       },
     ],

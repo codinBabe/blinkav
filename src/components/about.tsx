@@ -73,7 +73,7 @@ const AboutUs = () => {
               className="space-y-4 leading-loose text-[17px]"
             >
               <p>
-                <b>Founded in 2019</b>, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
+                <b>Founded in 2023</b>, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
                 security, and connectivity. Backed by a skilled team of over 10 professionals, we bring innovation; precision, and reliability to every
                 project we execute.<br></br>
                 We serve residential, commercial, and hospitality spaces with tailored, future-ready systems.</p>
