@@ -106,7 +106,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.8 }}
-            className="sangBlue-font text-white text-[42.56px] md:text-6xl lg:text-8xl font-bold px-4"
+            className="font-klav-bold text-white text-[42.56px] md:text-6xl lg:text-8xl font-bold px-4"
           >
             {slide.title}
           </motion.h1>
@@ -124,7 +124,7 @@ const Hero = () => {
             }}
             className={`w-10 h-1 rounded-md border border-white transition-all duration-300 ${
               index === currentSlide
-                ? "bg-[color:var(--primary)] scale-125 border-0"
+                ? "bg-primary scale-125 border-0"
                 : "bg-white"
             }`}
           />

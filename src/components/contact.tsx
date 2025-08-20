@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
-import SocialIcon from "./icons/Social-Icon";
+import SocialIcon from "./icons/social-icon";
 import { ContactForm, ProjectWizard } from "./forms";
 import { containerStagger, slideInBottom, Motion } from "@/animations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui";
@@ -38,14 +38,14 @@ const Contact = () => {
           initial={"hidden"}
           animate={"visible"}
           variants={slideInBottom}
-          className="sangBlue-font flex flex-col items-center text-center mx-auto max-w-sm"
+          className="font-klav-bold flex flex-col items-center text-center mx-auto max-w-sm"
         >
           <h2 className="text-xl md:text-3xl lg:text-6xl mb-5">Get in Touch</h2>
           <p className="leading-loose mb-5">
             If you have any questions, feedback, or suggestions, we would love
             to hear from you.
           </p>
-          <SocialIcon bgColor="bg-[color:var(--muted)]/80" />
+          <SocialIcon bgColor="bg-muted/80" />
         </motion.div>
 
         <motion.div
@@ -78,7 +78,7 @@ const Contact = () => {
                   >
                     {/* Front Side */}
                     <div className="absolute w-full h-full backface-hidden bg-white border border-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 gap-4">
-                      <info.icon className="h-8 w-8 text-[var(--primary)]" />
+                      <info.icon className="h-8 w-8 text-primary" />
                       <h3 className="text-lg md:text-2xl font-bold">
                         {info.title}
                       </h3>
@@ -104,7 +104,7 @@ const Contact = () => {
           })}
         </motion.div>
       </section>
-      
+
       <section>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253737.9494019069!2d2.8222842803047024!3d6.438276036856594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b8f36a5d50d%3A0x6a8fdc4a0e82c392!2sNational%20Theatre!5e0!3m2!1sen!2sng!4v1755315270285!5m2!1sen!2sng"
@@ -129,7 +129,7 @@ const Contact = () => {
                 <Motion
                   as={"h2"}
                   variants={slideInBottom}
-                  className="sangBlue-font text-[26px] md:text-[30px] lg:text-[60px] leading-tight mb-3"
+                  className="font-klav-bold text-[26px] md:text-[30px] lg:text-[60px] leading-tight mb-3"
                 >
                   Schedule a Consultation
                 </Motion>
@@ -151,14 +151,14 @@ const Contact = () => {
                 <Motion
                   as={"h2"}
                   variants={slideInBottom}
-                  className="sangBlue-font text-[26px] md:text-[30px] lg:text-[60px] leading-tight mb-3"
+                  className="font-klav-bold text-[26px] md:text-[30px] lg:text-[60px] leading-tight mb-3"
                 >
                   Get Your Custom Quote
                 </Motion>
                 <Motion
                   as={"p"}
                   variants={slideInBottom}
-                  className="leading-loose text-[var(--muted-foreground)]"
+                  className="leading-loose text-muted-foreground"
                 >
                   Tell us about your project and we&apos;ll provide a tailored
                   solution

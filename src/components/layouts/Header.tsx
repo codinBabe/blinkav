@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import SocialIcon from "../icons/Social-Icon";
+import SocialIcon from "../icons/social-icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
 import { motion } from "framer-motion";
 
@@ -61,10 +61,10 @@ const Header = () => {
     >
       <Link
         href={"/"}
-        className="border-b border-b-[var(--border)] mb-4 w-full hidden lg:flex justify-center"
+        className="border-b border-b-border mb-4 w-full hidden lg:flex justify-center"
       >
         <Image
-          src={noBgPaths ? "/images/logo-white.png" : "/images/logo-black.png"}
+          src={noBgPaths ? "/images/logo-white.png" : "/images/logo-blue.png"}
           alt="Blinkav Logo"
           width={200}
           height={50}
@@ -138,9 +138,10 @@ const Header = () => {
               <Link
                 key={index}
                 href={item.href}
-                className={`${noBgPaths
-                  ? "bg-white text-black hover:bg-gray-200"
-                  : "bg-black text-white hover:bg-gray-800"
+                className={`${
+                  noBgPaths
+                    ? "bg-white text-black hover:bg-gray-200"
+                    : "bg-black text-white hover:bg-gray-800"
                 } px-4 py-2 rounded-full font-bold transition duration-300`}
               >
                 {item.label}
@@ -148,8 +149,9 @@ const Header = () => {
             ) : (
               <Link
                 key={index}
-                className={`${noBgPaths ? "text-white" : "text-black"
-                  } font-bold leading-[70px]`}
+                className={`${
+                  noBgPaths ? "text-white" : "text-black"
+                } font-bold leading-[70px]`}
                 href={item.href}
               >
                 {item.label}
@@ -226,28 +228,25 @@ const Header = () => {
                     </ul>
                   )}
                 </div>
+              ) : item.label === "Contact" ? (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-bold text-[15px] py-2.5 w-full text-center bg-black text-white rounded-full mt-2"
+                >
+                  {item.label}
+                </Link>
               ) : (
-                item.label === "Contact" ? (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="font-bold text-[15px] py-2.5 w-full text-center bg-black text-white rounded-full mt-2"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <Link
-                    key={idx}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
-                  >
-                    {item.label}
-                  </Link>
-                )
+                <Link
+                  key={idx}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-bold text-[15px] py-2.5 w-full text-center border-b border-b-[#dddddd]"
+                >
+                  {item.label}
+                </Link>
               )
-
             )}
           </nav>
 

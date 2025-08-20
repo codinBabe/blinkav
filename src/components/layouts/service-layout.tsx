@@ -5,17 +5,20 @@ import { ServicePageData } from "@/lib";
 const ServiceLayout = ({ pageTitle, bgImage, sections }: ServicePageData) => (
   <section className="overflow-hidden">
     <div className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{ backgroundImage: `url(${bgImage})` }}
+      <Image
+        src={bgImage}
+        alt={pageTitle}
+        fill
+        priority
+        quality={75}
+        sizes="100vw"
+        className="object-cover object-center"
       />
-
       <div className="absolute inset-0 bg-black/40 z-0" />
-
       <Motion
         as="h1"
         variants={slideInBottom}
-        className="relative z-10 sangBlue-font text-white text-[60px] lg:text-[65px] px-4"
+        className="relative z-10 font-klav-bold text-white text-[60px] lg:text-[65px] px-4"
       >
         {pageTitle}
       </Motion>
@@ -43,7 +46,7 @@ const ServiceLayout = ({ pageTitle, bgImage, sections }: ServicePageData) => (
                       ? slideInRight
                       : slideInBottom
                   }
-                  className="sangBlue-font text-[40px] lg:text-[55px] mb-4 leading-tight"
+                  className="text-[40px] lg:text-[55px] mb-4 leading-tight"
                 >
                   {sec.title}
                 </Motion>
@@ -56,7 +59,7 @@ const ServiceLayout = ({ pageTitle, bgImage, sections }: ServicePageData) => (
                     return (
                       <h3
                         key={index}
-                        className="sangBlue-font text-xl md:text-2xl mb-4 leading-tight"
+                        className="text-xl md:text-2xl mb-4 leading-tight"
                       >
                         {block.text}
                       </h3>
@@ -92,7 +95,7 @@ const ServiceLayout = ({ pageTitle, bgImage, sections }: ServicePageData) => (
                 width={400}
                 height={100}
                 className="w-full h-full object-cover"
-                unoptimized
+                priority={i === 0}
               />
             </Motion>
           </div>

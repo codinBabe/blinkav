@@ -3,7 +3,7 @@
 import {
   CustomLeftArrow,
   CustomRightArrow,
-} from "@/components/icons/Custom-Arrow";
+} from "@/components/icons/custom-arrow";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -15,7 +15,7 @@ const partnerImages = [
   "/images/partners/3.png",
   "/images/partners/4.png",
   "/images/partners/5.png",
-  "/images/partners/6.png"
+  "/images/partners/6.png",
 ];
 
 const processSteps = [
@@ -52,7 +52,7 @@ const AboutUs = () => {
             className="md:hidden w-full xl:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0 -mt-8"
           >
             <Image
-              src={"/images/About-Us.webp"}
+              src={"/images/aboutus/about (2).jpeg"}
               alt="About Us"
               width={600}
               height={600}
@@ -63,7 +63,7 @@ const AboutUs = () => {
             <Motion
               as={"h1"}
               variants={slideInLeft}
-              className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
+              className="font-klav-bold text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
             >
               About us
             </Motion>
@@ -72,11 +72,18 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="space-y-4 leading-loose text-[17px]"
             >
-              <p>Founded in 2023, Blinkav is a technology integration company committed to delivering world-class solutions in smart automation,
-                security, and connectivity. Backed by a skilled team of over 10 professionals, we bring innovation; precision, and reliability to every
-                project we execute.<br></br>
-                We serve residential, commercial, and hospitality spaces with tailored, future-ready systems.</p>
-                <p>At Blinkav, our goal is simple - to connect people to their spaces through intelligient technology
+              <p>
+                Founded in 2023, Blinkav is a technology integration company
+                committed to delivering world-class solutions in smart
+                automation, security, and connectivity. Backed by a skilled team
+                of over 10 professionals, we bring innovation; precision, and
+                reliability to every project we execute.<br></br>
+                We serve residential, commercial, and hospitality spaces with
+                tailored, future-ready systems.
+              </p>
+              <p>
+                At Blinkav, our goal is simple - to connect people to their
+                spaces through intelligient technology
               </p>
             </Motion>
           </div>
@@ -115,7 +122,7 @@ const AboutUs = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-[40px] leading-tight mb-4 lg:text-6xl"
+              className="font-klav-bold text-[40px] leading-tight mb-4 lg:text-6xl"
             >
               What we offer?
             </Motion>
@@ -124,7 +131,10 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              As a collective team, we provide global consulting and technical expertise to support our clients in the planning, design, development, construction, operation and maintenance of critical infrastructure and smart technology systems.
+              As a collective team, we provide global consulting and technical
+              expertise to support our clients in the planning, design,
+              development, construction, operation and maintenance of critical
+              infrastructure and smart technology systems.
             </Motion>
             <br></br>
             <Motion
@@ -132,7 +142,11 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              We serve private homeowners seeking to enhance security, convenience, and energy efficiency through intelligent home installations, as well as corporate clients looking to streamline operations and improve productivity through integrated, future-ready solutions.
+              We serve private homeowners seeking to enhance security,
+              convenience, and energy efficiency through intelligent home
+              installations, as well as corporate clients looking to streamline
+              operations and improve productivity through integrated,
+              future-ready solutions.
             </Motion>
           </div>
         </section>
@@ -142,7 +156,7 @@ const AboutUs = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-[40px] leading-tight mb-4"
+              className="font-klav-bold text-[40px] leading-tight mb-4"
             >
               Why choose us?
             </Motion>
@@ -188,7 +202,14 @@ const AboutUs = () => {
               variants={slideInRight}
               className="md:w-[60%] leading-loose text-[17px]"
             >
-              At Blinkav, we pride ourselves on delivering premium, reliable and innovative technology solutions. To ensure this, we've strategically partnered with globally recognized brands that are leaders in their respective industries. These partnerships are more than just business relationships - they represent our commitment to excellence. By aligning with these industry leaders. We ensures our clients benefit from the most innovative, future-proof technologies on the market today.
+              At Blinkav, we pride ourselves on delivering premium, reliable and
+              innovative technology solutions. To ensure this, we've
+              strategically partnered with globally recognized brands that are
+              leaders in their respective industries. These partnerships are
+              more than just business relationships - they represent our
+              commitment to excellence. By aligning with these industry leaders.
+              We ensures our clients benefit from the most innovative,
+              future-proof technologies on the market today.
             </Motion>
           </div>
           <Motion
@@ -235,10 +256,10 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="text-center mb-14"
             >
-              <h2 className="sangBlue-font text-4xl text-[color:var(--foreground)] mb-4">
+              <h2 className="font-klav-bold text-4xl text-foreground mb-4">
                 Our Process
               </h2>
-              <p className="text-xl text-[color:var(--muted-foreground)] max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 From initial consultation to ongoing support, we ensure a smooth
                 experience
               </p>
@@ -254,15 +275,13 @@ const AboutUs = () => {
                     key={index}
                     className="text-center"
                   >
-                    <div className="w-16 h-16 bg-[color:var(--primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                       {step.step}
                     </div>
-                    <h3 className="sangBlue-font text-xl font-semibold text-[color:var(--foreground)] mb-2">
+                    <h3 className="font-klav-bold text-xl font-semibold text-foreground mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-[color:var(--muted-foreground)]">
-                      {step.description}
-                    </p>
+                    <p className="text-muted-foreground">{step.description}</p>
                   </Motion>
                 );
               })}

@@ -9,7 +9,7 @@ import {
   ShieldCheckIcon,
   SpeakerWaveIcon,
   CodeBracketIcon,
-  CalculatorIcon
+  CalculatorIcon,
 } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
 import { containerStagger, slideInBottom } from "@/animations";
@@ -47,7 +47,8 @@ const services = [
   {
     icon: SpeakerWaveIcon,
     title: "Entertainment Systems",
-    description: "Seamlessly blending technology with lifestyle through cutting-edge entertainment systems.",
+    description:
+      "Seamlessly blending technology with lifestyle through cutting-edge entertainment systems.",
     image: "/images/hero-4.jpg",
     features: [
       "Cinema and Media Rooms",
@@ -67,7 +68,7 @@ const services = [
       "Interactive Smarts Displays and Touch Panels",
       "All-in-One Video Bars",
       "Wireless Presentation Systems",
-      "Hybrid Meeting Optimization"
+      "Hybrid Meeting Optimization",
     ],
   },
   {
@@ -112,8 +113,7 @@ const services = [
   {
     icon: CalculatorIcon,
     title: "App Development",
-    description:
-      "End-to-end mobile app development for modern businesses.",
+    description: "End-to-end mobile app development for modern businesses.",
     image: "/images/bg2.jpg",
     features: [
       "Responsive Layout",
@@ -179,7 +179,7 @@ const ServicesOverview = () => {
                       <div className="w-12 h-12 bg-gradient rounded-lg flex items-center justify-center mb-4">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="sangBlue-font text-2xl font-semibold leading-none tracking-tight mb-4">
+                      <h3 className="font-klav-bold text-2xl font-semibold leading-none tracking-tight mb-4">
                         {service.title}
                       </h3>
                       <p className="text-sm text-white">
@@ -190,7 +190,7 @@ const ServicesOverview = () => {
 
                   {/* Back */}
                   <div className="absolute w-full h-full flex flex-col items-center justify-center backface-hidden bg-white shadow-md rounded-lg p-6 border border-[#ddd0c8] transform rotateY-180">
-                    <h3 className="sangBlue-font text-2xl font-semibold leading-none tracking-tight mb-4">
+                    <h3 className="font-klav-bold text-2xl font-semibold leading-none tracking-tight mb-4">
                       {service.title}
                     </h3>
                     <ul className="space-y-2 text-sm text-muted-foreground">

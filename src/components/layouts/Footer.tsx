@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SocialIcon from "../icons/Social-Icon";
+import SocialIcon from "../icons/social-icon";
 import Link from "next/link";
 
 const Footer = () => {
@@ -74,22 +74,16 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="max-w-xs">
-          <h4 className="sangBlue-font text-xl font-bold mb-4">Contact Us</h4>
+          <h4 className="font-klav-bold text-xl font-bold mb-4">Contact Us</h4>
           <p className="text-gray-700">
             Want a quote? Fill out our{" "}
-            <Link
-              href="/contact"
-              className="hover:underline text-[var(--footer)]"
-            >
+            <Link href="/contact" className="hover:underline">
               <b>contact form</b>
             </Link>
           </p>
-          <p className="text-gray-700 mt-4">
+          <p className="text-gray-700 mt-2">
             Have questions or need support? Reach out at{" "}
-            <a
-              href="mailto:info@blinkav.co"
-              className="hover:underline text-[var(--footer)]"
-            >
+            <a href="mailto:info@blinkav.co" className="hover:underline">
               <b>info@blinkav.co</b>
             </a>
           </p>
@@ -97,7 +91,7 @@ const Footer = () => {
 
         {/* Socials */}
         <div className="max-w-xs">
-          <h4 className="sangBlue-font text-xl font-bold mb-4">
+          <h4 className="font-klav-bold text-xl font-bold mb-4">
             Connect with us
           </h4>
           <SocialIcon bgColor={"bg-#DDD0C8"} />
@@ -106,7 +100,7 @@ const Footer = () => {
 
       {/* Footer bottom */}
       <div className="max-w-7xl mx-auto mt-12 text-center">
-        <p className="text-sm text-[var(--muted-foreground)]">
+        <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} Blinkav Ltd. All rights reserved.
         </p>
       </div>

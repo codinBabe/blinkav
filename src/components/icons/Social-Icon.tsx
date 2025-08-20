@@ -5,8 +5,8 @@ import {
 import { cn } from "@/lib/utils";
 
 interface SocialIconProps {
-  bgColor?: string; // optional in case you want to default
-  className?: string; // allow external override too
+  bgColor?: string;
+  className?: string;
 }
 
 const SocialIcon: React.FC<SocialIconProps> = ({

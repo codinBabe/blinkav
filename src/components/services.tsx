@@ -30,13 +30,17 @@ const Services = () => {
           variants={slideInRight}
           viewport={{ once: true }}
         >
-          <h2 className="sangBlue-font text-3xl md:text-[48px] leading-tight text-center mt-6 md:mt-16">
+          <h2 className="font-klav-bold text-3xl md:text-[48px] leading-tight text-center mt-6 md:mt-16">
             Our Services
           </h2>
           <p className="text-lg text-center">
-            At <b>Blinkav</b>, we specialize in smart, secure, and seamless technology solutions for modern spaces.<br />
-            Whether it's your home, office, or commercial property,<br />
-            we deliver tailored systems that elevate comfort, convenience, and control.
+            At <b>Blinkav</b>, we specialize in smart, secure, and seamless
+            technology solutions for modern spaces.
+            <br />
+            Whether it's your home, office, or commercial property,
+            <br />
+            we deliver tailored systems that elevate comfort, convenience, and
+            control.
           </p>
         </motion.div>
         <ServicesOverview />
@@ -49,7 +53,7 @@ const Services = () => {
               whileInView={"visible"}
               variants={slideInLeft}
               viewport={{ once: true }}
-              className="sangBlue-font text-[40px] leading-tight mb-4"
+              className="font-klav-bold text-[40px] leading-tight mb-4"
             >
               People we&apos;ve worked for
             </motion.h2>
@@ -75,7 +79,7 @@ const Services = () => {
                 <motion.li
                   key={index}
                   variants={listSlideIn}
-                  className="sangBlue-font flex item-start text-[13px] md:text-[17px] leading-tight transition-transform duration-300"
+                  className="font-klav text flex item-start text-[13px] md:text-[17px] leading-tight transition-transform duration-300"
                   whileHover={{ x: 10 }}
                 >
                   <span>
