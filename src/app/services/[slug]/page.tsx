@@ -1,9 +1,39 @@
+// import { ServiceClient } from "@/components";
+// import { servicePages } from "@/lib";
+// import { notFound } from "next/navigation";
+
+// type Props = {
+//   params: { slug: string };
+// };
+
+// export default async function ServicePage({ params }: Props) {
+//   const { slug } =  params;
+
+//   const pageData = servicePages.find((page) => page.slug === slug);
+
+//   if (!pageData) return notFound();
+
+//   return <ServiceClient {...pageData} />;
+// }
+
+// export async function generateStaticParams() {
+//   return [
+//     { slug: "residential-solutions" },
+//     { slug: "audio-visual-solutions" },
+//     { slug: "security-solutions" },
+//     { slug: "workspace-solutions" },
+//     { slug: "development-solutions" },
+//   ];
+// }
+
+// export const revalidate = 0;
+
 import { ServiceClient } from "@/components";
 import { servicePages } from "@/lib";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function ServicePage({ params }: Props) {
@@ -16,14 +46,10 @@ export default async function ServicePage({ params }: Props) {
   return <ServiceClient {...pageData} />;
 }
 
-export async function generateStaticParams() {
-  return [
-    { slug: "residential-solutions" },
-    { slug: "audio-visual-solutions" },
-    { slug: "security-solutions" },
-    { slug: "workspace-solutions" },
-    { slug: "development-solutions" },
-  ];
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return servicePages.map((page) => ({
+    slug: page.slug,
+  }));
 }
 
 export const revalidate = 0;

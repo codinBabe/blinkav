@@ -203,7 +203,7 @@ const AboutUs = () => {
               className="md:w-[60%] leading-loose text-[17px]"
             >
               At Blinkav, we pride ourselves on delivering premium, reliable and
-              innovative technology solutions. To ensure this, we've
+              innovative technology solutions. To ensure this, we&apos;ve
               strategically partnered with globally recognized brands that are
               leaders in their respective industries. These partnerships are
               more than just business relationships - they represent our

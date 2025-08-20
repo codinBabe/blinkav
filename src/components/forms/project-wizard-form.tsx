@@ -273,8 +273,8 @@ const ProjectWizardForm = () => {
           Quote Sent Successfully!
         </h2>
         <p className="text-[17px] mb-4">
-          Thank you for your quote request! We've sent a detailed estimate to
-          your email address.
+          Thank you for your quote request! We&apos;ve sent a detailed estimate
+          to your email address.
         </p>
         <p className="text-sm text-gray-600 mb-6">
           Our team will contact you within 24 hours to schedule a consultation.
@@ -616,11 +616,13 @@ const ProjectWizardForm = () => {
                 <p className="font-medium mb-2">What happens next:</p>
                 <ul className="list-disc list-inside space-y-1">
                   <li>
-                    You'll receive a detailed quote via email within minutes
+                    You&apos;ll receive a detailed quote via email within
+                    minutes
                   </li>
                   <li>Our team will contact you within 24 hours</li>
                   <li>
-                    We'll schedule a free consultation to discuss your project
+                    We&apos;ll schedule a free consultation to discuss your
+                    project
                   </li>
                   <li>Final pricing will be confirmed after site inspection</li>
                   <li>Quote is valid for 30 days</li>

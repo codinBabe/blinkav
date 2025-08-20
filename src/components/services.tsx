@@ -37,7 +37,7 @@ const Services = () => {
             At <b>Blinkav</b>, we specialize in smart, secure, and seamless
             technology solutions for modern spaces.
             <br />
-            Whether it's your home, office, or commercial property,
+            Whether it&apos;s your home, office, or commercial property,
             <br />
             we deliver tailored systems that elevate comfort, convenience, and
             control.
