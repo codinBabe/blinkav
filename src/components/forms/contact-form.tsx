@@ -1,3 +1,5 @@
+"use client";
+
 import { ContactFormData, contactSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -6,6 +8,7 @@ import { Button, Input, Textarea } from "../ui";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -16,10 +19,25 @@ const ContactForm = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-    setSubmitted(true);
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send email");
+
+      setSubmitted(true);
+      reset();
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -61,7 +79,6 @@ const ContactForm = () => {
 
       <Textarea
         {...register("message")}
-        name="message"
         placeholder="Your Message"
         className="w-full mt-6 bg-white"
         rows={5}
@@ -75,8 +92,9 @@ const ContactForm = () => {
         variant={"gradient"}
         className="mt-6 font-semibold"
         size={"lg"}
+        disabled={loading}
       >
-        Submit
+        {loading ? "Sending..." : "Submit"}
       </Button>
     </form>
   );

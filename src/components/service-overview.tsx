@@ -9,6 +9,7 @@ import {
   ShieldCheckIcon,
   SpeakerWaveIcon,
   CodeBracketIcon,
+  CalculatorIcon,
 } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
 import { containerStagger, slideInBottom } from "@/animations";
@@ -24,10 +25,10 @@ const services = [
       "Professional security camera systems with remote monitoring and advanced analytics",
     image: "/images/cctv-surveillance.jpg",
     features: [
-      "4K IP cameras",
-      "Night vision",
-      "Mobile app access",
-      "Cloud storage",
+      "4k IP Cameras",
+      "AI-Powered Cameras",
+      "Remote Monitoring & Mobile Access",
+      "Integrated Alarms & Access Control",
     ],
   },
   {
@@ -45,14 +46,15 @@ const services = [
   },
   {
     icon: SpeakerWaveIcon,
-    title: "Audio Systems",
-    description: "Multi-room audio distribution and high-quality sound systems",
+    title: "Entertainment Systems",
+    description:
+      "Seamlessly blending technology with lifestyle through cutting-edge entertainment systems.",
     image: "/images/hero-4.jpg",
     features: [
-      "Whole-home audio",
-      "Zone control",
-      "Streaming integration",
-      "Premium speakers",
+      "Cinema and Media Rooms",
+      "Video Distribution",
+      "Multiroom Audio Systems",
+      "Outdoor Entertainment Solutions",
     ],
   },
   {
@@ -62,23 +64,24 @@ const services = [
       "Professional meeting room setups with video conferencing capabilities",
     image: "/images/conference-solution.jpg",
     features: [
-      "Video conferencing",
-      "Wireless presentation",
-      "Audio enhancement",
-      "Room booking",
+      "Zoom & Teams Rooms Integration",
+      "Interactive Smarts Displays and Touch Panels",
+      "All-in-One Video Bars",
+      "Wireless Presentation Systems",
+      "Hybrid Meeting Optimization",
     ],
   },
   {
     icon: ShieldCheckIcon,
-    title: "Access Control",
+    title: "Intercom & PBX Systems ",
     description:
-      "Secure entry systems with keyless access and visitor management",
-    image: "/images/access-control.jpg",
+      "Intercom solutions enable clear audio and video communication for access control, visitor management, and internal communication.",
+    image: "/images/intercom 2.jpg",
     features: [
-      "Keyless entry",
-      "Visitor management",
-      "Integration ready",
-      "Mobile access",
+      "PBX/VoIP",
+      "IP Intercom",
+      "Multi-way Communication",
+      "Multiroom Extension",
     ],
   },
   {
@@ -103,8 +106,20 @@ const services = [
     features: [
       "Responsive frontend",
       "Scalable backend",
+      "Secure Database",
+      "Server Management",
+    ],
+  },
+  {
+    icon: CalculatorIcon,
+    title: "App Development",
+    description: "End-to-end mobile app development for modern businesses.",
+    image: "/images/bg2.jpg",
+    features: [
+      "Responsive Layout",
+      "Scalable backend",
       "Modern UI/UX design",
-      "Cross-platform mobile apps (iOS & Android)",
+      "Cross-platform Mobile apps (iOS & Android)",
     ],
   },
 ];
@@ -164,7 +179,7 @@ const ServicesOverview = () => {
                       <div className="w-12 h-12 bg-gradient rounded-lg flex items-center justify-center mb-4">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="sangBlue-font text-2xl font-semibold leading-none tracking-tight mb-4">
+                      <h3 className="font-klav-bold text-2xl font-semibold leading-none tracking-tight mb-4">
                         {service.title}
                       </h3>
                       <p className="text-sm text-white">
@@ -175,7 +190,7 @@ const ServicesOverview = () => {
 
                   {/* Back */}
                   <div className="absolute w-full h-full flex flex-col items-center justify-center backface-hidden bg-white shadow-md rounded-lg p-6 border border-[#ddd0c8] transform rotateY-180">
-                    <h3 className="sangBlue-font text-2xl font-semibold leading-none tracking-tight mb-4">
+                    <h3 className="font-klav-bold text-2xl font-semibold leading-none tracking-tight mb-4">
                       {service.title}
                     </h3>
                     <ul className="space-y-2 text-sm text-muted-foreground">

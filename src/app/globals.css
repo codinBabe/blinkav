@@ -1,78 +1,84 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-reg: "Klavika", sans-serif;
+  --font-klav-bold: "Klavika-Bold", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-footer: var(--footer);
+}
+
+:root {
+  --background: hsl(30, 10%, 92%);
+  --foreground: hsl(216, 69%, 14%);
+
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 0%);
+
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 0%);
+
+  --primary: hsl(29, 82%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-glow: hsl(29, 72%, 63%);
+
+  --secondary: hsl(30, 20%, 83%);
+  --secondary-foreground: hsl(0, 0%, 0%);
+
+  --muted: hsl(30, 20%, 88%);
+  --muted-foreground: hsl(0, 0%, 40%);
+
+  --accent: hsl(30, 20%, 83%);
+  --accent-foreground: hsl(0, 0%, 0%);
+
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+
+  --border: hsl(30, 15%, 80%);
+  --input: hsl(30, 15%, 85%);
+  --ring: hsl(29, 82%, 53%);
+  --footer: hsl(216, 69%, 14%);
+}
+
+/* @font-face for local Klavika files */
+@font-face {
+  font-family: "Klavika";
+  src: url("/fonts/Klavika-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klavika-Bold";
+  src: url("/fonts/Klavika-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
-  :root {
-    --background: hsl(30, 13%, 92%);
-    --foreground: hsl(0, 0%, 0%);
-
-    --card: hsl(0, 0%, 100%);
-    --card-foreground: hsl(0, 0%, 0%);
-
-    --popover: hsl(0, 0%, 100%);
-    --popover-foreground: hsl(0, 0%, 0%);
-
-    --primary: hsl(29, 82%, 53%);
-    --primary-foreground: hsl(0, 0%, 100%);
-    --primary-glow: hsl(29, 72%, 63%);
-
-    --secondary: hsl(30, 20%, 83%);
-    --secondary-foreground: hsl(0, 0%, 0%);
-
-    --muted: hsl(30, 20%, 88%);
-    --muted-foreground: hsl(0, 0%, 40%);
-
-    --accent: hsl(30, 20%, 83%);
-    --accent-foreground: hsl(0, 0%, 0%);
-
-    --destructive: hsl(0, 84%, 60%);
-    --destructive-foreground: hsl(0, 0%, 98%);
-
-    --border: hsl(30, 15%, 80%);
-    --input: hsl(30, 15%, 85%);
-    --ring: hsl(29, 82%, 53%);
-    --footer: hsl(219, 65%, 14%);
-
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--primary-glow))
-    );
-    --gradient-hero: linear-gradient(135deg, hsl(30 13% 89%), hsl(30 20% 85%));
-    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+  body {
+    @apply bg-background text-foreground font-reg text-base leading-normal scroll-smooth;
   }
-}
-
-@font-face {
-  font-family: "Helvetica Neue-LT";
-  src: url("/fonts/HelveticaNeueLight.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/fonts/HelveticaNeueRoman.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SangBleu Sans";
-  src: url("/fonts/sangbleu-sans-light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SangBleu Sans Regular";
-  src: url("/fonts/sangbleu-sans-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
 @layer utilities {
@@ -80,19 +86,6 @@
     background: linear-gradient(135deg, hsl(29, 82%, 53%), hsl(29, 72%, 63%));
   }
 
-  .sangBlue-font {
-    font-family: "SangBleu Sans", sans-serif;
-  }
-
-  .body-font {
-    font-family: "Helvetica Neue-LT", sans-serif;
-    line-height: 1.2;
-    font-size: 16px;
-    color: #000;
-    background-color: #edebe9;
-  }
-
-  /* SERVICES FILE */
   .perspective {
     perspective: 1000px;
     z-index: 0;
@@ -110,7 +103,6 @@
     transform: rotateY(180deg);
   }
 
-  /* END OF SERVICE FILE */
   ::selection {
     background-color: #ddd0c8;
   }
@@ -123,12 +115,14 @@
     pointer-events: none;
     background-repeat: no-repeat;
     z-index: -1;
-    pointer-events: none;
   }
 
-  .client-bg,
-  .about-bg {
+  .client-bg {
     background-image: url("/images/clients.jpg");
+  }
+
+  .about-bg {
+    background-image: url("/images/aboutus/about (5).jpeg");
   }
 
   .about-bg {
@@ -136,7 +130,6 @@
     opacity: 0.8;
   }
 
-  /* Mobile fix */
   @media (max-width: 768px) {
     .client-bg {
       background-position: calc(100%) calc(100% - 40px);
@@ -150,7 +143,6 @@
     }
   }
 
-  /* Medium and up — enable parallax */
   @media (min-width: 768px) {
     .client-bg {
       background-attachment: fixed;

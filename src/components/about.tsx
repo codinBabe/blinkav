@@ -3,20 +3,19 @@
 import {
   CustomLeftArrow,
   CustomRightArrow,
-} from "@/components/icons/Custom-Arrow";
+} from "@/components/icons/custom-arrow";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 
 const partnerImages = [
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
-  "/images/patner.webp",
+  "/images/partners/1.png",
+  "/images/partners/2.png",
+  "/images/partners/3.png",
+  "/images/partners/4.png",
+  "/images/partners/5.png",
+  "/images/partners/6.png",
 ];
 
 const processSteps = [
@@ -53,7 +52,7 @@ const AboutUs = () => {
             className="md:hidden w-full xl:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0 -mt-8"
           >
             <Image
-              src={"/images/About-Us.webp"}
+              src={"/images/aboutus/about (2).jpeg"}
               alt="About Us"
               width={600}
               height={600}
@@ -64,7 +63,7 @@ const AboutUs = () => {
             <Motion
               as={"h1"}
               variants={slideInLeft}
-              className="sangBlue-font text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
+              className="font-klav-bold text-[40px] leading-tight lg:text-6xl lg:leading-normal mb-6"
             >
               About us
             </Motion>
@@ -74,17 +73,17 @@ const AboutUs = () => {
               className="space-y-4 leading-loose text-[17px]"
             >
               <p>
-                Since 2016, Blinkav Ltd is a company dedicated to improving the
-                effectiveness of the daily lives of individuals both in private
-                and corporate entities. We are confident that we have the
-                manpower and financial strength to execute the project in the
-                highest professional manner.
+                Founded in 2023, Blinkav is a technology integration company
+                committed to delivering world-class solutions in smart
+                automation, security, and connectivity. Backed by a skilled team
+                of over 10 professionals, we bring innovation; precision, and
+                reliability to every project we execute.<br></br>
+                We serve residential, commercial, and hospitality spaces with
+                tailored, future-ready systems.
               </p>
-
               <p>
-                Blinkav Ltd has been providing sustainable designs for more than
-                7 years. Our company has more than 18 employees in our Lagos
-                office with affiliate offices in the UK, USA, and Nigeria.
+                At Blinkav, our goal is simple - to connect people to their
+                spaces through intelligient technology
               </p>
             </Motion>
           </div>
@@ -94,7 +93,7 @@ const AboutUs = () => {
             className="hidden md:block w-full xl:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/About-Us.webp"}
+              src={"/images/aboutus/about (2).jpeg"}
               alt="About Us"
               width={600}
               height={600}
@@ -111,7 +110,7 @@ const AboutUs = () => {
             className="ml-12 mt-12 w-[90%] md:ml-28 md:w-[75%] lg:w-[40%] md:mt-18 h-96 rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/what-we-offer.webp"}
+              src={"/images/aboutus/about (4).jpeg"}
               alt="What We Offer"
               unoptimized
               width={400}
@@ -123,7 +122,7 @@ const AboutUs = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-[40px] leading-tight mb-4 lg:text-6xl"
+              className="font-klav-bold text-[40px] leading-tight mb-4 lg:text-6xl"
             >
               What we offer?
             </Motion>
@@ -132,13 +131,22 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px]"
             >
-              As a collective group, we offer global consulting to assist our
-              clients in planning, development, design, construction, operation,
-              and maintenance of critical infrastructure and smart home
-              installations for private owners who are looking to improve
-              security, convenience, and energy management in their homes. We
-              also corporate owners who require their work operations to be
-              seamless and effective
+              As a collective team, we provide global consulting and technical
+              expertise to support our clients in the planning, design,
+              development, construction, operation and maintenance of critical
+              infrastructure and smart technology systems.
+            </Motion>
+            <br></br>
+            <Motion
+              as={"p"}
+              variants={slideInBottom}
+              className="leading-loose text-[17px]"
+            >
+              We serve private homeowners seeking to enhance security,
+              convenience, and energy efficiency through intelligent home
+              installations, as well as corporate clients looking to streamline
+              operations and improve productivity through integrated,
+              future-ready solutions.
             </Motion>
           </div>
         </section>
@@ -148,7 +156,7 @@ const AboutUs = () => {
             <Motion
               as={"h2"}
               variants={slideInBottom}
-              className="sangBlue-font text-[40px] leading-tight mb-4"
+              className="font-klav-bold text-[40px] leading-tight mb-4"
             >
               Why choose us?
             </Motion>
@@ -157,10 +165,10 @@ const AboutUs = () => {
               variants={slideInBottom}
               className="leading-loose text-[17px] list-disc pl-12"
             >
-              <li>Dedicated support team</li>
-              <li>Extron, Leviton & Creston certified.</li>
-              <li>CEDIA certified operations team</li>
-              <li>Committed to exceptional customer experience</li>
+              <li>Dedicated Support Team</li>
+              <li>Industry Recognized Certification (CTS, AVIXA, CEDIA)</li>
+              <li>ELAN, URC, HDL & Lutron Certified</li>
+              <li>Excellent After Sales Services</li>
             </Motion>
           </div>
           <Motion
@@ -169,10 +177,10 @@ const AboutUs = () => {
             className="w-full lg:w-3/5 h-full rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
-              src={"/images/why-choose-us.webp"}
+              src={"/images/aboutus/about (3).jpeg"}
               alt="Why Choose Us"
               unoptimized
-              width={600}
+              width={500}
               height={100}
               className="w-full h-full object-cover"
             />
@@ -194,9 +202,14 @@ const AboutUs = () => {
               variants={slideInRight}
               className="md:w-[60%] leading-loose text-[17px]"
             >
-              We have partnered with the best brands and leading product
-              manufacturers to ensure our solutions meets global standards and
-              best practice in the industry.
+              At Blinkav, we pride ourselves on delivering premium, reliable and
+              innovative technology solutions. To ensure this, we&apos;ve
+              strategically partnered with globally recognized brands that are
+              leaders in their respective industries. These partnerships are
+              more than just business relationships - they represent our
+              commitment to excellence. By aligning with these industry leaders.
+              We ensures our clients benefit from the most innovative,
+              future-proof technologies on the market today.
             </Motion>
           </div>
           <Motion
@@ -236,17 +249,17 @@ const AboutUs = () => {
         </section>
 
         {/* Our Process */}
-        <section className="mb-20 bg-[#DDD0C8] px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
+        <section className="mb-20 bg-[#c7d1df] px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
           <div className="max-w-7xl mx-auto">
             <Motion
               as={"div"}
               variants={slideInBottom}
               className="text-center mb-14"
             >
-              <h2 className="sangBlue-font text-4xl text-[color:var(--foreground)] mb-4">
+              <h2 className="font-klav-bold text-4xl text-foreground mb-4">
                 Our Process
               </h2>
-              <p className="text-xl text-[color:var(--muted-foreground)] max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 From initial consultation to ongoing support, we ensure a smooth
                 experience
               </p>
@@ -262,15 +275,13 @@ const AboutUs = () => {
                     key={index}
                     className="text-center"
                   >
-                    <div className="w-16 h-16 bg-[color:var(--primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                       {step.step}
                     </div>
-                    <h3 className="sangBlue-font text-xl font-semibold text-[color:var(--foreground)] mb-2">
+                    <h3 className="font-klav-bold text-xl font-semibold text-foreground mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-[color:var(--muted-foreground)]">
-                      {step.description}
-                    </p>
+                    <p className="text-muted-foreground">{step.description}</p>
                   </Motion>
                 );
               })}

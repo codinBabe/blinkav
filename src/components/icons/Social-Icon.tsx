@@ -5,8 +5,8 @@ import {
 import { cn } from "@/lib/utils";
 
 interface SocialIconProps {
-  bgColor?: string; // optional in case you want to default
-  className?: string; // allow external override too
+  bgColor?: string;
+  className?: string;
 }
 
 const SocialIcon: React.FC<SocialIconProps> = ({
@@ -17,12 +17,12 @@ const SocialIcon: React.FC<SocialIconProps> = ({
     {
       id: "phone",
       icon: <DevicePhoneMobileIcon className="h-6 w-6 text-black" />,
-      link: "tel:+2341234567",
+      link: "tel:+2349163244921",
     },
     {
       id: "email",
       icon: <EnvelopeIcon className="h-6 w-6 text-black" />,
-      link: "mailto:",
+      link: "mailto:info@blinkav.co",
     },
     {
       id: "instagram",
