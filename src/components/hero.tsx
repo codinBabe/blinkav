@@ -34,22 +34,20 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isReady, setIsReady] = useState(true);
 
   const slide = slides[currentSlide];
   const isVideo = slide.image.endsWith(".mp4");
 
   // Auto-advance slides
   useEffect(() => {
-    if (isHovered || !isReady) return;
+    if (isHovered) return;
 
     const timer = setTimeout(() => {
-      setIsReady(false);
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [currentSlide, isHovered, isReady]);
+  }, [currentSlide, isHovered]);
 
   return (
     <section
@@ -76,17 +74,16 @@ const Hero = () => {
               muted
               loop
               playsInline
-              onLoadedData={() => setIsReady(true)}
               className="w-full h-full object-cover"
             >
               <source src={slide.image} type="video/mp4" />
             </video>
           ) : (
             <Image
+              unoptimized
               src={slide.image}
               alt={slide.title}
               fill
-              onLoad={() => setIsReady(true)}
               className="object-cover"
               priority={currentSlide === 0}
             />
@@ -119,7 +116,6 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => {
-              setIsReady(false);
               setCurrentSlide(index);
             }}
             className={`w-10 h-1 rounded-md border border-white transition-all duration-300 ${
