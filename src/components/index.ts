@@ -5,5 +5,5 @@ export { default as Services } from "./services";
 export { default as SecuritySolution } from "./security";
 export { default as ResidentialSolution } from "./residential";
 export { default as AudioVisualSolution } from "./audio-visual";
-export { default as WorkspaceSolution } from "./workplace";
+export { default as WorkspaceSolution } from "./workspace";
 export { default as DevelopmentSolution } from "./development";
