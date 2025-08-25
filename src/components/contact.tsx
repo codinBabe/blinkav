@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
-import SocialIcon from "./icons/social-icon";
+import SocialIcon from "@/components/icons/Social-Icon";
 import { ContactForm, ProjectWizard } from "./forms";
 import { containerStagger, slideInBottom, Motion } from "@/animations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui";
@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: MapPinIcon,
       title: "Reach Us",
-      content: "123 TECH STREET, LAGOS, NIGERIA",
+      content: "Monica Court 5, Royal Pine Estate, Orchid Rd, Lagos, Nigeria",
     },
     {
       icon: EnvelopeIcon,

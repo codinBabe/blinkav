@@ -175,7 +175,7 @@ const WorkspaceSolution = () => {
             className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
-              src="/images/Workspace-5.webp"
+              src="/images/Video Conferencing.jpeg"
               alt="Residential Solutions"
               unoptimized
               width={400}

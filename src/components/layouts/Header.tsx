@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import SocialIcon from "../icons/social-icon";
+import SocialIcon from "@/components/icons/Social-Icon";
 import useScrollToTop from "@/hooks/use-scroll-to-top";
 import { motion } from "framer-motion";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SocialIcon from "../icons/social-icon";
+import SocialIcon from "@/components/icons/Social-Icon";
 import Link from "next/link";
 
 const Footer = () => {

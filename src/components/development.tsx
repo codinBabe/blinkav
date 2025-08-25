@@ -6,6 +6,7 @@ import { Motion, slideInBottom, slideInLeft, slideInRight } from "@/animations";
 const DevelopmentSolution = () => {
   return (
     <section>
+      {/* Hero Section */}
       <div className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
         <Image
           src="/images/bg3.jpg"
@@ -22,160 +23,60 @@ const DevelopmentSolution = () => {
           variants={slideInBottom}
           className="relative z-10 font-klav-bold text-white text-[60px] lg:text-[65px] px-4"
         >
-          Developmental Solutions
+          Development Solutions
         </Motion>
       </div>
+
+      {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 md:px-8 space-y-16 md:space-y-28">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
-          <div className="md:w-[50%]">
-            <Motion
-              as={"div"}
-              variants={slideInBottom}
-              className="text-[17px] leading-loose"
-            >
-              <p>
-                At Blinkav, we craft modern web solutions that empower
-                businesses to thrive in the digital space. Our development
-                process is rooted in performance, user experience, and
-                cutting-edge technologies that ensure robust, scalable, and
-                beautiful digital products.
-              </p>
-              <p>
-                From UI/UX design to full-stack development and mobile app
-                integration, our goal is to provide end-to-end services that
-                meet your business needs and elevate your digital presence.
-              </p>
-            </Motion>
-          </div>
-          <Motion
-            as={"div"}
-            variants={slideInBottom}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/hero-6.jpg"
-              alt="Frontend Development"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
-        </div>
 
+        {/* Overview */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-          <div className="md:w-[50%]">
-            <Motion
-              as={"h2"}
-              variants={slideInLeft}
-              className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
-            >
-              Frontend Development
-            </Motion>
-            <Motion
-              as={"div"}
-              variants={slideInBottom}
-              className="text-[17px] leading-loose space-y-4"
-            >
-              <p>
-                We build responsive, fast, and accessible interfaces using
-                technologies like React, Next.js, Vue.js, and TailwindCSS. Every
-                element is crafted to ensure an engaging user experience across
-                all devices and platforms.
-              </p>
-              <p>
-                Our approach prioritizes performance, SEO, and interactivity
-                using modern frameworks and best practices.
-              </p>
-            </Motion>
-          </div>
           <Motion
-            as={"div"}
-            variants={slideInRight}
-            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
-          >
-            <Image
-              src="/images/frontend-dev.jpg"
-              alt="Frontend Development"
-              unoptimized
-              width={400}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </Motion>
-        </div>
-
-        <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
-          <div className="md:w-[50%]">
-            <Motion
-              as={"h2"}
-              variants={slideInRight}
-              className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
-            >
-              Backend Development
-            </Motion>
-            <Motion
-              as={"div"}
-              variants={slideInBottom}
-              className="text-[17px] space-y-4 leading-loose"
-            >
-              <p>
-                We build secure, scalable, and high-performance backends using
-                Node.js, Express, NestJS, and PostgreSQL. Our APIs are designed
-                to support complex systems with ease, including real-time
-                functionality and secure data handling.
-              </p>
-              <p>
-                From database architecture to authentication and cloud
-                integration, we manage the heavy lifting so your product stays
-                efficient and maintainable.
-              </p>
-            </Motion>
-          </div>
-          <Motion
-            as={"div"}
+            as="div"
             variants={slideInLeft}
             className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
-              src="/images/backend-dev.jpg"
-              alt="Backend Development"
+              src="/images/hero-6.jpg"
+              alt="Development Overview"
               unoptimized
               width={400}
               height={100}
               className="w-full h-full object-cover"
             />
           </Motion>
+          <div className="md:w-[50%]">
+            <Motion
+              as="div"
+              variants={slideInBottom}
+              className="text-[17px] leading-loose space-y-4"
+            >
+              <p> At Blinkav, we craft modern web solutions that empower businesses to thrive in the digital space. Our development process is rooted in performance, user experience, and cutting-edge technologies that ensure robust, scalable, and beautiful digital products. </p> <p> From UI/UX design to full-stack development and mobile app integration, our goal is to provide end-to-end services that meet your business needs and elevate your digital presence. </p>
+            </Motion>
+          </div>
         </div>
 
+        {/* UI/UX Design */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
           <div className="md:w-[50%]">
             <Motion
-              as={"h2"}
+              as="h2"
               variants={slideInLeft}
               className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
             >
               UI/UX Design
             </Motion>
             <Motion
-              as={"div"}
+              as="div"
               variants={slideInBottom}
-              className="text-[17px] leading-loose space-y-4"
+              className="text-[17px] space-y-4 leading-loose"
             >
-              <p>
-                Design is at the heart of everything we build. Our designers use
-                tools like Figma, Adobe XD, and Sketch to create visually
-                compelling and highly functional interfaces that delight users
-                and drive engagement.
-              </p>
-              <p>
-                We prioritize usability, consistency, and branding to turn
-                concepts into intuitive digital experiences.
-              </p>
+              <p> Design is the soul of every product we create. We craft visually striking and highly intuitive interfaces that captivate users and elevate engagement from the very first interaction. </p> <p> With a deep focus on usability, consistency, and brand alignment, we transform ideas into seamless digital experiences—where every click feels natural and every screen tells a story. </p>
             </Motion>
           </div>
           <Motion
-            as={"div"}
+            as="div"
             variants={slideInRight}
             className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
@@ -190,35 +91,95 @@ const DevelopmentSolution = () => {
           </Motion>
         </div>
 
+        {/* Frontend Development */}
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+          <div className="md:w-[50%]">
+            <Motion
+              as="h2"
+              variants={slideInLeft}
+              className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
+            >
+              Frontend Development
+            </Motion>
+            <Motion
+              as="div"
+              variants={slideInBottom}
+              className="text-[17px] leading-loose space-y-4"
+            >
+              <p> We design and develop responsive, high-performance interfaces that deliver seamless user experiences across all devices. Every detail is thoughtfully crafted to ensure accessibility, speed, and visual impact. </p> <p> Our approach blends creative precision with technical excellence, prioritizing fast load times, discoverability, and dynamic interactivity—so your digital presence feels as powerful as it looks. </p>
+            </Motion>
+          </div>
+          <Motion
+            as="div"
+            variants={slideInRight}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/frontend-dev.jpg"
+              alt="Frontend Development"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
+          </Motion>
+        </div>
+
+        {/* Backend Development */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
           <div className="md:w-[50%]">
             <Motion
-              as={"h2"}
+              as="h2"
               variants={slideInRight}
+              className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
+            >
+              Backend Development
+            </Motion>
+            <Motion
+              as="div"
+              variants={slideInBottom}
+              className="text-[17px] space-y-4 leading-loose"
+            >
+              <p> We engineer robust, scalable backend systems that power seamless digital experiences. Designed for speed, security, and flexibility, our infrastructure supports everything from real-time features to complex data workflows. </p> <p> From structuring databases to implementing secure authentication and integrating with cloud services, we handle the technical foundation—so your product remains reliable, efficient, and ready to grow. </p>
+            </Motion>
+          </div>
+          <Motion
+            as="div"
+            variants={slideInLeft}
+            className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
+          >
+            <Image
+              src="/images/backend-dev.jpg"
+              alt="Backend Development"
+              unoptimized
+              width={400}
+              height={100}
+              className="w-full h-full object-cover"
+            />
+          </Motion>
+        </div>
+
+        {/* Mobile App Development */}
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+          <div className="md:w-[50%]">
+            <Motion
+              as="h2"
+              variants={slideInLeft}
               className="font-klav-bold text-[40px] leading-tight lg:text-6xl mb-4"
             >
               Mobile App Development
             </Motion>
             <Motion
-              as={"div"}
+              as="div"
               variants={slideInBottom}
               className="text-[17px] space-y-4 leading-loose"
             >
-              <p>
-                We develop cross-platform mobile applications using React Native
-                and Flutter to ensure smooth performance and native-like
-                experiences across Android and iOS devices.
-              </p>
-              <p>
-                Whether you need a companion app for your web platform or a
-                stand-alone mobile solution, we ensure speed, reliability, and
-                scalability.
-              </p>
+              <p> We create mobile apps that work smoothly on both Android and iOS devices—so your users get a great experience no matter what phone they use. Our apps are designed to feel fast, intuitive, and just like native apps you'd find in the app stores. </p> <p> Whether you need a mobile version of your website or a completely new app idea brought to life, we build reliable and scalable solutions that grow with your business and keep users coming back. </p>
             </Motion>
           </div>
           <Motion
-            as={"div"}
-            variants={slideInLeft}
+            as="div"
+            variants={slideInRight}
             className="w-full md:w-[50%] h-full rounded-xl overflow-hidden"
           >
             <Image
