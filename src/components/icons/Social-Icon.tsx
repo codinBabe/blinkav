@@ -59,7 +59,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({
           />
         </svg>
       ),
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/blinkav.co?igsh=eWFhOW4xeTAzOGpq",
     },
   ];
 
