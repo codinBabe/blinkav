@@ -174,7 +174,7 @@ const DevelopmentSolution = () => {
               variants={slideInBottom}
               className="text-[17px] space-y-4 leading-loose"
             >
-              <p> We create mobile apps that work smoothly on both Android and iOS devices—so your users get a great experience no matter what phone they use. Our apps are designed to feel fast, intuitive, and just like native apps you'd find in the app stores. </p> <p> Whether you need a mobile version of your website or a completely new app idea brought to life, we build reliable and scalable solutions that grow with your business and keep users coming back. </p>
+              <p> We create mobile apps that work smoothly on both Android and iOS devices—so your users get a great experience no matter what phone they use. Our apps are designed to feel fast, intuitive, and just like native apps you&apos;d find in the app stores. </p> <p> Whether you need a mobile version of your website or a completely new app idea brought to life, we build reliable and scalable solutions that grow with your business and keep users coming back. </p>
             </Motion>
           </div>
           <Motion
