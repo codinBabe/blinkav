@@ -1044,7 +1044,7 @@ const ProjectWizardForm = () => {
 
       console.log("Sending invoice data:", invoiceData);
 
-      const response = await fetch("https://blinkav.samuelowadayo.com.ng/invoice", {
+      const response = await fetch("https://email.blinkav.co/invoice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(invoiceData),
